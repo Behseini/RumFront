@@ -36,3 +36,12 @@ $('input').blur(function () {
     $(this).addClass('filled');
   }
 })
+
+
+// Validation
+$(document).ready(function(){
+		$('#validate3').click(function(){
+				$('#form3').djValidator('validate');
+			});
+
+		});

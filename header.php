@@ -178,47 +178,81 @@ echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
                 <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   Sign In
 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="navbarDropdown">
+                     <form>
+   <div class="dropdown-box">
 
-                    <form action="" class="form">
-<p>Sigin in</p>
-                        <div class="container">
+         <div class="col-md-12 p-0 m-0">
+            <p class="d-block text-center">Sign in</p>
+         </div>
 
-                            <ul class="nav nav-pills d-none" id="pills-tab" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">login</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="pills-forget-tab" data-toggle="pill" href="#pills-forget" role="tab" aria-controls="pills-forget" aria-selected="false">forget</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
-                                    <div class="row">
-                                        <div class="form-wrapper">
-                                            <div class="form-group">
-                                                <label class="form-label" for="first"> <i class="icon icon-envelope"></i>  Your Email</label>
-                                                <input id="first" class="form-input" type="text" />
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="form-label" for="last"><i class="icon icon-lock"></i>  Your Password</label>
-                                                <input id="last" class="form-input" type="text" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="btn btn-defaulta btn-link">Forget Your Password?</button>
-                                </div>
-                                <div class="tab-pane fade" id="pills-forget" role="tabpanel" aria-labelledby="pills-forget-tab">profile
-                                    <button class="btn btn-defaultb btn-link">Back to Login</button>
-                                </div>
+         <ul class="nav nav-pills d-none" id="pills-tab" role="tablist">
+            <li class="nav-item">
+               <a class="nav-link active" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">login</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" id="pills-forget-tab" data-toggle="pill" href="#pills-forget" role="tab" aria-controls="pills-forget" aria-selected="false">forget</a>
+            </li>
+         </ul>
+         <div class="tab-content m-0" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
 
-                            </div>
+             </form>
+                <form id="form3">
+               <div class="col-md-12 p-0 m-0">
+                  <div class="form-wrapper">
+                     <div class="form-group">
+                        <label class="form-label" for="first"> <i class="icon icon-envelope"></i>  Your Email</label>
+<!--                         <input id="first" class="form-input form-control input-md" type="text" data-dj-validator="email,*" required/> -->
+                        <input name="emailinput" type="text" class="form-input" data-dj-validator="email,*" required>
+                     </div>
+                     <div class="form-group">
+                        <label class="form-label" for="last"><i class="icon icon-lock"></i>  Your Password</label>
+                        <input id="last" class="form-input" type="text" data-dj-validator="word,4,8" required />
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 p-0 m-0">
+                  <button type="button" id="validate3"  class="btn btn-block btn-sm rounded-0 btn-dropdown-form">Login</button>
+               </div>
+               <div class="col-md-12 p-0 m-0">
+                  <a class="d-block text-right btn-form-tabs btn-forget">Forget Password?</a>
+               </div>
+             </form>
+               <form>
+               <div class="col-md-12 p-0 m-0">
+                  <p class="d-block text-center" style="margin-top:20px;">Not a User?</p>
+               </div>
+               <div class="col-md-12 p-0 m-0">
+                  <button class="btn btn-block btn-sm rounded-0 btn-dropdown-form">Register</button>
+               </div>
+
+                </form>
+            </div>
+            <div class="tab-pane fade" id="pills-forget" role="tabpanel" aria-labelledby="pills-forget-tab">
+               <div class="col-md-12 p-0 m-0">
+                  <div class="form-wrapper">
+                     <div class="form-group">
+                        <label class="form-label" for="first"> <i class="icon icon-envelope"></i>  Your Email</label>
+                        <input id="first" class="form-input" type="text" />
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-12 p-0 m-0">
+                  <button class="btn btn-block btn-sm rounded-0 btn-dropdown-form">Register</button>
+               </div>
+               <div class="col-md-12 p-0 m-0">
+                  <a class="d-block text-right btn-form-tabs btn-backlogin">Back to login?</a>
+               </div>
 
 
+            </div>
+         </div>
+      </form>
+   </div>
+   <!-- End of dropdown-box -->
 
 
-                        </div>
-                    </form>
                 </div>
             </li>
         </ul>
