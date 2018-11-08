@@ -25,48 +25,48 @@ if (typeof jQuery==='undefined'){throw new Error('DjValidator requires jQuery 1.
 	var djv_functions=[vword,vatext,vantext,vtext,vint,vnum,vdig,vfile,vefile,vmail,vphone,vurl,vregexp,vequal,vnequal,vor,vmulti,vcall,vradio,vcheck,vip];
 	var djv_style="display:none; color:red; text-align:inherit; font:.9em fantasy bold italic;";
 	var djv_labels={
-			required:'Required field.',
-			word_min:'At least $1 characters with no spaces.',
-			word_between:'Between $1 and $2 characters with no spaces.',
-			atext_min:'At least $1 alphabetic characters.',
-			atext_between:'Between $1 and $2 alphabetic characters.',
-			antext_min:'At least $1 alphabetic characters or digits.',
-			antext_between:'Between $1 and $2 alphabetic characters or digits.',
-			text_min:'At least $1 characters.',
-			text_between:'Between $1 and $2 characters.',
-			int_invalid:'Invalid integer.',
-			int_min:'The number must be greater than or equal to $1.',
+			required:'Required field',
+			word_min:'At least $1 characters with no spaces',
+			word_between:'Between $1 and $2 characters with no spaces',
+			atext_min:'At least $1 alphabetic characters',
+			atext_between:'Between $1 and $2 alphabetic characters',
+			antext_min:'At least $1 alphabetic characters or digits',
+			antext_between:'Between $1 and $2 alphabetic characters or digits',
+			text_min:'At least $1 characters',
+			text_between:'Between $1 and $2 characters',
+			int_invalid:'Invalid integer',
+			int_min:'The number must be greater than or equal to $1',
 			int_max:'The number must be less than or equal to $1',
-			int_between:'The number must be between $1 and $2.',
-			num_invalid:'Invalid real number.',
-			num_min:'The number must be greater than or equal to $1.',
+			int_between:'The number must be between $1 and $2',
+			num_invalid:'Invalid real number',
+			num_min:'The number must be greater than or equal to $1',
 			num_max:'The number must be less than or equal to $1',
 			num_between:'The number must be between $1 and $2.',
 			dig_min:'At least $1 digits.',
-			dig_between:'Between $1 and $2 digits.',
+			dig_between:'Between $1 and $2 digits',
 			file_min:'Select at least $1 files.',
-			file_between:'Select between $1 and $2 files.',
+			file_between:'Select between $1 and $2 files',
 			file_format:'Invalid file type.',
-			file_min_size:'Files must be larger than $1 kb in size.',
+			file_min_size:'Files must be larger than $1 kb in size',
 			file_max_size:'Files must be less than $1 kb. in size',
-			file_ext:'Valid file extensions: $1.',
+			file_ext:'Valid file extensions: $1',
 			email:'Email not valid.',
 			email_max:'Email must be less than $1 characters.',
-			phone:'Invalid phone number.',
+			phone:'Invalid phone number',
 			url:'Invalid url.',
 			url_max:'URL must be less than $1 characters',
 			ip:'Invalid $1 address',
-			regexp:'Invalid value.',
-			or:'$1: At least one of these fields is required.',
-			equal:'Must be equal to: $1.',
-			not_equal:'Must be different from: $1.',
+			regexp:'Invalid value',
+			or:'$1: At least one of these fields is required',
+			equal:'Must be equal to: $1',
+			not_equal:'Must be different from: $1',
 			multi_min:'Select at least $1 options',
-			multi_between:'Select from $1 to $2 options.',
-			call:'Invalid value.',
-			radio:'Check an option.',
-			check_single:'Check this option.',
-			check_multi_min:'$1: Check at least $2 options.',
-			check_multi_between:'$1: Check from $2 to $3 options.'
+			multi_between:'Select from $1 to $2 options',
+			call:'Invalid value',
+			radio:'Check an option',
+			check_single:'Check this option',
+			check_multi_min:'$1: Check at least $2 options',
+			check_multi_between:'$1: Check from $2 to $3 options'
 	}
 
 	function vreq($obj){
@@ -332,12 +332,14 @@ if (typeof jQuery==='undefined'){throw new Error('DjValidator requires jQuery 1.
 	function createMsg($obj,text){
 		var custom=$obj.data('dj-validator-msg');
 		if(custom)text=custom;
-		$new=$('<p class="dj-validator-msg animated slideUp" style="'+djv_style+'">'+text+'</p>');
+		$new=$('<small class="dj-validator-msg animated slideUp">'+text+'</small>');
 		var type=$obj.attr('type');
 		var disp=$obj.is(':visible');
 		if((type&&(type=='radio'||type=='checkbox'))||!disp)$new.appendTo($obj.parent());
-		else $new.insertAfter($obj);
-		$new.fadeIn(1500);
+		//else $new.insertAfter($obj);
+	    else $new.appendTo($obj.parent().next('.v-msg'));
+
+		$new.fadeIn();
 	}
 
 	function validateField($field){

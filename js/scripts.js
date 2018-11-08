@@ -12,36 +12,31 @@ $(function () {
     $(this).prev(".dropdown-toggler").find(".icon").removeClass("css-angle-down");
   });
 
+
+  $(".navbar-top .toggler").on('click', function () {
+    let $this = $(this).next(".navbar-top .dropdown-menu");
+    $(".navbar-top .dropdown-menu").not($this).slideUp(300);
+    $this.slideToggle(300);
+  });
+
+  $(".navbar-top .dropdown-menu").hover(function (e) {}, function (e) {
+    $(this).slideUp(500);
+
+  });
+
 });
 
-$('.btn-defaulta').on('click', function () {
-  $('#pills-forget-tab').trigger('click');
+$('.btn-forget').on('click', function () {
+  $('#pills-forget-tab').click();
 });
 
-$('.btn-defaultb').on('click', function () {
-  $('#pills-login-tab').trigger('click');
+$('.btn-backlogin').on('click', function () {
+  $('#pills-login-tab').click();
 });
 
-// Forms
-$('input').focus(function () {
-  $(this).parents('.form-group').addClass('focused');
+$(document).ready(function () {
+  $('#validate3').click(function () {
+    $('#form3').djValidator('validate');
+  });
+
 });
-
-$('input').blur(function () {
-  var inputValue = $(this).val();
-  if (inputValue == "") {
-    $(this).removeClass('filled');
-    $(this).parents('.form-group').removeClass('focused');
-  } else {
-    $(this).addClass('filled');
-  }
-})
-
-
-// Validation
-$(document).ready(function(){
-		$('#validate3').click(function(){
-				$('#form3').djValidator('validate');
-			});
-
-		});
