@@ -13,30 +13,77 @@ $(function () {
   });
 
 
-  $(".navbar-top .toggler").on('click', function () {
-    let $this = $(this).next(".navbar-top .dropdown-menu");
-    $(".navbar-top .dropdown-menu").not($this).slideUp(300);
-    $this.slideToggle(300);
+  // $(".navbar-top .toggler").on('click', function () {
+  //   let $this = $(this).next(".navbar-top .dropdown-menu");
+  //   $(".navbar-top .dropdown-menu").not($this).slideUp(300);
+  //   $this.slideToggle(300);
+  // });
+
+  // $(".navbar-top .dropdown-menu").hover(function (e) {}, function (e) {
+  //   $(this).slideUp(500);
+
+  // });
+  $(".navbar-top .dropdown").on("show.bs.dropdown", function () {
+    $(this).addClass('top-active-dropdown');
+    $(this)
+      .find(".dropdown-menu")
+      .first()
+      .stop(true, true)
+      .slideDown(300);
   });
-
-  $(".navbar-top .dropdown-menu").hover(function (e) {}, function (e) {
-    $(this).slideUp(500);
-
+  $(".navbar-top .dropdown").on("hide.bs.dropdown", function () {
+    let $this = $(this);
+    setTimeout(function () {
+      $this.removeClass('top-active-dropdown');
+    }, 250);
+    $(this)
+      .find(".dropdown-menu")
+      .first()
+      .stop(true, true)
+      .slideUp(300);
   });
+  //  $(".navbar-top .dropdown-menu").on("click", function (e) {
+  //    e.stopPropagation();
+  //  });
 
 });
 
-$('.btn-forget').on('click', function () {
-  $('#pills-forget-tab').click();
-});
 
-$('.btn-backlogin').on('click', function () {
-  $('#pills-login-tab').click();
-});
 
 $(document).ready(function () {
-  $('#validate3').click(function () {
-    $('#form3').djValidator('validate');
+  $(".dropdown-menu").on("click", function (e) {
+    e.stopPropagation();
   });
 
+  $('.btn-forgetpassword').on('click', function () {
+    $('.tab-pane').removeClass('show active');
+    $('#pills-forget').addClass('show active');
+  });
+
+  $('.btn-backlogin').on('click', function () {
+    $('.tab-pane').removeClass('show active');
+    $('#pills-login').addClass('show active');
+  });
+
+  $('#validate-dropdown-login').on('click', function () {
+    $('#dropdown-login').djValidator('validate');
+  });
+
+  $('#validate-password-email').on('click', function () {
+    $('#dropdown-password-email').djValidator('validate');
+  });
+
+});
+
+
+
+$('#sign-in-nav').on('click', function () {
+  $('#sign-in-sidebar').animate({
+    width: "410px"
+  }, 'fast', 'linear');
+});
+$('.closebtn').on('click', function () {
+  $('#sign-in-sidebar').animate({
+    width: "0px"
+  }, 'fast', 'linear');
 });

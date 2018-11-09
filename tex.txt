@@ -23,34 +23,18 @@ echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
 </head>
 
 <body>
-<div id="sign-in-sidebar" class="sidenav">
-    <div class="side-nav-header">
-    <div class="row p-l-2">
-                                <p class="float-left">Cart</p> <a role="button"  class="float-right closebtn">Close</a>
-
-
-
-    </div>
-
-    </div>
-    <div class="side-nav-body">
-    <a href="#">About</a>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
   <a href="#">Services</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
-
-    </div>
-    <div class="side-nav-footer">
-    <a role="button"  class="btn closebtn">&times;</a>
-    </div>
-
-
 </div>
 <section>
 <!-- Desktop Navbars -->
-<nav class="navbar navbar-expand-lg navbar-top fixed-top">
+<nav class="navbar navbar-expand-lg navbar-top">
 <div class="container-fluid px-6">
-    <!-- <a class="navbar-brand" href="#"><i class="icon icon-pointer"></i> vancouver best affordable optical solutions</a> -->
+    <a class="navbar-brand" href="#"><i class="icon icon-pointer"></i> vancouver best affordable optical solutions</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -62,31 +46,151 @@ echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-        <a class="nav-link" href="#" id="wish-list-nav">  <i class="icon icon-heart-o pulse"></i></a>
-</li>
-<li class="nav-item">
 
-        <a class="nav-link" href="#" id="cat-list-nav"> <i class=" icon icon-bag nopulse"></i></a>
+            <li class="nav-item dropdown">
+                <a class="nav-link toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="icon icon-heart-o pulse"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+             
+  <form>
+                        <div class="dropdown-box">
+                            <div class="col-md-12 p-0 m-0">
+                                <p class="d-block text-center">Wish List</p>
+                            </div>
+      </div>
+                    </form>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class=" icon icon-bag nopulse"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+             
+  <form>
+                        <div class="dropdown-box">
+                            <div class="col-md-12 p-0 m-0">
+                                <p class="d-block text-center">Cart</p>
+                            </div>
+                            <div class="col-md-12 p-0 m-0" id="cart-dropdown">
+                                <div class="card">No products in the cart</div>
+                            </div>
+      </div>
+                    </form>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Help
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+  <form>
+                        <div class="dropdown-box">
+                            <div class="col-md-12 p-0 m-0">
+                                <p class="d-block text-center">Help</p>
+                            </div>
+      </div>
+                    </form>
+                </div>
+            </li>
 
-</li>
-<li class="nav-item">
+            <li class="nav-item dropdown">
+                <a class="nav-link toggler" href="#" id="signinDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sign In
+                </a>
+                <div class="dropdown-menu dropdown-menu-right p-0" aria-labelledby="signinDropdown">
+                        <div class="dropdown-box">
+                            <div class="col-md-12 p-0 m-0">
+                                <p class="d-block text-center">Sign in</p>
+                            </div>
+                            <div class="col-md-12 p-0 m-0 clearfix">
+                                <ul class="nav nav-pills d-none" id="pills-tab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="pills-forget-tab" data-toggle="pill" href="#pills-forget" role="tab" aria-controls="pills-forget" aria-selected="false">forget</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content m-0" id="pills-tabContent">
 
-        <a class="nav-link" href="#" id="help-nav">Help</a>
-</li>
-<li class="nav-item">
+                                    <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
 
-        <a class="nav-link" href="#" id="sign-in-nav">Sign in</a>
-</li>
-    
+                                        <div class="col-md-12 p-0 m-0">
+                                            <form id="dropdown-login" autocomplete="off">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" aria-label="" placeholder="Your Email" data-dj-validator="email,*" required />
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"><i class="icon-envelope"></i></span>
+                                                    </div>
+                                                </div>
+                                                <div class="v-msg"></div>
+                                                <div class="input-group">
+                                                    <input type="password" class="form-control" aria-label="" placeholder="Your Password" data-dj-validator="word,4,8" autocomplete="new-password" required />
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"><i class="icon-lock"></i></span>
+                                                    </div>
+                                                </div>
+                                                <div class="v-msg"></div>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-12 p-0 m-0">
+                                            <button type="button" id="validate-dropdown-login" class="btn btn-block btn-sm rounded-0 btn-dropdown-form">Login</button>
+                                        </div>
+                                        <div class="col-md-12 p-0 m-0">
+                                            <a class="text-right float-right btn-form-tabs btn-forgetpassword">Forget Password?</a>
+                                        </div>
 
+
+
+                                    </div>
+
+                                    <div class="tab-pane fade" id="pills-forget" role="tabpanel" aria-labelledby="pills-forget-tab">
+                                        <div class="col-md-12 p-0 m-0">
+                                         <form id="dropdown-password-email" autocomplete="off">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" aria-label="" placeholder="Your Email" data-dj-validator="email,*" required />
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"><i class="icon-envelope"></i></span>
+                                                    </div>
+                                                </div>
+                                                <div class="v-msg"></div>
+
+                                            </form>
+                                        </div>
+
+                                         <div class="col-md-12 p-0 m-0">
+                                             <button id="validate-password-email" class="btn btn-block btn-sm rounded-0 btn-dropdown-form">Retrive Password</button>
+                                         </div>
+                                        <div class="col-md-12 p-0 m-0">
+                                            <a class="float-right text-right btn-form-tabs btn-backlogin">Back to login?</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                                                                    <div class="col-md-12 p-0 m-0">
+                                            <p class="d-block text-center" style="margin-top:20px;">Not a User?</p>
+                                        </div>
+                                        <div class="col-md-12 p-0 m-0">
+                                        <a class="btn btn-block btn-sm rounded-0 btn-dropdown-form" href="#" role="button">Register</a>
+                                                        </div>
+
+                        </div>
+              
+                </div>
+            
+            </li>
+            <li><a style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</a></li>
         </ul>
 
     </div>
 </div>
 </nav>
 
-<nav class="navbar navbar-expand-lg navbar-light shadow-sm navbar-main fixed-top " style="margin-top:36px">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow-sm navbar-main">
 <div class="container-fluid px-6">
     <a class="navbar-brand pr-5" href="#">Rumi Optical</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
