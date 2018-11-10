@@ -56,13 +56,15 @@ $(document).ready(function () {
   });
 
   $('.btn-forgetpassword').on('click', function () {
-    $('.tab-pane').removeClass('show active');
-    $('#pills-forget').addClass('show active');
+//    $('.tab-pane').removeClass('show active');
+//    $('#pills-forget').addClass('show active');
+    $('#pills-forget-tab').click();
   });
 
   $('.btn-backlogin').on('click', function () {
-    $('.tab-pane').removeClass('show active');
-    $('#pills-login').addClass('show active');
+      $('#pills-login-tab').click();
+//    $('.tab-pane').removeClass('show active');
+//    $('#pills-login').addClass('show active');
   });
 
   $('#validate-dropdown-login').on('click', function () {
@@ -77,13 +79,33 @@ $(document).ready(function () {
 
 
 
-$('#sign-in-nav').on('click', function () {
-  $('#sign-in-sidebar').animate({
+$('#signin-nav').on('click', function () {
+    $('body').css({background:'rgba(0,0,0,0.4)'});
+  $('#signin-sidenav').animate({
+    width: "410px"
+  }, 'fast', 'linear');
+});
+$('#help-nav').on('click', function () {
+    $('body').css({background:'rgba(0,0,0,0.4)'});
+  $('#help-sidenav').animate({
+    width: "410px"
+  }, 'fast', 'linear');
+});
+$('#cart-nav').on('click', function () {
+    $('body').css({background:'rgba(0,0,0,0.4)'});
+  $('#cart-sidenav').animate({
+    width: "410px"
+  }, 'fast', 'linear');
+});
+$('#wish-nav').on('click', function () {
+    $('body').css({background:'rgba(0,0,0,0.4)'});
+  $('#wish-sidenav').animate({
     width: "410px"
   }, 'fast', 'linear');
 });
 $('.closebtn').on('click', function () {
-  $('#sign-in-sidebar').animate({
+     $('body').css('background','#fff');
+  $('#signin-sidenav, #help-sidenav, #cart-sidenav, #wish-sidenav').animate({
     width: "0px"
   }, 'fast', 'linear');
 });
