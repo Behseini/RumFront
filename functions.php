@@ -33,6 +33,9 @@
         wp_enqueue_style( 'single-e', get_template_directory_uri() .'/css/single-e.css' );
         wp_enqueue_style( 'single-ue', get_template_directory_uri() .'/css/single-ue.css' );
     }
+        if( is_page_template( 'page-register.php' ) ){
+        wp_enqueue_style( 'registration', get_template_directory_uri() .'/css/registration.css' );
+    }
     }
     add_action( 'wp_enqueue_scripts', 'add_styles' );
 
@@ -53,20 +56,21 @@ add_action( 'wp_enqueue_scripts', 'add_old_browser_js' );
 /*
  =================================================    Adding Scripts
 */
-
 function add_js() {
-wp_deregister_script('jquery');
-wp_register_script('jquery', get_template_directory_uri() .'/js/jquery.min.js' , '', '', true );
-wp_enqueue_script('jquery');
-wp_enqueue_script('popper', get_template_directory_uri() .'/js/popper.min.js', array('jquery'),'',true );
-wp_enqueue_script('bootstrap', get_template_directory_uri() .'/js/bootstrap.js', array('jquery'),'',true );
-wp_enqueue_script('slider', get_template_directory_uri() .'/js/jquery-ui.min.js', array('jquery'),'',true );
-wp_enqueue_script('validate', get_template_directory_uri() .'/js/validator.js', array('jquery'),'',true );
-wp_enqueue_script('scripts', get_template_directory_uri() .'/js/scripts.js', array('jquery'),'',true );
-if( is_singular( 'women_eyeglasses' ) ){
-    wp_enqueue_script('single', get_template_directory_uri() .'/js/single-e.js', array('jquery'),'',true );
-}
-
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', get_template_directory_uri() .'/js/jquery.min.js' , '', '', true );
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('popper', get_template_directory_uri() .'/js/popper.min.js', array('jquery'),'',true );
+    wp_enqueue_script('bootstrap', get_template_directory_uri() .'/js/bootstrap.js', array('jquery'),'',true );
+    wp_enqueue_script('slider', get_template_directory_uri() .'/js/jquery-ui.min.js', array('jquery'),'',true );
+    wp_enqueue_script('validate', get_template_directory_uri() .'/js/validator.js', array('jquery'),'',true );
+    wp_enqueue_script('scripts', get_template_directory_uri() .'/js/scripts.js', array('jquery'),'',true );
+    if( is_singular( 'women_eyeglasses' ) ){
+        wp_enqueue_script('single', get_template_directory_uri() .'/js/single-e.js', array('jquery'),'',true );
+    }
+    if( is_page_template( 'page-register.php' ) ){
+        wp_enqueue_script( 'registration', get_template_directory_uri() .'/js/registration.js', array('jquery'),'',true );
+    }
 
 
 }
