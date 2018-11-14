@@ -62,9 +62,10 @@ get_header();
           </div>
 
             <div class="container">
-  <a class="btn btn-primary" data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true" href="#" id="login">Display</a>
+   <button class="btn btn-secondary" data-toggle="popover" data-container="body" data-placement="bottom" typw="button" data-html="true" id="ageyear"><i class="icon-calendar"></i></button>
 
-  <div id="popover-content-login" class="d-none">
+  <div id="popover-content-ageyear" class="d-none">
+<!--
     <div id="demo" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
 
@@ -76,7 +77,9 @@ get_header();
               </div>
             </div>
          <div class="row">
+             <div class="col-lg-12 p-0">
              <div class="carousel-item-inner years-01"></div>
+             </div>
          </div>
         </div>
         <div class="carousel-item">
@@ -87,7 +90,9 @@ get_header();
               </div>
             </div>
          <div class="row">
+             <div class="col-lg-12 p-0">
              <div class="carousel-item-inner years-02"></div>
+             </div>
          </div>
         </div>
                 <div class="carousel-item">
@@ -149,16 +154,33 @@ get_header();
 
 
       </div>
-      <a class="carousel-control-prev d-none" href="#demo" data-slide="prev">
+      <a class="carousel-control-prev d-nonee" href="#demo" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </a>
-      <a class="carousel-control-next d-none" href="#demo" data-slide="next">
+      <a class="carousel-control-next d-nonee" href="#demo" data-slide="next">
         <span class="carousel-control-next-icon"></span>
       </a>
     </div>
-  </div>
 
+-->
+    <div class="row" style="background:#e1e1e1;">
+                <div class="col-lg-12 p-0">
+    <a role="button" class="btn btn-cal-control m-l-0 float-left next"><i class="icon icon-arrow-left"></i></a>
+                    <span class="years">0000 - 0000</span>
+    <a role="button" class="btn btn-cal-control m-r-0 float-right prev"><i class="icon icon-arrow-right"></i></a>
+              </div>
+            </div>
+<div class="content-slider">
+   <div class="contents" data-index="7"></div>
+   <div class="contents" data-index="6"></div>
+   <div class="contents" data-index="5"></div>
+   <div class="contents" data-index="4"></div>
+   <div class="contents" data-index="3"></div>
+   <div class="contents" data-index="2"></div>
+   <div class="contents" data-index="1"></div>
 </div>
+</div>
+                 </div>
                     <div class="row">
                                   <div class="col-md-4">
               <div class="form-group w-100">
