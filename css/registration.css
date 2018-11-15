@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
 
 .register-navs > .nav-link {
+       	font-weight: 500;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 1px;
+	font-size: 16px;
     background: #e1e1e1;
     border-radius: 0px;
     color: #999;
@@ -33,14 +37,14 @@
 }
 
 .form-label {
-    	font-weight: 400;
+  	font-weight: 400;
 	font-family: 'Open Sans', sans-serif;
 	letter-spacing: 1px;
 	font-size: 13px;
     position: absolute;
     left: 0;
     top: 10px;
-    color: #999;
+    color: #777;
     background-color: #fff;
     z-index: 10;
     transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
@@ -52,6 +56,7 @@
     -webkit-transform: translateY(-125%);
     transform: translateY(-125%);
     font-size: .75em;
+    color:#b9b9b9;
 }
 
 .form-input {
@@ -137,7 +142,7 @@
 fieldset {
     margin-top: 20px;
     border: solid 1px #ddd !important;
-    padding: 10px 8px 20px 8px;
+    padding: 15px 8px 20px 8px;
     border-bottom: none;
     width: 100%;
     border-radius: 4px;
@@ -167,6 +172,14 @@ legend {
     border-bottom-right-radius: 2px;
 */
 }
+.input-block {
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: 40px;
+    z-index: 1100;
+    background-color: transparent !important;;
+}
 .btn-g{
      min-width: 50px;
 }
@@ -182,4 +195,25 @@ legend {
 
 #containerElem .popover {
     min-width: 316px !important;
+}
+.btn-tab-control{
+    padding-left: 20px;
+    padding-right: 20px;
+   background: #333;
+    border-radius: 0px;
+    color: #fff;
+        font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.field-icon {
+   display: inline-block;
+  text-align:center;
+  float: right;
+  margin-right: 0px;
+  margin-top: -32px;
+  position: relative;
+  z-index: 2;
+  cursor:pointer;
+padding: 8px 15px 8px 15px;
 }

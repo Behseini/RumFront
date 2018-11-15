@@ -1,3 +1,4 @@
+ var token = "<?php echo $_SESSION['token']; ?>";
 $('input').focus(function () {
     $(this).parents('.form-group').addClass('focused');
 });
@@ -48,12 +49,12 @@ for (let g = step1 - 72; g <= legalYear - 72; g++) {
 function renderYears() {
     for (let a = 0; a < 12; a++) {
     $('.contents').eq(6).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range1[a]+'">' + years.range1[a] + '</button>');
-    $('.contents').eq(5).append('<button class="btn btn-primary btn-sm btn-year">' + years.range2[a] + '</button>');
-    $('.contents').eq(4).append('<button class="btn btn-primary btn-sm btn-year">' + years.range3[a] + '</button>');
-    $('.contents').eq(3).append('<button class="btn btn-primary btn-sm btn-year">' + years.range4[a] + '</button>');
-    $('.contents').eq(2).append('<button class="btn btn-primary btn-sm btn-year">' + years.range5[a] + '</button>');
-    $('.contents').eq(1).append('<button class="btn btn-primary btn-sm btn-year">' + years.range6[a] + '</button>');
-    $('.contents').eq(0).append('<button class="btn btn-primary btn-sm btn-year">' + years.range7[a] + '</button>');
+    $('.contents').eq(5).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range2[a]+'">' + years.range2[a] + '</button>');
+    $('.contents').eq(4).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range3[a]+'">' + years.range3[a] + '</button>');
+    $('.contents').eq(3).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range4[a]+'">' + years.range4[a] + '</button>');
+    $('.contents').eq(2).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range5[a]+'">' + years.range5[a] + '</button>');
+    $('.contents').eq(1).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range6[a]+'">' + years.range6[a] + '</button>');
+    $('.contents').eq(0).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range7[a]+'">' + years.range7[a] + '</button>');
     }
     $('.years').html(years[`range${current}`][0] + ' - ' + years[`range${current}`][11]);
     if (current >= 7) {
@@ -134,6 +135,7 @@ $('#ageyear').on('hidden.bs.popover', function () {
 $('body').on('click', function (e) {
 
     if ($(e.target).data('toggle') !== 'popover'
+//        && $(e.target) == $('.btn-cal-control')
         && $(e.target).parents('[data-toggle="popover"]').length === 0
         && $(e.target).parents('.popover.in').length === 0) {
         $('[data-toggle="popover"]').popover('hide');
@@ -152,6 +154,7 @@ $(document).on('click', '.btn-g', function () {
 $(document).on('click', '.btn-year', function () {
    let year = $(this).data('year');
     $('#user-year').val(year).focus();
+     $('[data-toggle="popover"]').popover('hide');
 })
 
 $(document).on('click', '.btn-m', function () {
@@ -163,3 +166,40 @@ $(document).on('click', '.btn-d', function () {
    let day = $(this).data('bd');
     $('#user-day').val(day).focus();
 })
+
+$(".toggle-password").click(function() {
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+
+  $('#reg1-validate').on('click', function () {
+    if($('#reg1').djValidator('validate')){
+        console.log('valid');
+    }
+      else{
+          console.log('No valid');
+      }
+  });
+
+let registereduser ={
+                        token: token,
+                        title:null,
+                        name:null,
+                        lastname:null,
+                        birthYear:null,
+                        birthMonth:null,
+                        birthDay:null,
+                        email:null,
+                        buzz:null,
+                        bulidingNo:null,
+                        streetNo:null,
+                        streetName:null,
+                        city:null,
+                        postalCode:null,
+                        password:null
+}
