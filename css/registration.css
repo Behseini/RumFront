@@ -167,6 +167,7 @@ legend {
     z-index: 1200;
     background-color: #333333;
     border-color: #333333;
+    color: #fff !important;
     /*
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 2px;
