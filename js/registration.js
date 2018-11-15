@@ -168,7 +168,7 @@ $(document).on('click', '.btn-d', function () {
 })
 
 $(".toggle-password").click(function() {
-  $(this).toggleClass("fa-eye fa-eye-slash");
+  $(this).toggleClass("icon-eye-f icon-eye-slash");
   var input = $($(this).attr("toggle"));
   if (input.attr("type") == "password") {
     input.attr("type", "text");

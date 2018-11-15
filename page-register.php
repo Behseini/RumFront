@@ -27,7 +27,7 @@ get_header();
                     </nav>
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                            <form id="reg1">
+                            <form id="reg1" autocomplete="off" novalidate>
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group w-100">
@@ -174,7 +174,7 @@ get_header();
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 p-0 pt-3">
-                                        <button role="button" class="btn btn-tab-control float-right mr-0" id="reg1-validate"> Next </button>
+                                        <button type="button" class="btn btn-tab-control float-right mr-0" id="reg1-validate"> Next </button>
                                     </div>
                                 </div>
                             </div>
@@ -270,7 +270,7 @@ get_header();
                                             <div class="form-group w-100">
                                                 <label class="form-label" for="user-pass">Your Password</label>
                                                 <input id="user-pass" class="form-input" type="password" autocomplete="false"/>
-                                                <span toggle="#user-pass" class="icon icon-eye-f field-icon toggle-password"></span>
+                                                <span toggle="#user-pass" class="icon icon-eye-slash field-icon toggle-password"></span>
                                                 <small id="user-pass-help" class="form-text ">enter your password?</small>
                                             </div>
                                         </div>
@@ -278,7 +278,7 @@ get_header();
                                             <div class="form-group w-100">
                                                 <label class="form-label" for="user-pass-confirm">Confirm Your Password</label>
                                                 <input id="user-pass-confirm" class="form-input" type="password" autocomplete="false"/>
-                                                <span toggle="#user-pass-confirm" class="icon icon-eye-f field-icon toggle-password"></span>
+                                                <span toggle="#user-pass-confirm" class="icon icon-eye-slash field-icon toggle-password"></span>
                                                 <small id="user-pass-confirm-help" class="form-text">what is your password again?</small>
                                             </div>
                                         </div>
