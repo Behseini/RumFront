@@ -98,6 +98,9 @@
 .btn-cal-control {
     background: #eee;
 }
+.btn-cal-control i {
+   pointer-events: none;
+}
 
 .content-slider {
     position: relative;

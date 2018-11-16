@@ -135,8 +135,7 @@ $('#ageyear').on('hidden.bs.popover', function () {
 function renderCaptcha(){
       var getCaptcha = $.ajax({
         type: "Get",
-//        url: "http://localhost:8080/Rumi5/wp-content/themes/RumiStrap/logins/captcha.php",
-        url: postlove.ajax_url,
+        url: captchaURL,
         cache: false,
         dataType: "HTML",
         beforeSend: function() {},
@@ -166,15 +165,16 @@ $('#captcha').on('hidden.bs.popover', function () {
 
 
 $('body').on('click', function (e) {
+console.log(e.target);
+ if (!$(e.target).is('.btn-cal-control')) {
 
-    if ($(e.target).data('toggle') !== 'popover'
-//        && $(e.target) == $('.btn-cal-control')
-        && $(e.target).parents('[data-toggle="popover"]').length === 0
-        && $(e.target).parents('.popover.in').length === 0) {
-        $('[data-toggle="popover"]').popover('hide');
-    }
-
-});
+     if ($(e.target).data('toggle') !== 'popover' &&
+         $(e.target).parents('[data-toggle="popover"]').length === 0 &&
+         $(e.target).parents('.popover.in').length === 0) {
+         $('[data-toggle="popover"]').popover('hide');
+     }
+ }
+ });
 $('[data-toggle=popover]').on('click', function (e) {
    $('[data-toggle=popover]').not(this).popover('hide');
 });

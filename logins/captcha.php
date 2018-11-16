@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once("../../../../wp-load.php");
 date_default_timezone_set('America/Vancouver');
 $files = glob('img/*');
 foreach($files as $file){
@@ -101,11 +101,11 @@ $theDateCheck = [];
   array_push($theDateCheck, $month_str_img_name[2]);
 
   $_SESSION['captach_dates'] = $theDateCheck;
- $font = 'OpenSans-Regular.ttf';
+ $font = 'OpenSans-SemiBold.ttf';
 for ($i = 0; $i <= 2; $i++) {
 $img_day  = imagecreatetruecolor(32,16);
-$color  = imagecolorallocate($img_day, 25, 25, 25);
-$bg     = imagecolorallocate($img_day, 255, 255, 255);
+$color  = imagecolorallocate($img_day, 255, 255, 255);
+$bg     = imagecolorallocate($img_day, 108, 117, 125);
 imagecolortransparent($img_day, $bg);
 imagefilledrectangle($img_day,0,0,200,100, $bg);
 imagettftext($img_day, 10, 0, 4 ,12, $color, $font, $weekdays[$i]);
@@ -113,8 +113,8 @@ imagepng($img_day, 'img/daystr_'.$day_str_img_name[$i].'.png');
 }
 for ($i = 0; $i <= 2; $i++) {
 $img_day_num  = imagecreatetruecolor(32,16);
-$color  = imagecolorallocate($img_day_num, 25, 25, 25);
-$bg     = imagecolorallocate($img_day_num, 255, 255, 255);
+$color  = imagecolorallocate($img_day_num, 255, 255, 255);
+$bg     = imagecolorallocate($img_day_num, 108, 117, 125);
 imagecolortransparent($img_day_num, $bg);
 imagefilledrectangle($img_day_num,0,0,200,100, $bg);
 imagettftext($img_day_num, 10, 0, 8 ,12, $color, $font, $days[$i]);
@@ -122,41 +122,53 @@ imagepng($img_day_num, 'img/daynum_'.$day_num_img_name[$i].'.png');
 }
 for ($i = 0; $i <= 2; $i++) {
 $img_day_month  = imagecreatetruecolor(32,16);
-$color  = imagecolorallocate($img_day_month, 25, 25, 25);
-$bg     = imagecolorallocate($img_day_month, 255, 255, 255);
+$color  = imagecolorallocate($img_day_month, 255, 255, 255);
+$bg     = imagecolorallocate($img_day_month, 108, 117, 125);
 imagecolortransparent($img_day_month, $bg);
 imagefilledrectangle($img_day_month,0,0,200,100, $bg);
 imagettftext($img_day_month, 10, 0, 5 ,12, $color, $font, $months[$i]);
 imagepng($img_day_month, 'img/daymon_'.$month_str_img_name[$i].'.png');
 }
-    $dirname = "img/";
-    $images = glob($dirname."*.png");
 
-echo '<div class="col-xs-4 date-btns-box"><div class="btn-group-vertical btn-block" data-toggle="buttons" role="group" aria-label="..."><lable class="btn btn-xs">Days</lable>';
+   $base_dir = trailingslashit(get_template_directory());
+   $dir      = 'logins/img/';
+//    $dirname = get_template_directory_uri() . '/logins/img/';
+//    $images = glob($dirname."*.png");
+$images   = glob($base_dir.$dir.'*.png');
+
+echo '<div class=date-btns-box"><div class="btn-group btn-group-toggle d-flex" data-toggle="buttons">
+      <a class="btn btn-secondary disabled w-100" style="min-width:72px; color:#fff;"> Day </a>';
+
+
 foreach($images as $image) {
+    $url = get_theme_file_uri($dir.basename($image));
         $filename = basename($image);
         if (startsWith($filename, "daystr")) {
-      echo '<label class="btn btn-default btn-block"> <input type="radio" name="days" value="'.substr($filename, 7, 5).'"><img src="'.$image.'" data-map="'.substr($filename, 7, 5).'" class="" alt=""/> </label>';
+      echo '<a class="btn btn-secondary w-100"> <input type="radio" name="days" value="'.substr($filename, 7, 5).'"><img src="'.$url.'" data-map="'.substr($filename, 7, 5).'" class="c" alt="s" /> </a>';
         }
     }
     echo '</div></div>';
 
 
-echo '<div class="col-xs-4 date-btns-box"><div class="btn-group-vertical btn-block" data-toggle="buttons" role="group" aria-label="..."><lable class="btn btn-xs">Dates</lable>';
+echo '<div class=date-btns-box" style="margin-top:5px;"><div class="btn-group btn-group-toggle d-flex" data-toggle="buttons">
+      <a class="btn btn-secondary disabled w-100" style="min-width:72px;color:#fff;"> Date </a>';
     foreach($images as $image) {
+           $url = get_theme_file_uri($dir.basename($image));
         $filename = basename($image);
         if (startsWith($filename, "daynum")) {
-      echo '<label class="btn btn-default btn-block"> <input type="radio" name="dates" value="'.substr($filename, 7, 5).'"><img src="'.$image.'" data-map="'.substr($filename, 7, 5).'" class="" alt=""/> </label>';
+      echo '<a class="btn btn-secondary w-100"> <input type="radio" name="dates" value="'.substr($filename, 7, 5).'"><img src="'.$url.'" data-map="'.substr($filename, 7, 5).'" class="c" alt="z" /> </a>';
         }
     }
     echo '</div></div>';
 
 
- echo '<div class="col-xs-4 date-btns-box"><div class="btn-group-vertical btn-block" data-toggle="buttons" role="group" aria-label="..."><lable class="btn btn-xs">Month</lable>';
+echo '<div class=date-btns-box"  style="margin-top:5px;"><div class="btn-group btn-group-toggle d-flex" data-toggle="buttons">
+      <a class="btn btn-secondary disabled w-100" style="min-width:72px;color:#fff;"> Month </a>';
     foreach($images as $image) {
+           $url = get_theme_file_uri($dir.basename($image));
         $filename = basename($image);
         if (startsWith($filename, "daymon")) {
-      echo '<label class="btn btn-default btn-block"> <input type="radio" name="months" value="'.substr($filename, 7, 5).'"><img src="'.$image.'" data-map="'.substr($filename, 7, 5).'" class="" alt=""/> </label>';
+      echo '<a class="btn btn-secondary w-100"> <input type="radio" name="months" value="'.substr($filename, 7, 5).'"><img src="'.$url.'" data-map="'.substr($filename, 7, 5).'" class="" alt=""/> </a>';
         }
     }
     echo '</div></div>';

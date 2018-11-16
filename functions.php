@@ -14,6 +14,18 @@
  =================================================    Adding Styles
 */
 
+add_action ( 'wp_head', 'my_js_variables' );
+function my_js_variables(){
+?>
+  <script type="text/javascript">
+    var captchaURL  = <?php echo json_encode( get_template_directory_uri() . '/logins/captcha.php' ); ?>;
+    var registerURL = <?php echo json_encode( get_template_directory_uri() . '/logins/register.php' ); ?>;
+    var loginURL    = <?php echo json_encode( get_template_directory_uri() . '/logins/login.php' ); ?>;
+    var confirmURL  = <?php echo json_encode( get_template_directory_uri() . '/logins/confirm.php' ); ?>;
+    var resetURL    = <?php echo json_encode( get_template_directory_uri() . '/logins/reset.php' ); ?>;
+  </script>
+<?php
+}
     function add_styles() {
     wp_enqueue_style( 'fonticon', get_template_directory_uri() .'/css/icons.css' );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() .'/css/bootstrap.css' );
