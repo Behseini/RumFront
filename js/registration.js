@@ -124,12 +124,45 @@ $("[data-toggle=popover]").each(function (i, obj) {
 
 });
 
+
 $('#ageyear').on('show.bs.popover', function () {
     renderYears();
 })
 $('#ageyear').on('hidden.bs.popover', function () {
     $('.contents').empty();
 })
+
+function renderCaptcha(){
+      var getCaptcha = $.ajax({
+        type: "Get",
+//        url: "http://localhost:8080/Rumi5/wp-content/themes/RumiStrap/logins/captcha.php",
+        url: postlove.ajax_url,
+        cache: false,
+        dataType: "HTML",
+        beforeSend: function() {},
+        success: function(
+
+
+
+            ) {}
+    });
+    getCaptcha.done(function(dates) {
+        $('.captcha-content').html(dates);
+    });
+    getCaptcha.fail(function(jqXHR, textStatus) {
+         $('.captcha-content').html("Request failed: " + textStatus);
+    });
+
+}
+$('#captcha').on('show.bs.popover', function () {
+    renderCaptcha();
+})
+$('#captcha').on('hidden.bs.popover', function () {
+    $('.captcha-content').empty();
+})
+
+
+
 
 
 $('body').on('click', function (e) {

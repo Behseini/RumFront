@@ -284,6 +284,23 @@ get_header();
                                         </div>
 
                                     </div>
+                                                <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group w-100">
+                                       <a role="button" class="btn btn-secondary float-right btn-sm btn-pop" data-toggle="popover" data-container="#datepicker" data-placement="bottom" typw="button" data-html="true" id="captcha"><i class="icon-stop"></i>What Date is today?</a>
+                                        <br />
+                                    <small id="user-name" class="form-text">Please help us to stop spams</small>
+                                    </div>
+                                </div>
+                                                    <div class="row" id="datepicker">
+                                                                   <div id="popover-content-captcha" class="d-none">
+                                   <div class="captcha-content">
+
+                                                                       </div>
+                                </div>
+
+                                                    </div>
+                            </div>
                                 </fieldset>
                             </div>
 
