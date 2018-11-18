@@ -2,6 +2,41 @@
 $('input').focus(function () {
     $(this).parents('.form-group').addClass('focused');
 });
+$( document ).ready(function() {
+    var getCaptcha1 = $.ajax({
+        type: "Get",
+        url: captchaURL,
+        cache: false,
+        dataType: "HTML",
+        beforeSend: function () {},
+        success: function () {}
+    });
+    getCaptcha1.done(function (dates) {
+        $('.captcha-data').html(dates);
+    });
+    getCaptcha1.fail(function (jqXHR, textStatus) {
+        $('.captcha-data').html("Request failed: " + textStatus);
+    });
+});
+
+let registereduser ={
+                        token: token,
+                        captchcode:null,
+                        title:null,
+                        name:null,
+                        lastname:null,
+                        birthYear:null,
+                        birthMonth:null,
+                        birthDay:null,
+                        email:null,
+                        buzz:null,
+                        bulidingNo:null,
+                        streetNo:null,
+                        streetName:null,
+                        city:null,
+                        postalCode:null,
+                        password:null
+}
 
 $('input').blur(function () {
     var inputValue = $(this).val();
@@ -48,13 +83,13 @@ for (let g = step1 - 72; g <= legalYear - 72; g++) {
 
 function renderYears() {
     for (let a = 0; a < 12; a++) {
-    $('.contents').eq(6).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range1[a]+'">' + years.range1[a] + '</button>');
-    $('.contents').eq(5).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range2[a]+'">' + years.range2[a] + '</button>');
-    $('.contents').eq(4).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range3[a]+'">' + years.range3[a] + '</button>');
-    $('.contents').eq(3).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range4[a]+'">' + years.range4[a] + '</button>');
-    $('.contents').eq(2).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range5[a]+'">' + years.range5[a] + '</button>');
-    $('.contents').eq(1).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range6[a]+'">' + years.range6[a] + '</button>');
-    $('.contents').eq(0).append('<button class="btn btn-primary btn-sm btn-year" data-year="'+years.range7[a]+'">' + years.range7[a] + '</button>');
+    $('.contents').eq(6).append('<a class="btn btn-sm btn-year btn-popover" data-year="'+years.range1[a]+'">' + years.range1[a] + '</a>');
+    $('.contents').eq(5).append('<a class="btn btn-sm btn-year btn-popover" data-year="'+years.range2[a]+'">' + years.range2[a] + '</a>');
+    $('.contents').eq(4).append('<a class="btn btn-sm btn-year btn-popover" data-year="'+years.range3[a]+'">' + years.range3[a] + '</a>');
+    $('.contents').eq(3).append('<a class="btn btn-sm btn-year btn-popover" data-year="'+years.range4[a]+'">' + years.range4[a] + '</a>');
+    $('.contents').eq(2).append('<a class="btn btn-sm btn-year btn-popover" data-year="'+years.range5[a]+'">' + years.range5[a] + '</a>');
+    $('.contents').eq(1).append('<a class="btn btn-sm btn-year btn-popover" data-year="'+years.range6[a]+'">' + years.range6[a] + '</a>');
+    $('.contents').eq(0).append('<a class="btn btn-sm btn-year btn-popover" data-year="'+years.range7[a]+'">' + years.range7[a] + '</a>');
     }
     $('.years').html(years[`range${current}`][0] + ' - ' + years[`range${current}`][11]);
     if (current >= 7) {
@@ -132,42 +167,40 @@ $('#ageyear').on('hidden.bs.popover', function () {
     $('.contents').empty();
 })
 
-function renderCaptcha(){
-      var getCaptcha = $.ajax({
-        type: "Get",
-        url: captchaURL,
-        cache: false,
-        dataType: "HTML",
-        beforeSend: function() {},
-        success: function(
-
-
-
-            ) {}
-    });
-    getCaptcha.done(function(dates) {
-        $('.captcha-content').html(dates);
-    });
-    getCaptcha.fail(function(jqXHR, textStatus) {
-         $('.captcha-content').html("Request failed: " + textStatus);
-    });
-
-}
-$('#captcha').on('show.bs.popover', function () {
-    renderCaptcha();
-})
-$('#captcha').on('hidden.bs.popover', function () {
-    $('.captcha-content').empty();
-})
+//function renderCaptcha(){
+//      var getCaptcha = $.ajax({
+//        type: "Get",
+//        url: captchaURL,
+//        cache: false,
+//        dataType: "HTML",
+//        beforeSend: function() {},
+//        success: function(
+//
+//
+//
+//            ) {}
+//    });
+//    getCaptcha.done(function(dates) {
+//        $('.captcha-content').html(dates);
+//    });
+//    getCaptcha.fail(function(jqXHR, textStatus) {
+//         $('.captcha-content').html("Request failed: " + textStatus);
+//    });
+//
+//}
+//$('#captcha').on('show.bs.popover', function () {
+//    renderCaptcha();
+//})
+//$('#captcha').on('hidden.bs.popover', function () {
+//    $('.captcha-content').empty();
+//})
 
 
 
 
 
 $('body').on('click', function (e) {
-console.log(e.target);
- if (!$(e.target).is('.btn-cal-control')) {
-
+ if (!$(e.target).is('.show-on')) {
      if ($(e.target).data('toggle') !== 'popover' &&
          $(e.target).parents('[data-toggle="popover"]').length === 0 &&
          $(e.target).parents('.popover.in').length === 0) {
@@ -212,15 +245,51 @@ $(".toggle-password").click(function() {
 
   $('#reg1-validate').on('click', function () {
     if($('#reg1').djValidator('validate')){
-        console.log('valid');
+         $('.registration .tab-pane').removeClass('show active');
+         $('.registration .tab-pane').eq(1).addClass('show active');
+         $('.registration .nav-link').removeClass('active');
+         $('.registration .nav-link').eq(1).addClass('active');
     }
       else{
           console.log('No valid');
       }
   });
+  $('#reg2-validate').on('click', function () {
+    if($('#reg2').djValidator('validate')){
+         $('.registration .tab-pane').removeClass('show active');
+         $('.registration .tab-pane').eq(2).addClass('show active');
+         $('.registration .nav-link').removeClass('active');
+         $('.registration .nav-link').eq(2).addClass('active');
+    }
+      else{
+          console.log('No valid');
+      }
+  });
+  $('#back-pane-0').on('click', function () {
+         $('.registration .tab-pane').removeClass('show active');
+         $('.registration .tab-pane').eq(0).addClass('show active');
+         $('.registration .nav-link').removeClass('active');
+         $('.registration .nav-link').eq(0).addClass('active');
 
+  });
+  $('#back-pane-1').on('click', function () {
+         $('.registration .tab-pane').removeClass('show active');
+         $('.registration .tab-pane').eq(1).addClass('show active');
+         $('.registration .nav-link').removeClass('active');
+         $('.registration .nav-link').eq(1).addClass('active');
+
+  });
+  $('#reg3-validate').on('click', function () {
+    if($('#reg3').djValidator('validate')){
+
+    }
+      else{
+          console.log('No valid');
+      }
+  });
 let registereduser ={
                         token: token,
+                        captchcode:null,
                         title:null,
                         name:null,
                         lastname:null,

@@ -8,12 +8,15 @@
  * @subpackage Rumi Press
  * @since 1.0
  */
-
-
 /*
  =================================================    Adding Styles
 */
-
+add_action('init', 'wp_sessionize', 1);
+function wp_sessionize() {
+    if(!session_id()) {
+        session_start();
+    }
+}
 add_action ( 'wp_head', 'my_js_variables' );
 function my_js_variables(){
 ?>
