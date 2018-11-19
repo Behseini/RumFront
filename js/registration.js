@@ -245,24 +245,31 @@ $(".toggle-password").click(function() {
 
   $('#reg1-validate').on('click', function () {
     if($('#reg1').djValidator('validate')){
-         $('.registration .tab-pane').removeClass('show active');
-         $('.registration .tab-pane').eq(1).addClass('show active');
-         $('.registration .nav-link').removeClass('active');
-         $('.registration .nav-link').eq(1).addClass('active');
-    }
+            registereduser.title = $('#user-title').val();
+            registereduser.name = $('#user-name').val();
+            registereduser.lastname = $('#user-last-name').val();
+            registereduser.birthYear = $('#user-year').val();
+            registereduser.birthMonth = $('#user-month').val();
+            registereduser.birthDay = $('#user-day').val();
+            $('.registration .tab-pane').removeClass('show active');
+            $('.registration .tab-pane').eq(1).addClass('show active');
+            $('.registration .nav-link').removeClass('active');
+            $('.registration .nav-link').eq(1).addClass('active');
+      }
       else{
           console.log('No valid');
       }
   });
   $('#reg2-validate').on('click', function () {
     if($('#reg2').djValidator('validate')){
-         $('.registration .tab-pane').removeClass('show active');
-         $('.registration .tab-pane').eq(2).addClass('show active');
-         $('.registration .nav-link').removeClass('active');
-         $('.registration .nav-link').eq(2).addClass('active');
+//         $('.registration .tab-pane').removeClass('show active');
+//         $('.registration .tab-pane').eq(2).addClass('show active');
+//         $('.registration .nav-link').removeClass('active');
+//         $('.registration .nav-link').eq(2).addClass('active');
     }
       else{
           console.log('No valid');
+
       }
   });
   $('#back-pane-0').on('click', function () {
@@ -287,21 +294,4 @@ $(".toggle-password").click(function() {
           console.log('No valid');
       }
   });
-let registereduser ={
-                        token: token,
-                        captchcode:null,
-                        title:null,
-                        name:null,
-                        lastname:null,
-                        birthYear:null,
-                        birthMonth:null,
-                        birthDay:null,
-                        email:null,
-                        buzz:null,
-                        bulidingNo:null,
-                        streetNo:null,
-                        streetName:null,
-                        city:null,
-                        postalCode:null,
-                        password:null
-}
+

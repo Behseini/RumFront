@@ -47,14 +47,14 @@ get_header();
                             <div class="form-group w-100">
                                 <label class="form-label" for="user-name">Your Name</label>
                                 <input id="user-name" class="form-input" type="text" data-dj-validator="text,3,50" required/>
-                                <small id="user-name" class="form-text ">what is your name?</small>
+                                <small id="user-name-label" class="form-text ">what is your name?</small>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group w-100">
-                                <label class="form-label" for="first">Your Last Name</label>
-                                <input id="first" class="form-input" type="text" data-dj-validator="text,3,50" required />
-                                <small id="emailHelp" class="form-text">what is your last name?</small>
+                                <label class="form-label" for="user-last-name">Your Last Name</label>
+                                <input id="user-last-name" class="form-input" type="text" data-dj-validator="text,2,50" required />
+                                <small id="user-last-name-label" class="form-text">what is your last name?</small>
                             </div>
                         </div>
                     </div>
@@ -171,28 +171,29 @@ get_header();
                         </div>
                         <div class="row">
                             <div class="col-md-12 p-0 pt-3">
-                                <button type="button" class="btn btn-tab-control float-right mr-0" id="reg1-validate"> Next </button>
+                                <a role="button" class="btn btn-tab-control float-right mr-0" id="reg1-validate"> Next </a>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <div class="row">
+                <form id="reg2" autocomplete="off" novalidate>
+			   <div class="row">
                     <fieldset>
                         <legend>Email Address</legend>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-email">Your Email</label>
-                                    <input id="user-email" class="form-input" type="text" />
+                                    <input id="user-email" class="form-input" type="email" data-dj-validator="email,*" required />
                                     <small id="user-email-help" class="form-text ">what is your email?</small>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-email-confirm">Confirm Your Email</label>
-                                    <input id="user-email-confirm" class="form-input" type="text" />
+                                    <input id="user-email-confirm" class="form-input" type="text" data-dj-validator="equal,user-email,input user-email" required/>
                                     <small id="user-email-confirm-help" class="form-text">what is your email again?</small>
                                 </div>
                             </div>
@@ -206,14 +207,14 @@ get_header();
                             <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-buzz">Buzz Number<small> <i> if applicable?</i></small></label>
-                                    <input id="user-buzz" class="form-input" type="text" />
+                                    <input id="user-buzz" class="form-input" type="text" data-dj-validator-group="optionals" />
                                     <small id="user-buzz-help" class="form-text ">what is your buzz numebr?</small>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-building">Building Number</label>
-                                    <input id="user-building" class="form-input" type="text" />
+                                    <input id="user-building" class="form-input" type="text" data-dj-validator="text,1,12" required/>
                                     <small id="user-building-help" class="form-text">what is your building number?</small>
                                 </div>
                             </div>
@@ -222,14 +223,14 @@ get_header();
                             <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-street">Street Name</label>
-                                    <input id="user-street" class="form-input" type="text" />
+                                    <input id="user-street" class="form-input" type="text" data-dj-validator="text,3,80" required/>
                                     <small id="user-street-help" class="form-text ">what is your street address?</small>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-city">City Name</label>
-                                    <input id="user-city" class="form-input" type="text" />
+                                    <input id="user-city" class="form-input" type="text" data-dj-validator="text,3,50" required/>
                                     <small id="user-city-help" class="form-text">what is your city name?</small>
                                 </div>
                             </div>
@@ -238,7 +239,7 @@ get_header();
                             <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-postal">Postal Code</label>
-                                    <input id="user-postal" class="form-input" type="text" />
+                                    <input id="user-postal" class="form-input" type="text" data-dj-validator="text,6,7" required/>
                                     <small id="user-postal-help" class="form-text ">what is your postal code?</small>
                                 </div>
                             </div>
@@ -246,11 +247,14 @@ get_header();
                     </fieldset>
                 </div>
                 <div class="row">
+
                     <div class="col-md-12 p-0 pt-3">
-                        <button role="button" class="btn btn-tab-control float-left mr-0" id="back-pane-0"> Back </button>
-                        <button role="button" class="btn btn-tab-control float-right mr-0" id="reg2-validate"> Next </button>
+                        <a role="button" class="btn btn-tab-control float-left mr-0" id="back-pane-0"> Back </a>
+                        <a role="button" class="btn btn-tab-control float-right mr-0" id="reg2-validate"> Next </a>
+
                     </div>
                 </div>
+				</form>
             </div>
             <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                 <form autocomplete="off">
