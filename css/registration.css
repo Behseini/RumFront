@@ -152,7 +152,7 @@ body{
 */
 
 .form-text {
-    color: #ddd;
+    color: #a7a7a7;
 
 }
 
@@ -273,14 +273,20 @@ legend {
     min-width: 316px !important;
 }
 .btn-tab-control{
-    padding-left: 20px;
-    padding-right: 20px;
-   background: #333;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: #7d7d7d;
     border-radius: 0px;
-    color: #fff;
-        font-family: 'Open Sans', sans-serif;
+    color: #fff !important;
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
     font-weight: 500;
+    font-size: 14px;
+}
+.btn-tab-control:hover{
+
+   background: #333;
+
 }
 .field-icon {
     display: inline-block;

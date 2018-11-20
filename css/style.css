@@ -419,11 +419,11 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	display: none;
 	/* color: #ffc107 !important; */
-	color: #cca92c !important;
-
+/*	color: #cca92c !important;*/
+    color:#f44336 !important;
 	line-height: 22px !important;
 	padding: 0px !important;
-	font-weight: 400 !important;
+	font-weight: 500 !important;
 	text-transform: capitalize !important;
 	letter-spacing: 1px !important;
 	font-size: 12px !important;
