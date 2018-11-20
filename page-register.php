@@ -37,7 +37,7 @@ get_header();
                                 <label class="form-label" for="user-title">Your Gender</label>
                                 <a role="button" class="btn btn-secondary float-right btn-sm btn-pop" data-toggle="popover" data-container="body" data-placement="bottom" typw="button" data-html="true" id="gender"><i class="icon-venus-mars"></i></a>
                                 <input id="user-title" class="form-input" type="text" data-dj-validator="text,2,4" required />
-                                <div class="input-block"></div>
+                                <div class="input-block" data-toggle="tooltip" data-placement="top" title="Click Next Button to Select Your Title "></div>
                                 <!--                 <small id="user-name" class="form-text">what is your gender?</small>-->
                             </div>
                         </div>
@@ -193,7 +193,7 @@ get_header();
                             <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-email-confirm">Confirm Your Email</label>
-                                    <input id="user-email-confirm" class="form-input" type="text" data-dj-validator="equal,user-email,input user-email" required/>
+                                    <input id="user-email-confirm" class="form-input" type="text" data-dj-validator="equal,user-email, your entered email" required/>
                                     <small id="user-email-confirm-help" class="form-text">what is your email again?</small>
                                 </div>
                             </div>

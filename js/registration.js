@@ -262,10 +262,10 @@ $(".toggle-password").click(function() {
   });
   $('#reg2-validate').on('click', function () {
     if($('#reg2').djValidator('validate')){
-//         $('.registration .tab-pane').removeClass('show active');
-//         $('.registration .tab-pane').eq(2).addClass('show active');
-//         $('.registration .nav-link').removeClass('active');
-//         $('.registration .nav-link').eq(2).addClass('active');
+         $('.registration .tab-pane').removeClass('show active');
+         $('.registration .tab-pane').eq(2).addClass('show active');
+         $('.registration .nav-link').removeClass('active');
+         $('.registration .nav-link').eq(2).addClass('active');
     }
       else{
           console.log('No valid');

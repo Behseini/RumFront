@@ -1,5 +1,9 @@
 $(function () {
   "use strict";
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
   $(".navbar-main .dropdown-toggler").on('click', function () {
     $(this).find('.icon').toggleClass('css-angle-down');
     let $this = $(this).next(".navbar-main .dropdown-menu");
