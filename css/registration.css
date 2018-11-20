@@ -1,30 +1,100 @@
 @import url('https://fonts.googleapis.com/css?family=Abel');
 
+body{
+    background: #fff;
+    padding-top: 120px;
+}
+.registration .container{
+  background: #f7f7f7;
+    padding-top: 50px;
+    padding-bottom: 60px !important;
+}
+/*
+.reg-page {
+	background-color: #f7f7f7;
+	background-color: #fff;
+	padding-top: 128px;
+}
+*/
+.registration .title {
+	font-weight: 500;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 2px;
+	font-size: 24px;
+	margin-bottom: 17px;
+}
+.registration .subtitle {
+	font-weight: 500;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 1px;
+	font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+
+.reg-page .form-control {
+	/* background: #ccc !important;
+	border-color: #ccc !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	font-family: "Open-Sans", sans-serif !important;
+	letter-spacing: 1px !important;
+	font-size: 13px !important;
+    border-radius: 2px; */
+	border: 1px solid #ccc;
+	width: 100%;
+	max-width: 100%;
+	display: block;
+	margin: 0 0 1em;
+	background-color: transparent;
+	outline: none;
+}
+
+.reg-pag .form-control:focus {
+	color: #fff;
+}
+
+.reg-pag .input-group-text {
+	background: #222 !important;
+	border-color: #222 !important;
+	color: #8c8c8c;
+}
+.container .form-horizontal label {
+	color: #999;
+	font-weight: 500;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 1px;
+	font-size: 14px;
+}
 .register-navs > .nav-link {
        	font-weight: 500;
 	font-family: 'Open Sans', sans-serif;
 	letter-spacing: 1px;
-	font-size: 16px;
+	font-size: 15px;
     background: #e1e1e1;
+    background: #eaeaea;
+    background: rgb(225,225,225);
     border-radius: 0px;
-    color: #999;
+    font-weight: 600;
+    color: #111;
     line-height: 42px;
 }
 
 .register-navs > .nav-link.active {
-    background: #333;
+    background: #333 !important;
     border-radius: 0px;
-    color: #fff;
+    color: #fff !important;
     border: 1px solid #3333;
 }
 
-.tab-content {
-    border: 1px solid #ddd;
+.registration  .tab-content {
+    border: 1px solid #ccc;
     border-top: 0px !important;
     padding: 20px;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
-    background: #fff;
+/*    background: #fff;*/
     padding-bottom: 40px;
 }
 
@@ -37,15 +107,16 @@
 }
 
 .form-label {
-  	font-weight: 400;
+  	font-weight: 600;
 	font-family: 'Open Sans', sans-serif;
 	letter-spacing: 1px;
-	font-size: 14px;
+	font-size: 13px;
     position: absolute;
     left: 0;
     top: 10px;
     color: #111;
     background-color: #fff;
+     background: #f7f7f7;
     z-index: 10;
     transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
     transition: transform 150ms ease-out, font-size 150ms ease-out;
@@ -67,6 +138,7 @@
     border: 0;
     box-shadow: 0 1px 0 0 #e5e5e5;
     transition: box-shadow 150ms ease-out;
+     background: #f7f7f7;
 }
 
 .form-input:focus {
@@ -144,7 +216,7 @@
 
 fieldset {
     margin-top: 20px;
-    border: solid 1px #ddd !important;
+    border: solid 1px #ccc !important;
     padding: 15px 8px 20px 8px;
     border-bottom: none;
     width: 100%;
@@ -159,8 +231,8 @@ legend {
     padding-left: 10px;
     padding-right: 10px;
     letter-spacing: 1px;
-    color: #888;
-    font-weight: 500;
+    color: #000;
+    font-weight: 700;
 }
 
 .btn-pop {

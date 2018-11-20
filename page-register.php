@@ -10,14 +10,13 @@ $token = md5(rand(1000,9999));
 $_SESSION['token'] = $token;
 get_header();
 ?>
-<div class="row reg-page">
+<div class="row registration">
 <div class="container">
 <h5 class="text-center title"> Registration</h5>
 <p class="text-center subtitle">Create an account and you will speed up your purchase, receive emails and get our latest special discounts and offers </p>
-</div>
-<div class="container p-0 registration">
+
 <div class="row">
-    <div class="col-md-8 offset-md-2 p-0">
+    <div class="col-md-8 offset-md-2 p-0 mt-4">
         <nav class="nav nav-pills nav-fill nav-justified register-navs">
 <!--
             <a class="nav-item nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Personal</a>
@@ -94,8 +93,7 @@ get_header();
                         <div class="row" id="containerElem"></div>
                     </div>
 
-                    <div class="container">
-                        <div id="popover-content-ageyear" class="d-none">
+                            <div id="popover-content-ageyear" class="d-none">
                             <div class="row" style="background:#e1e1e1;">
                                 <div class="col-lg-12 p-0">
                                     <a role="button" class="btn btn-cal-control show-on m-l-0 float-left next"><i class="icon icon-chevron-left"></i></a>
@@ -169,12 +167,13 @@ get_header();
                             <a role="button" class="btn btn-popover btn-sm btn-d" data-bd="30">30</a>
                             <a role="button" class="btn btn-popover btn-sm btn-d" data-bd="31">31</a>
                         </div>
+
                         <div class="row">
                             <div class="col-md-12 p-0 pt-3">
                                 <a role="button" class="btn btn-tab-control float-right mr-0" id="reg1-validate"> Next </a>
                             </div>
                         </div>
-                    </div>
+
                 </form>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
