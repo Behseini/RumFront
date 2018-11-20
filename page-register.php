@@ -6,6 +6,7 @@
 * @subpackage Twenty_Fourteen
 * @since Twenty Fourteen 1.0
 */
+session_start();
 $token = md5(rand(1000,9999));
 $_SESSION['token'] = $token;
 get_header();
@@ -14,7 +15,7 @@ get_header();
 <div class="container">
 <h5 class="text-center title"> Registration</h5>
 <p class="text-center subtitle">Create an account and you will speed up your purchase, receive emails and get our latest special discounts and offers </p>
-
+<div class="form-result"></div>
 <div class="row">
     <div class="col-md-8 offset-md-2 p-0 mt-4">
         <nav class="nav nav-pills nav-fill nav-justified register-navs">
@@ -28,7 +29,7 @@ get_header();
             <a class="nav-item nav-link" id="pills-contact-tab">Security</a>
         </nav>
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                 <form id="reg1" autocomplete="off" novalidate>
                     <div class="row">
                         <div class="col-md-4">
@@ -255,7 +256,7 @@ get_header();
                 </div>
 				</form>
             </div>
-            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="tab-pane fade show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                 <form autocomplete="off">
                     <div class="row">
                         <fieldset>
@@ -289,10 +290,83 @@ get_header();
                                     <div class="captcha-data"></div>
                                 </div>
                             </div>
+                                                           <div class="row">
+                    <div class="col-md-12 p-0 pt-3">
+                        <a role="button" class="btn btn-form-confirm float-right mr-0 mt-2 mb-2" data-toggle="modal" data-target="#exampleModalCenter" > Confirm & Submit </a>
+                    </div>
+                </div>
                         </fieldset>
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-sm">
+  <tbody>
+            <tr class="table-secondary">
+          <th scope="row">Your Personal Information</th><td></td>
+      </tr>
+    <tr>
+      <th scope="row">Title</th>
+      <td>Mr.</td>
+    </tr>
+    <tr>
+      <th scope="row">Name</th>
+      <td>Jacob</td>
+    </tr>
+     <tr>
+      <th scope="row">Last Name</th>
+      <td>Jacob</td>
+    </tr>
+     <tr>
+      <th scope="row">Your Birthday</th>
+      <td>Jacob</td>
+    </tr>
+     <tr>
+      <th scope="row">Your Email</th>
+      <td>Behseuni@gmail.com</td>
+    </tr>
+      <tr class="table-secondary">
+          <th scope="row">Your Address</th><td></td>
+      </tr>
+     <tr>
+      <th scope="row">Buzz Number</th>
+      <td>1224</td>
+    </tr>
+           <tr>
+      <th scope="row">Building Number</th>
+      <td>1224</td>
+    </tr>
+           <tr>
+      <th scope="row">Street Name</th>
+      <td>1224</td>
+    </tr>
+           <tr>
+      <th scope="row">City</th>
+      <td>1224</td>
+    </tr>
+                 <tr>
+      <th scope="row">Postal Code</th>
+      <td>1224</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="submit-registration">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
                                         <div class="row">
                     <div class="col-md-12 p-0 pt-3">
-                        <button role="button" class="btn btn-tab-control float-left mr-0" id="back-pane-1"> Back </button>
+                        <a role="button" class="btn btn-tab-control float-left mr-0" id="back-pane-1"> Back </a>
                     </div>
                 </div>
                     </div>

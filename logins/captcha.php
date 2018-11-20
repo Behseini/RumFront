@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("../../../../wp-load.php");
 date_default_timezone_set('America/Vancouver');
 $files = glob('img/*');
@@ -101,7 +102,7 @@ for ($i = 0; $i <= 2; $i++) {
 //  array_push($theDateCheck, $month_str_img_name[2]);
 
 // Set Session vaiable for today date
- $_SESSION['captach_dates'] = $day_str_img_name[2].$day_num_img_name[2].$month_str_img_name[2];
+ $_SESSION["captchcode"] = $day_str_img_name[2].$day_num_img_name[2].$month_str_img_name[2];
  $font = 'OpenSans-SemiBold.ttf';
 for ($i = 0; $i <= 2; $i++) {
     $img_day  = imagecreatetruecolor(32,16);
@@ -138,7 +139,7 @@ for ($i = 0; $i <= 2; $i++) {
 $images   = glob($base_dir.$dir.'*.png');
 
 echo '<div class=date-btns-box show-on"><div class="btn-group btn-group-toggle d-flex show-on" data-toggle="buttons">
-      <a class="btn btn-secondary disabled w-100 show-on" style="min-width:72px; color:#fff;"> Day </a>';
+      <a class="btn btn-captcha-mute w-100 show-on"> Day </a>';
 
 
 foreach($images as $image) {
@@ -152,7 +153,7 @@ foreach($images as $image) {
 
 
 echo '<div class=date-btns-box show-on" style="margin-top:5px;"><div class="btn-group btn-group-toggle d-flex show-on" data-toggle="buttons">
-      <a class="btn btn-secondary disabled w-100 show-on" style="min-width:72px;color:#fff;"> Date </a>';
+      <a class="btn btn-captcha-mute w-100 show-on" style="min-width:72px;color:#fff;"> Date </a>';
     foreach($images as $image) {
            $url = get_theme_file_uri($dir.basename($image));
         $filename = basename($image);
@@ -164,7 +165,7 @@ echo '<div class=date-btns-box show-on" style="margin-top:5px;"><div class="btn-
 
 
 echo '<div class=date-btns-box show-on"  style="margin-top:5px;"><div class="btn-group btn-group-toggle d-flex show-on" data-toggle="buttons">
-      <a class="btn btn-secondary disabled w-100 show-on" style="min-width:72px;color:#fff;"> Month </a>';
+      <a class="btn btn-captcha-mute w-100 show-on" style="min-width:72px;color:#fff;"> Month </a>';
     foreach($images as $image) {
            $url = get_theme_file_uri($dir.basename($image));
         $filename = basename($image);

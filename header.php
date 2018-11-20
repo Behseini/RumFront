@@ -23,6 +23,7 @@ echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
 </head>
 
 <body>
+     <div class="page-container">
     <div id="signin-sidenav" class="sidenav">
         <div class="sidebar-wrap">
         <div class="side-nav-header">
@@ -482,7 +483,7 @@ sagittis lacus vel augue laoreet rutrum faucibus." >  <i class="icon icon-clock"
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Specialty Eyewear <i class="icon icon-angle-right css-angle-right"></i>
+                    Safety Glasses <i class="icon icon-angle-right css-angle-right"></i>
                 </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <div class="mx-auto well-menu shadow-sm">

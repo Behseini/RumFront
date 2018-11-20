@@ -167,36 +167,6 @@ $('#ageyear').on('hidden.bs.popover', function () {
     $('.contents').empty();
 })
 
-//function renderCaptcha(){
-//      var getCaptcha = $.ajax({
-//        type: "Get",
-//        url: captchaURL,
-//        cache: false,
-//        dataType: "HTML",
-//        beforeSend: function() {},
-//        success: function(
-//
-//
-//
-//            ) {}
-//    });
-//    getCaptcha.done(function(dates) {
-//        $('.captcha-content').html(dates);
-//    });
-//    getCaptcha.fail(function(jqXHR, textStatus) {
-//         $('.captcha-content').html("Request failed: " + textStatus);
-//    });
-//
-//}
-//$('#captcha').on('show.bs.popover', function () {
-//    renderCaptcha();
-//})
-//$('#captcha').on('hidden.bs.popover', function () {
-//    $('.captcha-content').empty();
-//})
-
-
-
 
 
 $('body').on('click', function (e) {
@@ -294,4 +264,37 @@ $(".toggle-password").click(function() {
           console.log('No valid');
       }
   });
+//Monday, 1 January
+let captchaArrary =[];
 
+   $('body').on('change', 'input:radio[name="days"]', function(){
+        captchaArrary[0] = $(this).val();
+    });
+    $('body').on('change', 'input:radio[name="dates"]', function(){
+        captchaArrary[1] = $(this).val();
+    });
+    $('body').on('change', 'input:radio[name="months"]', function(){
+        captchaArrary[2] = $(this).val()
+    });
+    $('#submit-registration').on('click', function () {
+         registereduser.captchcode = captchaArrary.toString();
+
+       // registereduser.serialize();
+    var register = $.ajax({
+        type: "POST",
+        data: registereduser,
+        url: registerURL,
+        cache: false,
+        dataType: "HTML",
+        beforeSend: function () {
+            console.log(registereduser);
+        },
+        success: function () {}
+    });
+    register.done(function (dates) {
+        $('.form-result').html(dates);
+    });
+    register.fail(function (jqXHR, textStatus) {
+        $('.form-result').html("Request failed: " + textStatus);
+    });
+     });

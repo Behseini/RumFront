@@ -12,17 +12,19 @@
  =================================================    Adding Styles
 */
 add_action('init', 'wp_sessionize', 1);
-function wp_sessionize() {
-    if(!session_id()) {
-        session_start();
+    function wp_sessionize() {
+        if(!session_id()) {
+            session_start();
+        }
+        $_SESSION["newsession"]= "Iran";
     }
-}
+
 add_action ( 'wp_head', 'my_js_variables' );
 function my_js_variables(){
 ?>
   <script type="text/javascript">
     var captchaURL  = <?php echo json_encode( get_template_directory_uri() . '/logins/captcha.php' ); ?>;
-    var registerURL = <?php echo json_encode( get_template_directory_uri() . '/logins/register.php' ); ?>;
+    var registerURL = <?php echo json_encode( get_template_directory_uri() . '/logins/registration.php' ); ?>;
     var loginURL    = <?php echo json_encode( get_template_directory_uri() . '/logins/login.php' ); ?>;
     var confirmURL  = <?php echo json_encode( get_template_directory_uri() . '/logins/confirm.php' ); ?>;
     var resetURL    = <?php echo json_encode( get_template_directory_uri() . '/logins/reset.php' ); ?>;
@@ -108,18 +110,6 @@ add_action( 'after_switch_theme', 'bt_flush_rewrite_rules' );
 function bt_flush_rewrite_rules() {
      flush_rewrite_rules();
 }
-
-
-function register_session()
-{
-  if( !session_id() )
-  {
-    session_start();
-  }
-}
-
-add_action('init', 'register_session');
-
 
 
 

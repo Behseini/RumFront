@@ -1,5 +1,6 @@
 <?php
-if (!$_SESSION['captach_dates'] == $_POST['captach_dates']){
+session_start();
+if (!$_SESSION['captchcode'] == $_POST['captchcode']){
     echo '<div> You Select Wrong Captca</div>';
 }
 else{
