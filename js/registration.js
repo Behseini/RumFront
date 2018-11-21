@@ -13,6 +13,10 @@ $( document ).ready(function() {
     });
     getCaptcha1.done(function (dates) {
         $('.captcha-data').html(dates);
+        $('#rd-1').append('<input class="d-none" type="radio" name="days" data-dj-validator="radio" required>');
+        $('#rd-2').append('<input class="d-none" type="radio" name="dates" data-dj-validator="radio" required>');
+        $('#rd-3').append('<input class="d-none" type="radio" name="months" data-dj-validator="radio" required>');
+
     });
     getCaptcha1.fail(function (jqXHR, textStatus) {
         $('.captcha-data').html("Request failed: " + textStatus);
@@ -22,20 +26,21 @@ $( document ).ready(function() {
 let registereduser ={
                         token: token,
                         captchcode:null,
-                        title:null,
-                        name:null,
-                        lastname:null,
-                        birthYear:null,
-                        birthMonth:null,
-                        birthDay:null,
-                        email:null,
-                        buzz:null,
-                        bulidingNo:null,
-                        streetNo:null,
-                        streetName:null,
-                        city:null,
-                        postalCode:null,
-                        password:null
+                        usertitle:null,
+                        username:null,
+                        userlastname:null,
+                        userbyear:null,
+                        userbmonth:null,
+                        userbday:null,
+                        useremail:null,
+                        userephone:null,
+                        userbuzz:null,
+                        userunit:null,
+                        userbuildingno:null,
+                        userstreet:null,
+                        usercity:null,
+                        userpostalcode:null,
+                        userpass:null
 }
 
 $('input').blur(function () {
@@ -215,12 +220,12 @@ $(".toggle-password").click(function() {
 
   $('#reg1-validate').on('click', function () {
     if($('#reg1').djValidator('validate')){
-            registereduser.title = $('#user-title').val();
-            registereduser.name = $('#user-name').val();
-            registereduser.lastname = $('#user-last-name').val();
-            registereduser.birthYear = $('#user-year').val();
-            registereduser.birthMonth = $('#user-month').val();
-            registereduser.birthDay = $('#user-day').val();
+            registereduser.usertitle = $('#user-title').val();
+            registereduser.username = $('#user-name').val();
+            registereduser.userlastname = $('#user-last-name').val();
+            registereduser.userbyear = $('#user-year').val();
+            registereduser.userbmonth = $('#user-month').val();
+            registereduser.userbday = $('#user-day').val();
             $('.registration .tab-pane').removeClass('show active');
             $('.registration .tab-pane').eq(1).addClass('show active');
             $('.registration .nav-link').removeClass('active');
@@ -232,10 +237,32 @@ $(".toggle-password").click(function() {
   });
   $('#reg2-validate').on('click', function () {
     if($('#reg2').djValidator('validate')){
+
+            registereduser.useremail = $('#user-title').val();
+            registereduser.userbuzz = $('#user-name').val();
+            registereduser.userunit = $('#user-last-name').val();
+            registereduser.userbuildingno = $('#user-year').val();
+            registereduser.userstreet = $('#user-month').val();
+            registereduser.usercity = $('#user-day').val();
+            registereduser.userpostalcode = $('#user-day').val();
+
          $('.registration .tab-pane').removeClass('show active');
          $('.registration .tab-pane').eq(2).addClass('show active');
          $('.registration .nav-link').removeClass('active');
          $('.registration .nav-link').eq(2).addClass('active');
+    }
+      else{
+          console.log('No valid');
+
+      }
+  });
+
+$('#confirm-reg').on('click', function () {
+    if($('#reg3').djValidator('validate')){
+
+            registereduser.userpass = $('#user-title').val();
+
+
     }
       else{
           console.log('No valid');

@@ -23,8 +23,8 @@ if (typeof jQuery==='undefined'){throw new Error('DjValidator requires jQuery 1.
 (function ($){
 
 	//variables:
-	var djv_keys=['word','atext','antext','text','int','num','dig','file','efile','email','phone','url','regexp','equal','nequal','or','multi','call','radio','check','ip'];
-	var djv_functions=[vword,vatext,vantext,vtext,vint,vnum,vdig,vfile,vefile,vmail,vphone,vurl,vregexp,vequal,vnequal,vor,vmulti,vcall,vradio,vcheck,vip];
+	var djv_keys=['word','atext','antext','text','int','num','dig','file','efile','email','pass','phone','url','regexp','equal','nequal','or','multi','call','radio','check','ip'];
+	var djv_functions=[vword,vatext,vantext,vtext,vint,vnum,vdig,vfile,vefile,vmail,vpass,vphone,vurl,vregexp,vequal,vnequal,vor,vmulti,vcall,vradio,vcheck,vip];
 	var djv_style="display:none; color:red; text-align:inherit; font:.9em fantasy bold italic;";
 	var djv_labels={
 			required:'Required field.',
@@ -54,6 +54,7 @@ if (typeof jQuery==='undefined'){throw new Error('DjValidator requires jQuery 1.
 			file_ext:'Valid file extensions: $1.',
 			email:'Email not valid.',
 			email_max:'Email must be less than $1 characters.',
+			pass:'Your password must have: <br /> A minimum of 6 characters <br />A minimum of 1 lower case letter [a-z] <br />A minimum of 1 upper case letter [A-Z] <br />A minimum of 1 numeric character [0-9] <br />A minimum of 1 special character [ ~`!@#$%^&*()-_+={}[]|\;:"<>,./?]',
 			phone:'Invalid phone number.',
 			url:'Invalid url.',
 			url_max:'URL must be less than $1 characters',
@@ -222,6 +223,13 @@ if (typeof jQuery==='undefined'){throw new Error('DjValidator requires jQuery 1.
 		if(params.length<2)throw new Error("Error validating field '"+$obj.attr("name")+"'"+", insufficient parameters.");
 		if(!/^([a-z0-9_.-])+@(([a-z0-9-])+.)*([a-z0-9])+$/i.test($obj.val())){createMsg($obj,djv_labels.email);return false;}
 		if(params[1]!='*'&&$obj.val().length>params[1]){createMsg($obj,djv_labels.email_max.replace('$1',params[1]));return false;}
+		return true;
+	}
+
+	function vpass($obj,params){
+		if(params.length<2)throw new Error("Error validating field '"+$obj.attr("name")+"'"+", insufficient parameters.");
+		if(!/^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{6,}$/.test($obj.val())){createMsg($obj,djv_labels.pass);return false;}
+		if(params[1]!='*'&&$obj.val().length>params[1]){createMsg($obj,djv_labels.pass_max.replace('$1',params[1]));return false;}
 		return true;
 	}
 

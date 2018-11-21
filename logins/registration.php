@@ -37,25 +37,25 @@ else{
     /* Set the parameters values and execute the statement again to insert another row */
 
 
-    $usertitle      = $_POST['title'];
-    $username       = $_POST['name'];
-    $userlastname   = $_POST['lastname'];
-    $userbyear      = $_POST['birthYear'];
-    $userbmonth     = $_POST['birthMonth'];
-    $userbday       = $_POST['birthDay'];
-    $useremail      = $_POST['email'];
-    $userbuzz       = $_POST['buzz'];
-    $userbuildingno = $_POST['bulidingNo'];
-    $userstreetno   = $_POST['streetNo'];
-    $userstreetname = $_POST['streetName'];
-    $usercity       = $_POST['city'];
-    $userpostalcode = $_POST['postalCode'];
-    $userpass       = $_POST['password'];
+    $usertitle      = $_POST['usertitle'];
+    $username       = $_POST['username'];
+    $userlastname   = $_POST['userlastname'];
+    $userbyear      = $_POST['userbyear'];
+    $userbmonth     = $_POST['userbmonth'];
+    $userbday       = $_POST['userbday'];
+    $useremail      = $_POST['useremail'];
+    $userbuzz       = $_POST['userbuzz'];
+    $userunit       = $_POST['userunit'];
+    $userbuildingno = $_POST['userbuildingno'];
+    $userstreet     = $_POST['userstreet'];
+    $usercity       = $_POST['usercity'];
+    $userpostalcode = $_POST['userpostalcode'];
+    $userpass       = $_POST['userpass'];
     $isconfirmed =    0;
-    $isactive = 0,
+    $isactive = 0;
     $ip = getRealIpAddr();
-    $registeredat = NULL,
-    $comment = NULL
+    $registeredat = NULL;
+    $comment = NULL;
 
     $stmt->execute();
 

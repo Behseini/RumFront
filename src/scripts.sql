@@ -13,7 +13,7 @@ CREATE TABLE users (
     userstreet VARCHAR(100) NOT NULL,
     userpostal VARCHAR(7) NOT NULL,
     userpassword VARCHAR(80) NOT NULL UNIQUE,
-    joinedat DATETIME DEFAULT CURRENT_TIMESTAMP
+    joinedat DATE NOT NULL DEFAULT CURRENT_TIMESTAMP,
     isactive INT(1) NOT NULL,
 );
 

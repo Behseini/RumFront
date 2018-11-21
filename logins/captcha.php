@@ -138,7 +138,7 @@ for ($i = 0; $i <= 2; $i++) {
 //    $images = glob($dirname."*.png");
 $images   = glob($base_dir.$dir.'*.png');
 
-echo '<div class=date-btns-box show-on"><div class="btn-group btn-group-toggle d-flex show-on" data-toggle="buttons">
+echo '<div class=date-btns-box show-on" id="rd-1"><div class="btn-group btn-group-toggle d-flex show-on" data-toggle="buttons">
       <a class="btn btn-captcha-mute w-100 show-on"> Day </a>';
 
 
@@ -152,7 +152,7 @@ foreach($images as $image) {
     echo '</div></div>';
 
 
-echo '<div class=date-btns-box show-on" style="margin-top:5px;"><div class="btn-group btn-group-toggle d-flex show-on" data-toggle="buttons">
+echo '<div class=date-btns-box show-on" id="rd-2" style="margin-top:5px;"><div class="btn-group btn-group-toggle d-flex show-on" data-toggle="buttons">
       <a class="btn btn-captcha-mute w-100 show-on" style="min-width:72px;color:#fff;"> Date </a>';
     foreach($images as $image) {
            $url = get_theme_file_uri($dir.basename($image));
@@ -164,7 +164,7 @@ echo '<div class=date-btns-box show-on" style="margin-top:5px;"><div class="btn-
     echo '</div></div>';
 
 
-echo '<div class=date-btns-box show-on"  style="margin-top:5px;"><div class="btn-group btn-group-toggle d-flex show-on" data-toggle="buttons">
+echo '<div class=date-btns-box show-on" id="rd-3" style="margin-top:5px;"><div class="btn-group btn-group-toggle d-flex show-on" data-toggle="buttons">
       <a class="btn btn-captcha-mute w-100 show-on" style="min-width:72px;color:#fff;"> Month </a>';
     foreach($images as $image) {
            $url = get_theme_file_uri($dir.basename($image));
