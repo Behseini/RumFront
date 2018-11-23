@@ -9,8 +9,12 @@
 session_start();
 $token = md5(rand(1000,9999));
 $_SESSION['token'] = $token;
+
 get_header();
 ?>
+<script>
+     let token = "<?php echo $_SESSION['token']; ?>";
+</script>
 <div class="row registration">
 <div class="container">
 <h5 class="text-center title"> Registration</h5>
@@ -29,7 +33,7 @@ get_header();
             <a class="nav-item nav-link" id="pills-contact-tab">Security</a>
         </nav>
         <div class="tab-content" id="pills-tabContent">
-            <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                 <form id="reg1" autocomplete="off" novalidate>
                     <div class="row">
                         <div class="col-md-4">
@@ -66,7 +70,7 @@ get_header();
                                     <div class="form-group w-100">
                                         <label class="form-label" for="user-year">Your Birth Year</label>
                                         <a role="button" class="btn btn-secondary float-right btn-sm btn-pop" data-toggle="popover" data-container="body" data-placement="bottom" typw="button" data-html="true" id="ageyear"><i class="icon-calendar"></i></a>
-                                        <input id="user-year" class="form-input" type="text" readonly />
+                                        <input id="user-year" class="form-input" type="text" data-dj-validator="text,4,4" required/>
                                         <div class="input-block"></div>
                                         <!--                 <small id="user-name" class="form-text">what is your name?</small>-->
                                     </div>
@@ -75,7 +79,7 @@ get_header();
                                     <div class="form-group w-100">
                                         <label class="form-label" for="user-month">Your Birth Month</label>
                                         <a role="button" class="btn btn-secondary float-right btn-sm btn-pop" data-toggle="popover" data-container="#containerElem" data-placement="bottom" typw="button" data-html="true" id="agemonth"><i class="icon-calendar"></i></a>
-                                        <input id="user-month" class="form-input" type="text" readonly />
+                                        <input id="user-month" class="form-input" type="text" data-dj-validator="text,3,15" required />
                                         <div class="input-block"></div>
                                         <!--                 <small id="user-name" class="form-text">what is your name?</small>-->
                                     </div>
@@ -84,7 +88,7 @@ get_header();
                                     <div class="form-group w-100">
                                         <label class="form-label" for="user-day">Your Birth Day</label>
                                         <a role="button" class="btn btn-secondary float-right btn-sm btn-pop" data-toggle="popover" data-container="body" data-placement="bottom" typw="button" data-html="true" id="ageday"><i class="icon-calendar"></i></a>
-                                        <input id="user-day" class="form-input" type="text" readonly />
+                                        <input id="user-day" class="form-input" type="text" data-dj-validator="text,2,2" required />
                                         <div class="input-block"></div>
                                         <!--                 <small id="user-name" class="form-text">what is your name?</small>-->
                                     </div>
@@ -181,7 +185,7 @@ get_header();
                 <form id="reg2" autocomplete="off" novalidate>
 			   <div class="row">
                     <fieldset>
-                        <legend>Email Address</legend>
+                        <legend>Email & Phone</legend>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group w-100">
@@ -195,6 +199,15 @@ get_header();
                                     <label class="form-label" for="user-email-confirm">Confirm Your Email</label>
                                     <input id="user-email-confirm" class="form-input" type="text" data-dj-validator="equal,user-email, your entered email" required/>
                                     <small id="user-email-confirm-help" class="form-text">what is your email again?</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group w-100">
+                                    <label class="form-label" for="user-phone">Your Phone</label>
+                                    <input id="user-phone" class="form-input" type="email" data-dj-validator="phone,*" required />
+                                    <small id="user-phone-help" class="form-text ">what is your phone number?</small>
                                 </div>
                             </div>
                         </div>
@@ -264,7 +277,7 @@ get_header();
                 </div>
 				</form>
             </div>
-            <div class="tab-pane fade show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                 <form id="reg3" autocomplete="off" novalidate>
                     <div class="row">
                         <fieldset>
@@ -304,7 +317,7 @@ get_header();
                     </div>
                 </div>
                         </fieldset>
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal fade" id="registeration-data" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">

@@ -102,7 +102,7 @@ for ($i = 0; $i <= 2; $i++) {
 //  array_push($theDateCheck, $month_str_img_name[2]);
 
 // Set Session vaiable for today date
- $_SESSION["captchcode"] = $day_str_img_name[2].$day_num_img_name[2].$month_str_img_name[2];
+ $_SESSION["captchcode"] = $day_str_img_name[2].','.$day_num_img_name[2].','.$month_str_img_name[2];
  $font = 'OpenSans-SemiBold.ttf';
 for ($i = 0; $i <= 2; $i++) {
     $img_day  = imagecreatetruecolor(32,16);

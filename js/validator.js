@@ -234,7 +234,7 @@ if (typeof jQuery==='undefined'){throw new Error('DjValidator requires jQuery 1.
 	}
 
 	function vphone($obj){
-		if(!/^(\+?[0-9]{2,3}[- ]?)?[0-9]{5,12}$/.test($obj.val())){createMsg($obj,djv_labels.phone);return false;}
+		if(!/^(()?\d{3}())?(-|\s)?\d{3}(-|\s)?\d{4}$/.test($obj.val())){createMsg($obj,djv_labels.phone);return false;}
 		return true;
 	}
 

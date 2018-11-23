@@ -1,4 +1,3 @@
- var token = "<?php echo $_SESSION['token']; ?>";
 $('input').focus(function () {
     $(this).parents('.form-group').addClass('focused');
 });
@@ -33,7 +32,7 @@ let registereduser ={
                         userbmonth:null,
                         userbday:null,
                         useremail:null,
-                        userephone:null,
+                        userphone:null,
                         userbuzz:null,
                         userunit:null,
                         userbuildingno:null,
@@ -238,13 +237,14 @@ $(".toggle-password").click(function() {
   $('#reg2-validate').on('click', function () {
     if($('#reg2').djValidator('validate')){
 
-            registereduser.useremail = $('#user-title').val();
-            registereduser.userbuzz = $('#user-name').val();
-            registereduser.userunit = $('#user-last-name').val();
-            registereduser.userbuildingno = $('#user-year').val();
-            registereduser.userstreet = $('#user-month').val();
-            registereduser.usercity = $('#user-day').val();
-            registereduser.userpostalcode = $('#user-day').val();
+            registereduser.useremail = $('#user-email').val();
+            registereduser.userphone = $('#user-phone').val();
+            registereduser.userbuzz = $('#user-buzz').val();
+            registereduser.userunit = $('#user-unit').val();
+            registereduser.userbuildingno = $('#user-building').val();
+            registereduser.userstreet = $('#user-street').val();
+            registereduser.usercity = $('#user-city').val();
+            registereduser.userpostalcode = $('#user-postal').val();
 
          $('.registration .tab-pane').removeClass('show active');
          $('.registration .tab-pane').eq(2).addClass('show active');
@@ -260,8 +260,8 @@ $(".toggle-password").click(function() {
 $('#confirm-reg').on('click', function () {
     if($('#reg3').djValidator('validate')){
 
-            registereduser.userpass = $('#user-title').val();
-
+     registereduser.userpass = $('#user-pass').val();
+       $('#registeration-data').modal('show');
 
     }
       else{
@@ -283,15 +283,8 @@ $('#confirm-reg').on('click', function () {
          $('.registration .nav-link').eq(1).addClass('active');
 
   });
-  $('#reg3-validate').on('click', function () {
-    if($('#reg3').djValidator('validate')){
 
-    }
-      else{
-          console.log('No valid');
-      }
-  });
-//Monday, 1 January
+
 let captchaArrary =[];
 
    $('body').on('change', 'input:radio[name="days"]', function(){
