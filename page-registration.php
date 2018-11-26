@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: User Registration
+* Template Name: Registration Template
 *
 * @package WordPress
 * @subpackage Twenty_Fourteen
@@ -17,17 +17,18 @@ get_header();
 </script>
 <div class="row registration">
 <div class="container">
+    <div class="alert alert-info alert-dismissible fade show" role="alert" style="margin-bottom:20px; margin-top:0px;">
+  <strong>Holy Guacamole!</strong> <br/> Sign up now to grab a sweet <strong>Welcome Discount</strong>.  You will receive a promotion code after successful registration. <br /><i>Limited time offer for New subscribers only.</i>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 <h5 class="text-center title"> Registration</h5>
 <p class="text-center subtitle">Create an account and you will speed up your purchase, receive emails and get our latest special discounts and offers </p>
 <div class="form-result"></div>
 <div class="row">
     <div class="col-md-8 offset-md-2 p-0 mt-4">
         <nav class="nav nav-pills nav-fill nav-justified register-navs">
-<!--
-            <a class="nav-item nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Personal</a>
-            <a class="nav-item nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Contact</a>
-            <a class="nav-item nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Security</a>
--->
             <a class="nav-item nav-link active">Personal</a>
             <a class="nav-item nav-link" id="pills-profile-tab">Contact</a>
             <a class="nav-item nav-link" id="pills-contact-tab">Security</a>
@@ -38,10 +39,10 @@ get_header();
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group w-100">
-                                <label class="form-label" for="user-title">Your Gender</label>
+                                <label class="form-label" for="user-title">Title</label>
                                 <a role="button" class="btn btn-secondary float-right btn-sm btn-pop" data-toggle="popover" data-container="body" data-placement="bottom" typw="button" data-html="true" id="gender"><i class="icon-venus-mars"></i></a>
                                 <input id="user-title" class="form-input" type="text" data-dj-validator="text,2,4" required />
-                                <div class="input-block" data-toggle="tooltip" data-placement="top" title="Click Next Button to Select Your Title "></div>
+                                <div class="input-block" data-toggle="tooltip" data-placement="bottom" title="Click Next Button to Select Your Title "></div>
                                 <!--                 <small id="user-name" class="form-text">what is your gender?</small>-->
                             </div>
                         </div>
@@ -49,16 +50,16 @@ get_header();
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group w-100">
-                                <label class="form-label" for="user-name">Your Name</label>
-                                <input id="user-name" class="form-input" type="text" data-dj-validator="text,3,50" required/>
-                                <small id="user-name-label" class="form-text ">what is your name?</small>
+                                <label class="form-label" for="user-name">First Name</label>
+                                <input id="user-name" class="form-input" type="text" data-dj-validator="text,3,50" autocomplete="nope" required/>
+<!--                                <small id="user-name-label" class="form-text ">what is your name?</small>-->
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group w-100">
-                                <label class="form-label" for="user-last-name">Your Last Name</label>
-                                <input id="user-last-name" class="form-input" type="text" data-dj-validator="text,2,50" required />
-                                <small id="user-last-name-label" class="form-text">what is your last name?</small>
+                                <label class="form-label" for="user-last-name">Last Name</label>
+                                <input id="user-last-name" class="form-input" type="text" data-dj-validator="text,2,50" autocomplete="nope" required />
+<!--                                <small id="user-last-name-label" class="form-text">what is your last name?</small>-->
                             </div>
                         </div>
                     </div>
@@ -68,7 +69,7 @@ get_header();
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group w-100">
-                                        <label class="form-label" for="user-year">Your Birth Year</label>
+                                        <label class="form-label" for="user-year">Birth Year</label>
                                         <a role="button" class="btn btn-secondary float-right btn-sm btn-pop" data-toggle="popover" data-container="body" data-placement="bottom" typw="button" data-html="true" id="ageyear"><i class="icon-calendar"></i></a>
                                         <input id="user-year" class="form-input" type="text" data-dj-validator="text,4,4" required/>
                                         <div class="input-block"></div>
@@ -77,7 +78,7 @@ get_header();
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group w-100">
-                                        <label class="form-label" for="user-month">Your Birth Month</label>
+                                        <label class="form-label" for="user-month">Birth Month</label>
                                         <a role="button" class="btn btn-secondary float-right btn-sm btn-pop" data-toggle="popover" data-container="#containerElem" data-placement="bottom" typw="button" data-html="true" id="agemonth"><i class="icon-calendar"></i></a>
                                         <input id="user-month" class="form-input" type="text" data-dj-validator="text,3,15" required />
                                         <div class="input-block"></div>
@@ -86,9 +87,9 @@ get_header();
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group w-100">
-                                        <label class="form-label" for="user-day">Your Birth Day</label>
+                                        <label class="form-label" for="user-day">Birth Day</label>
                                         <a role="button" class="btn btn-secondary float-right btn-sm btn-pop" data-toggle="popover" data-container="body" data-placement="bottom" typw="button" data-html="true" id="ageday"><i class="icon-calendar"></i></a>
-                                        <input id="user-day" class="form-input" type="text" data-dj-validator="text,2,2" required />
+                                        <input id="user-day" class="form-input" type="text" data-dj-validator="text,1,2" required />
                                         <div class="input-block"></div>
                                         <!--                 <small id="user-name" class="form-text">what is your name?</small>-->
                                     </div>
@@ -182,32 +183,32 @@ get_header();
                 </form>
             </div>
             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                <form id="reg2" autocomplete="off" novalidate>
+                <form id="reg2" autocomplete="off" autocomplete="nope" novalidate>
 			   <div class="row">
                     <fieldset>
                         <legend>Email & Phone</legend>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group w-100">
-                                    <label class="form-label" for="user-email">Your Email</label>
-                                    <input id="user-email" class="form-input" type="email" data-dj-validator="email,*" required />
-                                    <small id="user-email-help" class="form-text ">what is your email?</small>
+                                    <label class="form-label" for="user-email">Email</label>
+                                    <input id="user-email" class="form-input" type="text" data-dj-validator="email,*" autocomplete="nope" required />
+<!--                                    <small id="user-email-help" class="form-text ">what is your email?</small>-->
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group w-100">
-                                    <label class="form-label" for="user-email-confirm">Confirm Your Email</label>
-                                    <input id="user-email-confirm" class="form-input" type="text" data-dj-validator="equal,user-email, your entered email" required/>
-                                    <small id="user-email-confirm-help" class="form-text">what is your email again?</small>
+                                    <label class="form-label" for="user-email-confirm">Confirm Email</label>
+                                    <input id="user-email-confirm" class="form-input" type="text" data-dj-validator="equal,user-email, your entered email" autocomplete="nope" required/>
+<!--                                    <small id="user-email-confirm-help" class="form-text">what is your email again?</small>-->
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group w-100">
-                                    <label class="form-label" for="user-phone">Your Phone</label>
-                                    <input id="user-phone" class="form-input" type="email" data-dj-validator="phone,*" required />
-                                    <small id="user-phone-help" class="form-text ">what is your phone number?</small>
+                                    <label class="form-label" for="user-phone">Phone</label>
+                                    <input id="user-phone" class="form-input" type="phone" data-dj-validator="phone,*" autocomplete="nope" required />
+<!--                                    <small id="user-phone-help" class="form-text ">what is your phone number?</small>-->
                                 </div>
                             </div>
                         </div>
@@ -220,15 +221,15 @@ get_header();
                             <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-buzz">Buzz Number<small> <i> if applicable?</i></small></label>
-                                    <input id="user-buzz" class="form-input" type="text" data-dj-validator-group="optionals" />
-                                    <small id="user-buzz-help" class="form-text ">what is your buzz numebr?</small>
+                                    <input id="user-buzz" class="form-input" type="text" data-dj-validator-group="optionals" autocomplete="nope" />
+<!--                                    <small id="user-buzz-help" class="form-text ">what is your buzz numebr?</small>-->
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-unit">Unit Number <small> <i> if applicable?</i></small></label>
-                                    <input id="user-unit" class="form-input" type="text" data-dj-validator-group="optionals"/>
-                                    <small id="user-unit-help" class="form-text">what is your unit number?</small>
+                                    <input id="user-unit" class="form-input" type="text" data-dj-validator-group="optionals" autocomplete="nope"/>
+<!--                                    <small id="user-unit-help" class="form-text">what is your unit number?</small>-->
                                 </div>
                             </div>
                         </div>
@@ -236,15 +237,15 @@ get_header();
                                                        <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-building">Building Number</label>
-                                    <input id="user-building" class="form-input" type="text" data-dj-validator="text,1,12" required/>
-                                    <small id="user-building-help" class="form-text">what is your building number?</small>
+                                    <input id="user-building" class="form-input" type="text" data-dj-validator="text,1,12" autocomplete="nope" required/>
+<!--                                    <small id="user-building-help" class="form-text">what is your building number?</small>-->
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group w-100">
-                                    <label class="form-label" for="user-street">Street Name</label>
-                                    <input id="user-street" class="form-input" type="text" data-dj-validator="text,3,80" required/>
-                                    <small id="user-street-help" class="form-text ">what is your street address?</small>
+                                    <label class="form-label" for="user-street">Street</label>
+                                    <input id="user-street" class="form-input" type="text" data-dj-validator="text,3,80" autocomplete="nope" required/>
+<!--                                    <small id="user-street-help" class="form-text ">what is your street address?</small>-->
                                 </div>
                             </div>
 
@@ -252,16 +253,16 @@ get_header();
                         <div class="row">
                                                         <div class="col-md-6">
                                 <div class="form-group w-100">
-                                    <label class="form-label" for="user-city">City Name</label>
-                                    <input id="user-city" class="form-input" type="text" data-dj-validator="text,3,50" required/>
-                                    <small id="user-city-help" class="form-text">what is your city name?</small>
+                                    <label class="form-label" for="user-city">City</label>
+                                    <input id="user-city" class="form-input" type="text" data-dj-validator="text,3,50" autocomplete="nope" required/>
+<!--                                    <small id="user-city-help" class="form-text">what is your city name?</small>-->
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group w-100">
                                     <label class="form-label" for="user-postal">Postal Code</label>
-                                    <input id="user-postal" class="form-input" type="text" data-dj-validator="text,6,7" required/>
-                                    <small id="user-postal-help" class="form-text ">what is your postal code?</small>
+                                    <input id="user-postal" class="form-input" type="text" data-dj-validator="text,6,7" autocomplete="nope" required/>
+<!--                                    <small id="user-postal-help" class="form-text ">what is your postal code?</small>-->
                                 </div>
                             </div>
                         </div>
@@ -285,18 +286,18 @@ get_header();
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group w-100">
-                                        <label class="form-label" for="user-pass">Your Password</label>
-                                        <input id="user-pass" class="form-input" type="password" autocomplete="false"  data-dj-validator="pass,*" required/>
+                                        <label class="form-label" for="user-pass">Password</label>
+                                        <input id="user-pass" class="form-input" type="password" autocomplete="false"  data-dj-validator="pass,*" autocomplete="nope" required/>
                                         <span toggle="#user-pass" class="icon icon-eye-slash field-icon toggle-password"></span>
-                                        <small id="user-pass-help" class="form-text ">enter your password?</small>
+<!--                                        <small id="user-pass-help" class="form-text ">enter your password?</small>-->
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group w-100">
-                                        <label class="form-label" for="user-pass-confirm">Confirm Your Password</label>
-                                        <input id="user-pass-confirm" class="form-input" type="password" autocomplete="false" />
+                                        <label class="form-label" for="user-pass-confirm">Confirm Password</label>
+                                        <input id="user-pass-confirm" class="form-input" type="password" autocomplete="false" autocomplete="nope" />
                                         <span toggle="#user-pass-confirm" class="icon icon-eye-slash field-icon toggle-password"></span>
-                                        <small id="user-pass-confirm-help" class="form-text">what is your password again?</small>
+<!--                                        <small id="user-pass-confirm-help" class="form-text">what is your password again?</small>-->
                                     </div>
                                 </div>
                             </div>

@@ -2,7 +2,7 @@
 
 body{
     background: #fff;
-    padding-top: 120px;
+    padding-top: 100px;
 }
 .registration .container{
 /*  background: #f7f7f7;*/
@@ -17,17 +17,17 @@ body{
 }
 */
 .registration .title {
-	font-weight: 500;
+	font-weight: 600;
 	font-family: 'Open Sans', sans-serif;
 	letter-spacing: 2px;
 	font-size: 24px;
-	margin-bottom: 17px;
+	margin-bottom: 24px;
 }
 .registration .subtitle {
 	font-weight: 500;
 	font-family: 'Open Sans', sans-serif;
 	letter-spacing: 1px;
-	font-size: 15px;
+	font-size: 16px;
     margin-top: 20px;
     margin-bottom: 30px;
 }
@@ -100,17 +100,17 @@ body{
 
 .form-group {
     position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
-.form-group + .form-group {
-    margin-top: 30px;
-}
+
 
 .form-label {
   	font-weight: 600;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif !important;
 	letter-spacing: 1px;
-	font-size: 13px;
+	font-size: 14px;
     position: absolute;
     left: 0;
     top: 10px;
@@ -132,6 +132,7 @@ body{
 }
 
 .form-input {
+    font-family: 'Open Sans', sans-serif !important;
     position: relative;
     padding: 12px 0px 5px 0;
     width: 100%;
@@ -219,7 +220,7 @@ body{
 fieldset {
     margin-top: 20px;
     border: solid 1px #ccc !important;
-    padding: 15px 8px 20px 8px;
+    padding: 15px 8px 30px 8px;
     border-bottom: none;
     width: 100%;
     border-radius: 4px;
@@ -251,6 +252,7 @@ legend {
 */
 }
 .input-block {
+     font-family: 'Open Sans', sans-serif !important;
     position: absolute;
     top: 4px;
     width: 100%;
@@ -277,17 +279,19 @@ legend {
 .btn-tab-control{
     padding-left: 30px;
     padding-right: 30px;
-    background: #7d7d7d;
+     background: #333;
+
     border-radius: 0px;
     color: #fff !important;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
+    margin-top: 16px;
 }
 .btn-tab-control:hover{
+ background: #7d7d7d;
 
-   background: #333;
 
 }
 .field-icon {
@@ -304,8 +308,12 @@ legend {
 
 .btn-popover {
     color: #fff !important;
+/*
     background-color: #6c757d;
     border-color: #6c757d;
+*/
+    background-color: #333333;
+    border-color: #535a5a;
 }
 
 .btn-popover:hover {
@@ -340,4 +348,15 @@ scope{
         border-radius: 0px;
         padding-left: 6px;
     color: #333;
+}
+.alert {
+   line-height: 30px !important;
+      font-family: 'Open Sans', sans-serif;
+           font-weight: 500;
+        font-size: 13px;
+    letter-spacing: 1px;
+}
+.alert strong {
+           font-weight: 700;
+        font-size: 14px;
 }

@@ -26,6 +26,12 @@
   display: inline-block !important;
 }
 
+.icon-instagram:before {
+  content: "\e901";
+}
+.icon-pinterest:before {
+  content: "\e900";
+}
 .icon-user-female:before {
   content: "\e000";
 }
@@ -64,6 +70,9 @@
 }
 .icon-social-twitter:before {
   content: "\e00a";
+}
+.icon-twite:before {
+  content: "\e00b";
 }
 .icon-social-facebook:before {
   content: "\e00c";
@@ -404,6 +413,9 @@
 .icon-bell-o:before {
   content: "\f0a2";
 }
+.icon-google-plus:before {
+  content: "\f0d5";
+}
 .icon-angle-left:before {
   content: "\f104";
 }
@@ -415,6 +427,9 @@
 }
 .icon-angle-down:before {
   content: "\f107";
+}
+.icon-youtube:before {
+  content: "\f167";
 }
 .icon-visa:before {
   content: "\f1f0";

@@ -1,34 +1,31 @@
 <?php
 session_start();
-if (!$_SESSION['captchcode'] == $_POST['captchcode']){
-    echo '<div> You Select Wrong Captca</div>';
-}
-else{
-    require_once "config.php";
-
-    function getRealIpAddr()
-{
-    if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
-    {
-      $ip=$_SERVER['HTTP_CLIENT_IP'];
-    }
-    elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))   //to check ip is pass from proxy
-    {
-      $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
-    }
-    else
-    {
-      $ip=$_SERVER['REMOTE_ADDR'];
-    }
-    return $ip;
-}
-  	$conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+if ($_SESSION['captchcode'] == $_POST['captchcode']){
+   require_once "config.php";
+   $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO users (token, usertitle, username, userlastname, userbyear, userbmonth, userbday, useremail, userphone, userbuzz, userunit, userbuildingno, userstreet, usercity, userpostalcode, userpass, isconfirmed, isactive, ip ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+    function getRealIpAddr()
+    {
+        if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
+        {
+          $ip=$_SERVER['HTTP_CLIENT_IP'];
+        }
+        elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))   //to check ip is pass from proxy
+        {
+          $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
+        }
+        else
+        {
+          $ip=$_SERVER['REMOTE_ADDR'];
+        }
+        return $ip;
+    }
+
+     $sql = "INSERT INTO users (token, usertitle, username, userlastname, userbyear, userbmonth, userbday, useremail, userphone, userbuzz, userunit, userbuildingno, userstreet, usercity, userpostalcode, userpass, isconfirmed, isactive, ip ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
     if($stmt = $conn->prepare($sql)){
     // Bind variables to the prepared statement as parameters
@@ -57,7 +54,7 @@ else{
     $ip = getRealIpAddr();
     $stmt->execute();
 
-$activate_link = 'http://rumioptical.com/phplogin/activate.php?email=' . $_POST['useremail'] . '&code=' . $_POST['token'];
+$activate_link = 'http://niazmandiha.ca/wp-content/themes/rumipress/logins/activate.php?email=' . $_POST['useremail'] . '&code=' . $_POST['token'];
 $to = $_POST['useremail'];
 $subject = "Account Activation Required - Rumi Optical";
 $headers = "MIME-Version: 1.0" . "\r\n";
@@ -85,7 +82,7 @@ $message = '<html>
           <td></td>
         </tr>
         <tr>
-          <td style="padding-top:12px; padding-bottom:12px;"><a role="button" href="'. $activate_link .'" style="margin-bottom:10px; text-decoration: none !important; display: inline-block;   font-weight: 400; letter-spacing:1px;  text-align: center;   white-space: nowrap;   vertical-align: middle;   -webkit-user-select: none;   -moz-user-select: none;   -ms-user-select: none;   user-select: none;   border: 1px solid transparent;   padding: 0.375rem 0.75rem;   font-size: 1rem;   line-height:2.3;   border-radius: 0.25rem;   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;color: #fff;   background-color: #28a745;   border-color: #28a745;">Active Your Account</a></td>
+          <td style="padding-top:12px; padding-bottom:12px;"><a role="button" href="'. $activate_link .'" style="margin-bottom:10px; text-decoration: none !important; display: inline-block;   font-weight: 400; letter-spacing:1px;  text-align: center;   white-space: nowrap;   vertical-align: middle;   -webkit-user-select: none;   -moz-user-select: none;   -ms-user-select: none;   user-select: none;   border: 1px solid transparent;   padding: 0.375rem 0.75rem;   font-size: 1rem;   line-height:2.2;   border-radius: 0.25rem;   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;color: #fff;   background-color: #28a745;   border-color: #28a745;">Active Your Account</a></td>
           <td></td>
         </tr>
                 <tr>
@@ -101,19 +98,21 @@ $message = '<html>
     </div>
   </body>
 </html>';
-  if(mail($to,$subject,$message,$headers)){
+
+          if(mail($to,$subject,$message,$headers)){
             echo 'One More Step! We are almost Done! Please check your email to activate your account!';
+             $stmt->close();
+              $conn->close();
+
         }
   else{
        echo 'Something Is Wrong With Your Email Address. Can You please check you are using correct email account';
 }
-} else{
+ } else{
     echo "ERROR: Could not prepare query: $sql. " . $conn->error;
 }
 
-// Close statement
-$stmt->close();
-
-// Close connection
-$conn->close();
+}
+else{
+echo '<div> Wrong Captcha</div>';
 }

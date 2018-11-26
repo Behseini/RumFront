@@ -1,7 +1,9 @@
 $(function () {
   "use strict";
     $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+
+
+        $("#demo3 li").hoverIntent( $('[data-toggle="tooltip"]').tooltip() );
 })
 
   $(".navbar-main .dropdown-toggler").on('click', function () {
