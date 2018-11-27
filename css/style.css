@@ -5,6 +5,10 @@ body {
 	padding: 0px;
 	margin: 0px;
 }
+.navbar-mobile-top , .navbar-mobile-bot {
+   z-index: 1600;
+}
+
 .navbar-mobile-top .collapse-wrap, .navbar-mobile-bot .collapse-wrap{
    padding:10px;
 }
@@ -73,7 +77,7 @@ body {
    text-align:center;
    color: #333 !important;
    text-decoration:none !important;
-
+cursor: pointer;
    width:36px;
 }
 .navbar-mobile-bot .navbar-toggler {
@@ -84,6 +88,8 @@ body {
    line-height: 1;
    background-color: transparent;
    border-radius: 0.15rem;
+    outline: none !important;
+   box-shadow: none;
 }
 .navbar-mobile-top .navbar-toggler {
    font-family: 'Open Sans', sans-serif;
@@ -96,6 +102,8 @@ body {
    padding: 0.60rem 0.90rem;
    background-color: transparent;
    border-radius: 0.15rem;
+     outline: none !important;
+   box-shadow: none;
 }
 .btn-group-vertical .btn{
    margin-bottom:4px;
@@ -725,13 +733,13 @@ background: #444;
         padding-top: 20px;
     padding-bottom: 20px;
     background: #ecebeb;
-    border-radius: 3px;
+
 }
 .footer-3{
         padding-top: 20px;
     padding-bottom: 20px;
     background: #404040;
-    border-radius: 3px;
+
 }
 .footer-3 p{
     font-weight: 600;
@@ -747,4 +755,18 @@ background: #444;
     font-size:32px;
     color: #fff;
 
+}
+
+.mobile-modals .modal{
+background: rgba(0,0,0,0.6);
+}
+.mobile-modals .modal-content{
+border-radius: 0px;
+}
+.mobile-modals .modal-title{
+    font-weight: 600;
+    font-size:14px;
+    font-family: 'Open Sans',sans-serif;
+    color: #777;
+    letter-spacing: 1px;
 }

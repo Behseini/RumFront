@@ -60,6 +60,11 @@ $(document).ready(function () {
   $(".dropdown-menu").on("click", function (e) {
     e.stopPropagation();
   });
+  $('.btn-forgetpassword-mobile').on('click', function () {
+//    $('.tab-pane').removeClass('show active');
+//    $('#pills-forget').addClass('show active');
+    $('#pills-forget-tab-mobile').click();
+  });
 
   $('.btn-forgetpassword').on('click', function () {
 //    $('.tab-pane').removeClass('show active');

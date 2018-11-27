@@ -3,9 +3,12 @@
 <div class="row footer-0">
     <div class="container">
     <div class="row">
+        <div class="col-sm-12 text-center">
+            <p>Join us on social</p>
+        </div>
         <div class="col-md-6 footer-social-box">
             <ul class="list-inline d-flex">
-              <li class="flex-fill"><span class="flex-fill">Join us on social</span></li>
+              <li class="flex-fill d-none "><span class="flex-fill">Join us on social</span></li>
               <li class="flex-fill"><a role="button" class="btn flex-fill" href="#"><i class="icon icon-instagram"></i></a></li>
               <li class="flex-fill"><a role="button" class="btn flex-fill" href="#"><i class="icon icon-social-facebook"></i></a></li>
               <li class="flex-fill"><a role="button" class="btn flex-fill" href="#"><i class="icon icon-pinterest"></i></a></li>
@@ -101,7 +104,7 @@
 
 </div>
 </div>
-<nav class="navbar fixed-bottom navbar-light bg-light navbar-mobile-bot">
+<nav class="navbar fixed-bottom navbar-light bg-light navbar-mobile-bot d-md-none">
    <a role="button" class="btn navbar-toggler" href="#"><i class="icon icon-phone"></i></a>
    <ul class="list-inline">
       <li class="list-inline-item">
@@ -111,7 +114,7 @@
          <a class="mobile-bot-nav" href="#"><i class="icon icon-bag"></i></a>
       </li>
       <li class="list-inline-item">
-         <a class="mobile-bot-nav" href="#"><i class="icon icon-lock-open"></i></a>
+         <a class="mobile-bot-nav" data-toggle="modal" data-target="#exampleModalCenter"><i class="icon icon-lock-open"></i></a>
       </li>
    </ul>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile-bot-toggler" aria-controls="navbar-mobile-bot-toggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -197,6 +200,57 @@
       </div>
    </div>
 </nav>
+<div class="mobile-modals">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Rumi Optical - <small>Login</small> </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Forget Password</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                          <div class="col-md-12">
+                                <div class="form-group w-100">
+                                    <label class="form-label" for="user-email">Email</label>
+                                    <input id="user-email" class="form-input" type="text" data-dj-validator="email,*" autocomplete="nope" required />
+<!--                                    <small id="user-email-help" class="form-text ">what is your email?</small>-->
+                                </div>
+                            </div>
+                                      <div class="col-md-12">
+                                    <div class="form-group w-100">
+                                        <label class="form-label" for="user-pass">Password</label>
+                                        <input id="user-pass" class="form-input" type="password" autocomplete="false"  data-dj-validator="pass,*" autocomplete="nope" required/>
+                                        <span toggle="#user-pass" class="icon icon-eye-slash field-icon toggle-password"></span>
+<!--                                        <small id="user-pass-help" class="form-text ">enter your password?</small>-->
+                                    </div>
+                                    </div>
+
+
+    </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+
+</div>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
  </div>
  </body>
 </html>

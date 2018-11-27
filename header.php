@@ -108,10 +108,7 @@ echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
                                                          
 
                         </div>
-              
-                </div>
-
-       
+        </div>
             <div class="side-nav-footer">
                   <div class="dropdown-box">
                 <div class="col-md-12 p-0 m-0">
@@ -342,7 +339,7 @@ echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
    
     <section>
         <!-- Desktop Navbars -->
-        <nav class="navbar navbar-expand-lg navbar-top fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-top fixed-top d-none d-md-block">
             <div class="container-fluid px-6">
                 <!-- <a class="navbar-brand" href="#"><i class="icon icon-pointer"></i> vancouver best affordable optical solutions</a> -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -381,7 +378,7 @@ sagittis lacus vel augue laoreet rutrum faucibus." >  <i class="icon icon-clock"
             </div>
         </nav>
 
-        <nav class="navbar navbar-expand-lg navbar-light shadow-sm navbar-main fixed-top " style="margin-top:36px">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm navbar-main fixed-top d-none d-md-block" style="margin-top:36px">
             <div class="container-fluid px-6">
                 <a class="navbar-brand pr-5" href="#">Rumi Optical</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -521,7 +518,7 @@ sagittis lacus vel augue laoreet rutrum faucibus." >  <i class="icon icon-clock"
                 </div>
             </div>
         </nav>
-<nav class="navbar fixed-top navbar-light bg-light navbar-mobile-top">
+<nav class="navbar fixed-top navbar-light bg-light navbar-mobile-top d-md-none">
    <a class="navbar-brand" href="#">Rumi Optical</a>
    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile-top-toggler" aria-controls="navbar-mobile-top-toggler" aria-expanded="false" aria-label="Toggle navigation">
 <!--       <span class="navbar-toggler-icon"></span> -->
