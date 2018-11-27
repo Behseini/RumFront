@@ -521,6 +521,90 @@ sagittis lacus vel augue laoreet rutrum faucibus." >  <i class="icon icon-clock"
                 </div>
             </div>
         </nav>
+<nav class="navbar fixed-top navbar-light bg-light navbar-mobile-top">
+   <a class="navbar-brand" href="#">Rumi Optical</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile-top-toggler" aria-controls="navbar-mobile-top-toggler" aria-expanded="false" aria-label="Toggle navigation">
+<!--       <span class="navbar-toggler-icon"></span> -->
+      navigate
+   </button>
+   <div class="collapse navbar-collapse" id="navbar-mobile-top-toggler">
+      <div class="collapse-wrap">
+
+         <div id="mobile-top-accordion" role="tablist">
+            <div class="card">
+               <div class="card-header collapsed" role="tab" id="mobile-top-collapse-heading-one"  data-toggle="collapse" href="#mobile-top-collapse-one" aria-expanded="true" aria-controls="mobile-top-collapse-one">
+                  <h6 class="mb-0">
+                     Eyeglasses
+                     <button class="bar-box float-right">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </h6>
+               </div>
+
+               <div id="mobile-top-collapse-one" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#mobile-top-accordion">
+                  <div class="card-body">
+                     <div class="btn-group-vertical w-100" role="group">
+                       <a role="button" class="btn" href="#">Women Eyeglasses</a>
+                       <a role="button" class="btn" href="#">Men Eyeglasses</a>
+                       <a role="button" class="btn" href="#">Unisex Eyeglasses </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header collapsed" role="tab" id="mobile-top-collapse-heading-two" data-toggle="collapse" href="#mobile-top-collapse-two" aria-expanded="false" aria-controls="mobile-top-collapse-two">
+                  <h6 class="mb-0">
+                     Sunglasses
+                     <button class="bar-box float-right">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </h6>
+               </div>
+               <div id="mobile-top-collapse-two" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#mobile-top-accordion">
+                  <div class="card-body">
+                     <div class="btn-group-vertical w-100" role="group">
+                       <a role="button" class="btn" href="#">Women Sunglasses</a>
+                       <a role="button" class="btn" href="#">Men Sunglasses</a>
+                       <a role="button" class="btn" href="#">Unisex Sunglasses </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <a href="">
+                  <div class="card-header">
+                     <h6 class="mb-0">
+                        Item 1
+                     </h6>
+                  </div>
+               </a>
+            </div>
+            <div class="card">
+               <div class="card-header collapsed" role="tab" id="mobile-top-collapse-heading-three" data-toggle="collapse" href="#mobile-top-collapse-three" aria-expanded="false" aria-controls="mobile-top-collapse-three">
+                  <h6 class="mb-0">
+                     Safety Glasses
+                     <button class="bar-box float-right">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </h6>
+               </div>
+               <div id="mobile-top-collapse-three" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#mobile-top-accordion">
+                  <div class="card-body">
+                     <div class="btn-group-vertical w-100" role="group">
+                       <a role="button" class="btn" href="#">Women Eyeglasses</a>
+                       <a role="button" class="btn" href="#">Men Eyeglasses</a>
+                       <a role="button" class="btn" href="#">Unisex Eyeglasses </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</nav>
 
 
     </section>

@@ -101,6 +101,102 @@
 
 </div>
 </div>
+<nav class="navbar fixed-bottom navbar-light bg-light navbar-mobile-bot">
+   <a role="button" class="btn navbar-toggler" href="#"><i class="icon icon-phone"></i></a>
+   <ul class="list-inline">
+      <li class="list-inline-item">
+         <a class="mobile-bot-nav" href="#"><i class="icon icon-heart"></i></a>
+      </li>
+      <li class="list-inline-item">
+         <a class="mobile-bot-nav" href="#"><i class="icon icon-bag"></i></a>
+      </li>
+      <li class="list-inline-item">
+         <a class="mobile-bot-nav" href="#"><i class="icon icon-lock-open"></i></a>
+      </li>
+   </ul>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile-bot-toggler" aria-controls="navbar-mobile-bot-toggler" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="icon icon-question"></i>
+   </button>
+   <div class="collapse navbar-collapse" id="navbar-mobile-bot-toggler">
+      <div class="collapse-wrap">
+
+         <div id="mobile-bot-accordion" role="tablist">
+            <div class="card">
+               <div class="card-header collapsed" role="tab" id="mobile-bot-collapse-heading-one"  data-toggle="collapse" href="#mobile-bot-collapse-one" aria-expanded="true" aria-controls="mobile-bot-collapse-one">
+                  <h6 class="mb-0">
+                     Items 1
+                       <button class="bar-box float-right">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </h6>
+               </div>
+
+               <div id="mobile-bot-collapse-one" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#mobile-bot-accordion">
+                  <div class="card-body">
+  <div class="btn-group-vertical w-100">
+  <button type="button" class="btn">Left</button>
+  <button type="button" class="btn">Middle</button>
+  <button type="button" class="btn">Right</button>
+</div>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header collapsed" role="tab" id="mobile-bot-collapse-heading-two" data-toggle="collapse" href="#mobile-bot-collapse-two" aria-expanded="false" aria-controls="mobile-bot-collapse-two">
+                  <h6 class="mb-0">
+
+                     Items 2
+  <button class="bar-box float-right">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </h6>
+               </div>
+               <div id="mobile-bot-collapse-two" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#mobile-bot-accordion">
+                  <div class="card-body">
+<div class="btn-group-vertical w-100">
+  <button type="button" class="btn">Left</button>
+  <button type="button" class="btn">Middle</button>
+  <button type="button" class="btn">Right</button>
+</div>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <a href="">
+                  <div class="card-header">
+                     <h6 class="mb-0">
+                        Item 1
+
+                     </h6>
+                  </div>
+               </a>
+            </div>
+            <div class="card">
+               <div class="card-header collapsed" role="tab" id="mobile-bot-collapse-heading-one" data-toggle="collapse" href="#mobile-bot-collapse-three" aria-expanded="false" aria-controls="mobile-bot-collapse-three">
+                  <h6 class="mb-0">
+                     Items 3
+                       <button class="bar-box float-right">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </h6>
+               </div>
+               <div id="mobile-bot-collapse-three" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#mobile-bot-accordion">
+                  <div class="card-body">
+<div class="btn-group-vertical w-100">
+  <button type="button" class="btn">Left</button>
+  <button type="button" class="btn">Middle</button>
+  <button type="button" class="btn">Right</button>
+</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</nav>
  </div>
  </body>
 </html>
