@@ -50,7 +50,10 @@ function my_js_variables(){
         wp_enqueue_style( 'single-e', get_template_directory_uri() .'/css/single-e.css' );
         wp_enqueue_style( 'single-ue', get_template_directory_uri() .'/css/single-ue.css' );
     }
-        if( is_page_template( 'page-registration.php' ) ){
+    if( is_page_template( 'page-women-eyeglasses.php' ) ){
+        wp_enqueue_style( 'we', get_template_directory_uri() .'/css/we.css' );
+    }
+    if( is_page_template( 'page-registration.php' ) ){
         wp_enqueue_style( 'registration', get_template_directory_uri() .'/css/registration.css' );
     }
     }

@@ -18,7 +18,7 @@ if ( $paged >= 2 || $page >= 2 )
 echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
 ?>
     </title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600|Open+Sans:300,400,600|Roboto:100,300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600|Open+Sans:300,400,600|Roboto:100,300,400,500|Rubik:300,400,500,700" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 

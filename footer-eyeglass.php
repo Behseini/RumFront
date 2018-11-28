@@ -1,5 +1,4 @@
 
-<?php wp_footer(); ?>
 <div class="row footer-0">
     <div class="container footer-social-box pt-1 pb-3 ml-2 mr-2 m-sm-auto">
     <div class="row">
@@ -12,7 +11,7 @@
             <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-social-facebook"></i></a>
             <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-pinterest"></i></a>
             <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-social-twitter"></i></a>
-            <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-youtube"></i></a>
+            <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-social-youtube"></i></a>
             <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-youtube"></i></a>
             </div>
             </div>
@@ -50,21 +49,6 @@
 
           </div>
           <div class="col-md-3 col-sm-6 pl-1">
-              <div class="row"><h4 class="footer-header">Support</h4></div>
-              <div class="row">
-                            <ul class="list-unstyled">
-                          <li><a href="#">Isurance</a></li>
-                          <li><a href="#">Promotions</a></li>
-                          <li><a href="#">Terms & Conditions</a></li>
-                          <li><a href="#">Live Chat</a></li>
-                          <li><a href="#">Send Us a Message</a></li>
-
-                  </ul>
-
-              </div>
-
-          </div>
-          <div class="col-md-2 col-sm-6 pl-1">
          <div class="row"><h4 class="footer-header">Tips & Guides</h4></div>
               <div class="row">
                             <ul class="list-unstyled">
@@ -73,6 +57,22 @@
                           <li><a href="#">How to Read a Prescription</a></li>
                           <li><a href="#">Live Chat</a></li>
                           <li><a href="#">Frames & Face Shapes</a></li>
+
+                  </ul>
+
+              </div>
+
+          </div>
+          <div class="col-md-2 col-sm-6 pl-1">
+
+                            <div class="row"><h4 class="footer-header">Support</h4></div>
+              <div class="row">
+                            <ul class="list-unstyled">
+                          <li><a href="#">Isurance</a></li>
+                          <li><a href="#">Promotions</a></li>
+                          <li><a href="#">Terms & Conditions</a></li>
+                          <li><a href="#">Live Chat</a></li>
+                          <li><a href="#">Send Us a Message</a></li>
 
                   </ul>
 
@@ -89,7 +89,7 @@
       <input type="radio" name="options" id="option1" autocomplete="off" checked> <i class="icon icon-check"></i> Read More
   </label>
   <label class="btn btn-secondary btn-sm">
-    <input type="radio" name="options" id="option2" autocomplete="off"> I Dissagre
+    <input type="radio" name="options" id="option2" autocomplete="off"> I Disagree
   </label>
 </div>
     </div>
@@ -97,17 +97,14 @@
 <div class="row footer-3">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <p>©
-                    <?php echo date("Y"); ?>
-                </p>
+            <div class="col-md-6 pb-0">
+                <p class="pb-0 mb-0">© <?php echo date("Y") ." Rumi Optical - All rights reserved. "; ?> </p>
             </div>
-            <div class="col-md-6 text-right">
+            <div class="col-md-6 text-right mb-0" >
                 <ul class="list-inline">
-                    <li class="list-inline-item"><i class="icon icon-paypal"></i></li>
-                    <li class="list-inline-item"><i class="icon icon-paypal"></i></li>
-                    <li class="list-inline-item"><i class="icon icon-paypal"></i></li>
-                </ul>
+                    <li class="list-inline-item"><i class="icon icon-paypal-pay"></i></li>
+                    <li class="list-inline-item"><i class="icon icon-mobile-pay"></i></li>
+              </ul>
             </div>
         </div>
 
@@ -402,5 +399,6 @@
 </div>
 </div>
  </div>
+<?php wp_footer(); ?>
  </body>
 </html>

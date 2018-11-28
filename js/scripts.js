@@ -54,6 +54,17 @@ $(function () {
 
 });
 
+$(".product").hover(function(){
+  $(this).find(".icon").removeClass('icon-heart-o zoomIn').addClass('zoomIn icon-heart');
+  $(this).find(".item-brand-name").addClass('zoomIn');
+
+    }, function(){
+       $(this).find(".icon").removeClass('zoomIn icon-heart').addClass('icon-heart-o');
+      $(this).find(".item-brand-name").removeClass('zoomIn');
+});
+
+
+
 
 
 $(document).ready(function () {
