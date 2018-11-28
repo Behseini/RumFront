@@ -519,12 +519,24 @@ sagittis lacus vel augue laoreet rutrum faucibus." >  <i class="icon icon-clock"
             </div>
         </nav>
 <nav class="navbar fixed-top navbar-light bg-light navbar-mobile-top d-md-none">
-   <a class="navbar-brand" href="#">Rumi Optical</a>
-   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile-top-toggler" aria-controls="navbar-mobile-top-toggler" aria-expanded="false" aria-label="Toggle navigation">
-<!--       <span class="navbar-toggler-icon"></span> -->
-      navigate
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile-top-toggler" aria-controls="navbar-mobile-top-toggler" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+<!--      navigate-->
    </button>
-   <div class="collapse navbar-collapse" id="navbar-mobile-top-toggler">
+
+   <a class="navbar-brand mx-auto"  href="#">Rumi Optical</a>
+
+
+       <ul class="list-inline">
+      <li class="list-inline-item">
+         <a class="mobile-bot-nav" href="#"><i class="icon icon-heart-o pulse"></i></a>
+      </li>
+      <li class="list-inline-item">
+         <a class="mobile-bot-nav" href="#"><i class="icon icon-bag"></i></a>
+      </li>
+   </ul>
+
+           <div class="collapse navbar-collapse" id="navbar-mobile-top-toggler">
       <div class="collapse-wrap">
 
          <div id="mobile-top-accordion" role="tablist">
@@ -601,6 +613,7 @@ sagittis lacus vel augue laoreet rutrum faucibus." >  <i class="icon icon-clock"
          </div>
       </div>
    </div>
+
 </nav>
 
 
