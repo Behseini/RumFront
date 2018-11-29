@@ -1,38 +1,25 @@
 
-<?php wp_footer(); ?>
 <div class="row footer-0">
-    <div class="container">
+    <div class="container footer-social-box pt-1 pb-3 ml-2 mr-2 m-sm-auto">
     <div class="row">
-
-    <div class="col-md-6 footer-social-box">
-    <div class="row">
-        <div class="col-xs-12 col-md-4 text-center p-3" > <p><strong>Join us on social</strong></p></div>
-        <div class="col-xs-12 col-md-8 p-3">
-        <div class="btn-group d-flex" role="group" aria-label="Basic example">
-        <a role="button" class="btn btn-secondary w-100 rounded-circle"><i class="icon icon-instagram"></i></a>
-        <a role="button" class="btn btn-secondary w-100 rounded-circle"><i class="icon icon-social-facebook"></i></a>
-        <a role="button" class="btn btn-secondary w-100 rounded-circle"><i class="icon icon-pinterest"></i></a>
-        <a role="button" class="btn btn-secondary w-100 rounded-circle"><i class="icon icon-social-twitter"></i></a>
-        <a role="button" class="btn btn-secondary w-100 rounded-circle"><i class="icon icon-youtube"></i></a>
-        <a role="button" class="btn btn-secondary w-100 rounded-circle"><i class="icon icon-google-plus"></i></a>
-        </div>
+    <div class="col-md-6 p-0">
+        <div class="row">
+            <div class="col-xs-12 col-md-4 text-center p-0 pt-4"  > <p><strong>Join us on social</strong></p></div>
+            <div class="col-xs-12 col-md-8 text-center p-0 pt-3">
+            <div class="btn-group m-0" role="group" aria-label="Basic example">
+            <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-instagram"></i></a>
+            <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-social-facebook"></i></a>
+            <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-pinterest"></i></a>
+            <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-social-twitter"></i></a>
+            <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-social-youtube"></i></a>
+            <a role="button" class="btn btn-secondary rounded-circle"><i class="icon icon-youtube"></i></a>
+            </div>
+            </div>
         </div>
     </div>
-<!--
-            <ul class="list-inline d-flex">
-              <li class="flex-fill d-none "><span class="flex-fill">Join us on social</span></li>
-              <li class="flex-fill"><a role="button" class="btn flex-fill" href="#"><i class="icon icon-instagram"></i></a></li>
-              <li class="flex-fill"><a role="button" class="btn flex-fill" href="#"><i class="icon icon-social-facebook"></i></a></li>
-              <li class="flex-fill"><a role="button" class="btn flex-fill" href="#"><i class="icon icon-pinterest"></i></a></li>
-              <li class="flex-fill"><a role="button" class="btn flex-fill" href="#"><i class="icon icon-social-twitter"></i></a></li>
-              <li class="flex-fill"><a role="button" class="btn flex-fill" href="#"><i class="icon icon-youtube"></i></a></li>
-              <li class="flex-fill"><a role="button" class="btn flex-fill" href="#"><i class="icon icon-google-plus"></i></a></li>
-</ul>
--->
-    </div>
-        <div class="col-md-6 text-center p-3">
+    <div class="col-md-6 text-center p-0 pt-5 pt-sm-2">
         <a class="btn btn-newsletter" role="button" href="#">sign up for our exclusive offers</a>
-        </div>
+    </div>
     </div>
     </div>
 </div>
@@ -62,21 +49,6 @@
 
           </div>
           <div class="col-md-3 col-sm-6 pl-1">
-              <div class="row"><h4 class="footer-header">Support</h4></div>
-              <div class="row">
-                            <ul class="list-unstyled">
-                          <li><a href="#">Isurance</a></li>
-                          <li><a href="#">Promotions</a></li>
-                          <li><a href="#">Terms & Conditions</a></li>
-                          <li><a href="#">Live Chat</a></li>
-                          <li><a href="#">Send Us a Message</a></li>
-
-                  </ul>
-
-              </div>
-
-          </div>
-          <div class="col-md-2 col-sm-6 pl-1">
          <div class="row"><h4 class="footer-header">Tips & Guides</h4></div>
               <div class="row">
                             <ul class="list-unstyled">
@@ -89,51 +61,54 @@
                   </ul>
 
               </div>
+
+          </div>
+          <div class="col-md-2 col-sm-6 pl-1">
+
+                            <div class="row"><h4 class="footer-header">Support</h4></div>
+              <div class="row">
+                            <ul class="list-unstyled">
+                          <li><a href="#">Isurance</a></li>
+                          <li><a href="#">Promotions</a></li>
+                          <li><a href="#">Terms & Conditions</a></li>
+                          <li><a href="#">Live Chat</a></li>
+                          <li><a href="#">Send Us a Message</a></li>
+
+                  </ul>
+
+              </div>
           </div>
     </div><!--/row-->
 </div><!--container-->
 </div>
 <div class="row footer-2">
-
-
+    <div class="container text-center">
+        <p>This website uses cookies to ensure you get the best experience on our website</p>
+         <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary btn-sm active"><i class="icon icon-check"></i> Read More</button>
+  <button type="button" class="btn btn-secondary btn-sm">I Disagree</button>
+</div>
+     </div>
 </div>
 <div class="row footer-3">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <p>©
-                    <?php echo date("Y"); ?>
-                </p>
+            <div class="col-12 col-sm-6 pt-3 pb-2 pb-sm-0 pt-sm-0">
+                <p class="pb-0 mb-0">© <?php echo date("Y") ." Rumi Optical - All rights reserved. "; ?> </p>
             </div>
-            <div class="col-md-6 text-right">
-                <ul class="list-inline">
-                    <li class="list-inline-item"><i class="icon icon-paypal"></i></li>
-                    <li class="list-inline-item"><i class="icon icon-paypal"></i></li>
-                    <li class="list-inline-item"><i class="icon icon-paypal"></i></li>
-                </ul>
+            <div class="col-12 col-sm-6 text-center mb-0 pt-4 pb-4 pb-sm-0 pt-sm-0" >
+                <ul class="list-inline m-0 p-0">
+                    <li class="list-inline-item"><i class="icon icon-paypal-pay"></i></li>
+                    <li class="list-inline-item"><i class="icon icon-mobile-pay"></i></li>
+              </ul>
             </div>
         </div>
 
 
 </div>
 </div>
-<nav class="navbar fixed-bottom navbar-light bg-light navbar-mobile-bot d-md-none">
-   <a role="button" class="btn navbar-toggler" href="#"><i class="icon icon-phone"></i></a>
-   <ul class="list-inline">
-      <li class="list-inline-item">
-         <a class="mobile-bot-nav" href="#"><i class="icon icon-heart"></i></a>
-      </li>
-      <li class="list-inline-item">
-         <a class="mobile-bot-nav" href="#"><i class="icon icon-bag"></i></a>
-      </li>
-      <li class="list-inline-item">
-         <a class="mobile-bot-nav" data-toggle="modal" data-target="#exampleModalCenter"><i class="icon icon-lock-open"></i></a>
-      </li>
-   </ul>
-   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile-bot-toggler" aria-controls="navbar-mobile-bot-toggler" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="icon icon-question"></i>
-   </button>
-   <div class="collapse navbar-collapse" id="navbar-mobile-bot-toggler">
+<nav class="navbar fixed-bottom navbar-light navbar-mobile-bot d-md-none">
+       <div class="collapse navbar-collapse" id="navbar-mobile-bot-toggler">
       <div class="collapse-wrap">
 
          <div id="mobile-bot-accordion" role="tablist">
@@ -212,6 +187,161 @@
          </div>
       </div>
    </div>
+   <div class="collapse navbar-collapse" id="navbar-mobile-bot-toggler-filter">
+      <div class="collapse-wrap">
+
+         <div id="mobile-bot-accordion-filter" role="tablist">
+    <div class="card">
+        <a href="">
+            <div class="card-header">
+                <h6 class="mb-0">
+                    Remove Filters
+                </h6>
+            </div>
+        </a>
+    </div>
+            <div class="card">
+               <div class="card-header collapsed" role="tab" id="mobile-bot-filter-one"  data-toggle="collapse" href="#mobile-bot-collapse-filter-one" aria-expanded="true" aria-controls="mobile-bot-collapse-one">
+                  <h6 class="mb-0">
+                     Brands
+                       <button class="bar-box float-right">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </h6>
+               </div>
+
+               <div id="mobile-bot-collapse-filter-one" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#mobile-bot-accordion-filter">
+                  <div class="card-body">
+  <div class="btn-group-vertical w-100">
+  <button type="button" class="btn">Left</button>
+  <button type="button" class="btn">Middle</button>
+  <button type="button" class="btn">Right</button>
+</div>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header collapsed" role="tab" id="mobile-bot-filter-two" data-toggle="collapse" href="#mobile-bot-collapse-filter-two" aria-expanded="false" aria-controls="mobile-bot-collapse-two">
+                  <h6 class="mb-0">
+
+                     Shapes
+  <button class="bar-box float-right">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </h6>
+               </div>
+               <div id="mobile-bot-collapse-filter-two" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#mobile-bot-accordion-filter">
+                  <div class="card-body">
+<div class="btn-group-vertical w-100">
+  <button type="button" class="btn">Left</button>
+  <button type="button" class="btn">Middle</button>
+  <button type="button" class="btn">Right</button>
+</div>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header collapsed" role="tab" id="mobile-bot-filter-three" data-toggle="collapse" href="#mobile-bot-collapse-filter-three" aria-expanded="false" aria-controls="mobile-bot-collapse-three">
+                  <h6 class="mb-0">
+                     Materials
+                       <button class="bar-box float-right">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                     </button>
+                  </h6>
+               </div>
+               <div id="mobile-bot-collapse-filter-three" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#mobile-bot-accordion-filter">
+                  <div class="card-body">
+<div class="btn-group-vertical w-100">
+  <button type="button" class="btn">Left</button>
+  <button type="button" class="btn">Middle</button>
+  <button type="button" class="btn">Right</button>
+</div>
+                  </div>
+               </div>
+            </div>
+             <div class="card">
+   <div class="card-header collapsed" role="tab" id="mobile-bot-filter-four" data-toggle="collapse" href="#mobile-bot-collapse-filter-four" aria-expanded="false" aria-controls="mobile-bot-filter-four">
+      <h6 class="mb-0">
+         Size
+         <button class="bar-box float-right">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         </button>
+      </h6>
+   </div>
+   <div id="mobile-bot-collapse-filter-four" class="collapse" role="tabpanel" aria-labelledby="headingmobilefilterfour" data-parent="#mobile-bot-accordion-filter">
+      <div class="card-body">
+         <div class="btn-group-vertical w-100">
+            <button type="button" class="btn">Left</button>
+            <button type="button" class="btn">Middle</button>
+            <button type="button" class="btn">Right</button>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="card">
+   <div class="card-header collapsed" role="tab" id="mobile-bot-filter-five" data-toggle="collapse" href="#mobile-bot-collapse-filter-five" aria-expanded="false" aria-controls="mobile-bot-filter-five">
+      <h6 class="mb-0">
+         Rim
+         <button class="bar-box float-right">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         </button>
+      </h6>
+   </div>
+   <div id="mobile-bot-collapse-filter-five" class="collapse" role="tabpanel" aria-labelledby="headingmobilefilterfive" data-parent="#mobile-bot-accordion-filter">
+      <div class="card-body">
+         <div class="btn-group-vertical w-100">
+            <button type="button" class="btn">Left</button>
+            <button type="button" class="btn">Middle</button>
+            <button type="button" class="btn">Right</button>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="card">
+   <div class="card-header collapsed" role="tab" id="mobile-bot-filter-six" data-toggle="collapse" href="#mobile-bot-collapse-filter-six" aria-expanded="false" aria-controls="mobile-bot-filter-six">
+      <h6 class="mb-0">
+         Color
+         <button class="bar-box float-right">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         </button>
+      </h6>
+   </div>
+   <div id="mobile-bot-collapse-filter-six" class="collapse" role="tabpanel" aria-labelledby="headingMobileFilterSix" data-parent="#mobile-bot-accordion-filter">
+      <div class="card-body">
+         <div class="btn-group-vertical w-100">
+            <button type="button" class="btn">Left</button>
+            <button type="button" class="btn">Middle</button>
+            <button type="button" class="btn">Right</button>
+         </div>
+      </div>
+   </div>
+</div>
+         </div>
+      </div>
+   </div>
+
+   <a role="button" class="btn navbar-toggler" href="#"><i class="icon icon-phone"></i></a>
+   <ul class="list-inline">
+      <li class="list-inline-item">
+         <a class="mobile-bot-nav" href="#"><i class="icon icon-pointer"></i></a>
+      </li>
+      <li class="list-inline-item">
+         <a class="mobile-bot-nav" data-toggle="collapse" data-target="#navbar-mobile-bot-toggler-filter" aria-controls="navbar-mobile-bot-toggler" aria-expanded="false" aria-label="Toggle navigation"><i class="icon icon-star"></i></a>
+      </li>
+      <li class="list-inline-item">
+         <a class="mobile-bot-nav" data-toggle="modal" data-target="#exampleModalCenter"><i class="icon icon-lock-open"></i></a>
+      </li>
+   </ul>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile-bot-toggler" aria-controls="navbar-mobile-bot-toggler" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="icon icon-question"></i>
+   </button>
+
 </nav>
 <div class="mobile-modals">
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -265,5 +395,6 @@
 </div>
 </div>
  </div>
+<?php wp_footer(); ?>
  </body>
 </html>

@@ -50,6 +50,9 @@ function my_js_variables(){
         wp_enqueue_style( 'single-e', get_template_directory_uri() .'/css/single-e.css' );
         wp_enqueue_style( 'single-ue', get_template_directory_uri() .'/css/single-ue.css' );
     }
+    if( is_page_template( 'front-page.php' ) ){
+        wp_enqueue_style( 'front', get_template_directory_uri() .'/css/front.css' );
+    }
     if( is_page_template( 'page-women-eyeglasses.php' ) ){
         wp_enqueue_style( 'we', get_template_directory_uri() .'/css/we.css' );
     }

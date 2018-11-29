@@ -84,24 +84,20 @@
 <div class="row footer-2">
     <div class="container text-center">
         <p>This website uses cookies to ensure you get the best experience on our website</p>
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-  <label class="btn btn-secondary btn-sm active">
-      <input type="radio" name="options" id="option1" autocomplete="off" checked> <i class="icon icon-check"></i> Read More
-  </label>
-  <label class="btn btn-secondary btn-sm">
-    <input type="radio" name="options" id="option2" autocomplete="off"> I Disagree
-  </label>
+         <div class="btn-group" role="group" aria-label="Basic example">
+  <button type="button" class="btn btn-secondary btn-sm active"><i class="icon icon-check"></i> Read More</button>
+  <button type="button" class="btn btn-secondary btn-sm">I Disagree</button>
 </div>
-    </div>
+     </div>
 </div>
 <div class="row footer-3">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 pb-0">
+            <div class="col-12 col-sm-6 pt-3 pb-2 pb-sm-0 pt-sm-0">
                 <p class="pb-0 mb-0">© <?php echo date("Y") ." Rumi Optical - All rights reserved. "; ?> </p>
             </div>
-            <div class="col-md-6 text-right mb-0" >
-                <ul class="list-inline">
+            <div class="col-12 col-sm-6 text-center mb-0 pt-4 pb-4 pb-sm-0 pt-sm-0" >
+                <ul class="list-inline m-0 p-0">
                     <li class="list-inline-item"><i class="icon icon-paypal-pay"></i></li>
                     <li class="list-inline-item"><i class="icon icon-mobile-pay"></i></li>
               </ul>
@@ -111,7 +107,7 @@
 
 </div>
 </div>
-<nav class="navbar fixed-bottom navbar-light bg-light navbar-mobile-bot d-md-none">
+<nav class="navbar fixed-bottom navbar-light navbar-mobile-bot d-md-none">
        <div class="collapse navbar-collapse" id="navbar-mobile-bot-toggler">
       <div class="collapse-wrap">
 
