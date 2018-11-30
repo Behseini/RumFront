@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
   display: inline-block !important;
 }
+
+.icon-filter:before {
+  content: "\e904";
+}
 .icon-paypal-pay:before {
   content: "\e902";
 }

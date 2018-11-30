@@ -27,32 +27,78 @@
 		$rim = $meta['rim_box'][0];
 		$thumbnail = $meta['thumbnail_box'][0];
 
-
-        echo '<div class="row">';
+        echo '<nav aria-label="breadcrumb">';
             echo '<ol class="breadcrumb">';
-                echo '<li><a href="http://eye/">Home</a></li>';
-                echo '<li><a href="http://eye/vancouver-women-eyeglasses/">Women Eyeglasses</a></li>';
-                echo '<li class="active">'.$brand.'</li>';
-                echo '<li class="active">'.$name.'</li>';
+                echo '<li class="breadcrumb-item"><a href="http://eye/"><i class="icon icon-home"></i></a></li>';
+                echo '<li class="breadcrumb-item "><a href="http://eye/vancouver-women-eyeglasses/">Women Eyeglasses</a></li>';
+                echo '<li class="breadcrumb-item d-none d-md-inline-block active">'.$brand.'</li>';
+                echo '<li class="breadcrumb-item active">'.$name.'</li>';
             echo '</ol>';
-        echo '</div>';
+        echo '</nav>';
+
+       echo '<div class="row d-sm-none d-md-none d-lg-none">';
+               echo '<ul class="list-inline mx-auto">';
+					$imgIDs = [];
+					$imgIDs = explode(',', $colorIDs);
+					$reversedIDs = array_reverse($imgIDs);
+					$IDcounter = 0;
+					foreach ($reversedIDs as $value) {
+						echo '<li class="c-options" id="'.trim ($value).'" data-target="#carousel-we-0" data-slide-to="'.$IDcounter.'">';
+						echo '<div class="c1"></div>';
+						echo '<div class="c2"></div>';
+					echo '</li>';
+					$IDcounter++;
+					}
+
+					 echo '</ul>';
+         echo '<div class="col-12">';
+          echo '<div id="carousel-we-0" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">';
+                  echo '<div class="carousel-inner">';
+                $images = [];
+                $images = explode(',', $colorImages);
+                $reversed = array_reverse($images);
+                $counter = 0;
+                foreach ($reversed as $value) {
+                    if($counter==0){
+                        echo'<div class="carousel-item active">';
+                        echo '<img class="d-block w-100" src="'.$upload_path.'/singlee/'.$value.'" title="Vancouver Best Online Affodable Women Eyeglasses"  alt="Vancouver Best Online Affodable Women Eyeglasses">';
+                     echo'</div>';
+                    }else{
+                        echo'<div class="carousel-item">';
+                        echo '<img class="d-block w-100" src="'.$upload_path.'/singlee/'.$value.'" title="Vancouver Best Online Affodable Women Eyeglasses"  alt="Vancouver Best Online Affodable Women Eyeglasses">';
+                     echo'</div>';
+                    }
+                    $counter++;
+                }
+					   echo '</div>';
+                 echo '</div>';
+        	echo '</div>';
+
+		echo '</div>';
 
         echo '<div class="row">';
             echo '<div class="col-md-4 left-box">';
-                echo '<div class="row">';
-                    echo '<h4 class="p-name" id="oName">'.$name.'</h4>';
-                echo '</div>';
-                echo '<div class="row">';
-                    echo '<h4 class="p-brand" id="oBrand">'.$brand.'</h4>';
-                echo '</div>';
-                echo '<div class="row">';
-                    echo '<h4 class="p-dt">Price:</h4>';
-                    echo '<h4 class="p-fee-nu" id="oPrice">$'.$price.'.00</h4>';
-				echo '</div>';
-				echo '<br />';
-                 echo '<div class="row">';
-                    echo '<h4 class="p-dt">Available in <span class="p-dd"> '. $colorsNumber.'</span> Colors</h4>';
-					echo '<ul class="list-inline">';
+    ?>
+<div class="row">
+    <table class="table table-details table-borderless">
+
+  <tbody>
+    <tr>
+      <td class="align-middle"><?php echo '<h4 class="p-brand" id="oBrand">'.$brand.'</h4>';  ?></td>
+      <td class="align-middle"><?php  echo '<h4 class="p-name" id="oName">'.$name.'</h4>'; ?></td>
+    </tr>
+    <tr>
+      <td class="align-middle"><h4 class="p-label">Price</h4></td>
+      <td class="align-middle"><?php echo '<h4 class="p-fee" id="oPrice">$'.$price.'.00</h4>'; ?></td>
+    </tr>
+      <tr>
+      <td class="align-middle"><h4 class="p-label">Available in</h4></td>
+      <td class="align-middle"><?php echo '<span class="item-var">'.$colorsNumber.'</span><span class="p-label">  Colors</span>'; ?></td>
+    </tr>
+
+              <tr class="d-none d-sm-block">
+      <td class="align-middle" style="min-width:160px;">	<?php
+        echo '<ul class="list-inline"> ';
 					$imgIDs = [];
 					$imgIDs = explode(',', $colorIDs);
 					$reversedIDs = array_reverse($imgIDs);
@@ -66,22 +112,21 @@
 					}
 
 					 echo '</ul>';
-
-				echo '</div>';
-				echo '<br />';
-                echo '<div class="row">';
-                    echo '<h4 class="p-dt">Available in <span class="p-dd"> '. $sizeNumber.'</span> Sizes</h4>';
-
-
-					 ?>
-    <div class="row" style="padding-right:40px;">
-	<table class="table size-table">
+              ?></td>
+    </tr>
+   <tr>
+      <td class="align-middle"><h4 class="p-label">Available in</h4></td>
+      <td class="align-middle"><?php echo '<span class="item-var">'.$sizeNumber.'</span><span class="p-label">  Sizes</span>'; ?></td>
+    </tr>
+  </tbody>
+</table>
+<table class="table size-table">
 	<tr>
-		<th id="frame-bridge"><img src="http://eye/img/lens-width.png" class="img-responsive" alt="Vancouver Best Affortable Online Eyeglasses"></th>
-		<th><img src="http://eye/img/lens-width.png" class="img-responsive" alt="Vancouver Best Affortable Online Eyeglasses"></th>
-		<th><img src="http://eye/img/lens-width.png" class="img-responsive" alt="Vancouver Best Affortable Online Eyeglasses"></th>
-		<th><img src="http://eye/img/lens-width.png" class="img-responsive" alt="Vancouver Best Affortable Online Eyeglasses"></th>
-		<th><img src="http://eye/img/lens-width.png" class="img-responsive" alt="Vancouver Best Affortable Online Eyeglasses"></th>
+		<th id="frame-bridge"><img src="http://eye/img/lens-width.png" class="d-block w-100" alt="Vancouver Best Affortable Online Eyeglasses"></th>
+		<th><img src="http://eye/img/lens-width.png" class="d-block w-100" alt="Vancouver Best Affortable Online Eyeglasses"></th>
+		<th><img src="http://eye/img/lens-width.png" class="d-block w-100" alt="Vancouver Best Affortable Online Eyeglasses"></th>
+		<th><img src="http://eye/img/lens-width.png" class="d-block w-100" alt="Vancouver Best Affortable Online Eyeglasses"></th>
+		<th><img src="http://eye/img/lens-width.png" class="d-block w-100" alt="Vancouver Best Affortable Online Eyeglasses"></th>
 	</tr>
  <?php
  $sizes = [];
@@ -99,19 +144,19 @@
  }
  ?>
 <tr>
-    <th class="text-center"> <a role="button" class="btn btn-help-o" data-toggle="popover" data-container="body" data-placement="bottom" data-html="true" id="lensw"><i class="fa fa-question"></i></a></th>
-    <th class="text-center"> <a role="button" class="btn btn-help-o" data-toggle="popover" data-container="body" data-placement="bottom" data-html="true" id="lensw"><i class="fa fa-question"></i></a></th>
-    <th class="text-center"> <a role="button" class="btn btn-help-o" data-toggle="popover" data-container="body" data-placement="bottom" data-html="true" id="lensw"><i class="fa fa-question"></i></a></th>
-    <th class="text-center"> <a role="button" class="btn btn-help-o" data-toggle="popover" data-container="body" data-placement="bottom" data-html="true" id="bridge"><i class="fa fa-question"></i></a></th>
-    <th class="text-center"> <a role="button" class="btn btn-help-o" data-toggle="popover" data-container="body" data-placement="bottom" data-html="true" id="temple"><i class="fa fa-question"></i></a></th>
+    <th class="text-center"> <a role="button" class="btn btn-help-o" data-toggle="popover" data-container="body" data-placement="bottom" data-html="true" id="lensw"><i class="icon icon-question"></i></a></th>
+    <th class="text-center"> <a role="button" class="btn btn-help-o" data-toggle="popover" data-container="body" data-placement="bottom" data-html="true" id="lensw"><i class="icon icon-question"></i></a></th>
+    <th class="text-center"> <a role="button" class="btn btn-help-o" data-toggle="popover" data-container="body" data-placement="bottom" data-html="true" id="lensw"><i class="icon icon-question"></i></a></th>
+    <th class="text-center"> <a role="button" class="btn btn-help-o" data-toggle="popover" data-container="body" data-placement="bottom" data-html="true" id="bridge"><i class="icon icon-question"></i></a></th>
+    <th class="text-center"> <a role="button" class="btn btn-help-o" data-toggle="popover" data-container="body" data-placement="bottom" data-html="true" id="temple"><i class="icon icon-question"></i></a></th>
 </tr>
 </table>
 
-      <div id="popover-lensw" class="hide pop">
+      <div id="popover-lensw" class="d-none  pop">
             <div class="panel panel-default">
             <div class="panel-heading">Lense Witdh</div>
             <div class="panel-body">
-                <img src="http://eye/img/lens-width.png" class="img-responsive" alt="Vancouver Best Affortable Online Eyeglasses">
+                <img src="http://eye/img/lens-width.png" class="d-block w-100" alt="Vancouver Best Affortable Online Eyeglasses">
                 <p>
                  Lense Witdh or Eye size is the horizontal width of the frame's lens in millimeters. Usually, the eye size ranges from 40 mm to 60 mm.
                 </p>
@@ -120,11 +165,11 @@
             </div>
         </div>
 
-		<div id="popover-bridge" class="hide pop">
+		<div id="popover-bridge" class="d-none  pop">
             <div class="panel panel-default">
             <div class="panel-heading">Bridge</div>
             <div class="panel-body">
-                <img src="http://eye/img/lens-width.png" class="img-responsive" alt="Vancouver Best Affortable Online Eyeglasses">
+                <img src="http://eye/img/lens-width.png" class="d-block w-100" alt="Vancouver Best Affortable Online Eyeglasses">
                 <p>
                  Bridge size is the distance between the two lenses in millimeters and typically ranges from 14 mm to 24 mm.
                 </p>
@@ -133,11 +178,11 @@
             </div>
         </div>
 
-		<div id="popover-temple" class="hide pop">
+		<div id="popover-temple" class="d-none  pop">
             <div class="panel panel-default">
             <div class="panel-heading">Temple</div>
             <div class="panel-body">
-                <img src="http://eye/img/lens-width.png" class="img-responsive" alt="Vancouver Best Affortable Online Eyeglasses">
+                <img src="http://eye/img/lens-width.png" class="d-block w-100" alt="Vancouver Best Affortable Online Eyeglasses">
             <p>
                 Temple length is measured along the length of the temple from one end to the other and also includes the bend. Your temple length can fall between 120 mm and 150 mm.
                 </p>
@@ -146,11 +191,11 @@
             </div>
         </div>
 
-		<div id="popover-temple" class="hide pop">
+		<div id="popover-temple" class="d-none  pop">
             <div class="panel panel-default">
             <div class="panel-heading">Temple</div>
             <div class="panel-body">
-                <img src="http://eye/img/lens-width.png" class="img-responsive" alt="Vancouver Best Affortable Online Eyeglasses">
+                <img src="http://eye/img/lens-width.png" class="d-block w-100" alt="Vancouver Best Affortable Online Eyeglasses">
             <p>
                 Long arms on the sides of the frame that extend from the hinge and over the ears to keep the glasses on the wearer’s face.
                 </p>
@@ -159,11 +204,11 @@
             </div>
         </div>
 
-		<div id="popover-temple" class="hide pop">
+		<div id="popover-temple" class="d-none  pop">
             <div class="panel panel-default">
             <div class="panel-heading">Temple</div>
             <div class="panel-body">
-                <img src="http://eye/img/lens-width.png" class="img-responsive" alt="Vancouver Best Affortable Online Eyeglasses">
+                <img src="http://eye/img/lens-width.png" class="d-block w-100" alt="Vancouver Best Affortable Online Eyeglasses">
             <p>
                 Long arms on the sides of the frame that extend from the hinge and over the ears to keep the glasses on the wearer’s face.
                 </p>
@@ -171,20 +216,17 @@
             <div class="panel-footer">Rumi Optical</div>
             </div>
         </div>
-
-
-   </div>
-					 <?php
+ <?php
 
                 echo '</div>';
                echo '<div class="row sidebar-row">';
 
-                echo '<div class="col-md-9 no-padding-l-r">';
+                echo '<div class="col-md-9 px-0">';
                     echo '<a role="button" class="btn btn-block btn-add-to-cart add-to-cart" data-toggle="modal" data-target="#add-to-cart-modal">Add to Cart </a>';
                 echo '</div>';
 
-                echo '<div class="col-md-3 no-padding-r">';
-                    echo '<a role="button" class="btn btn-block btn-add-to-wish add-to-wish"><i class="fa fa-heart-o"></i> </a>';
+                echo '<div class="col-md-3 px-0 pl-2">';
+                    echo '<a role="button" class="btn btn-block btn-add-to-wish add-to-wish"><i class="icon icon-heart-o"></i> </a>';
                 echo '</div>';
 				echo '</div>';
 				?>
@@ -193,27 +235,31 @@
 
             echo '</div>';
 			  echo '<div class="col-md-8">';
+
+
 			  ?>
-			  <div class="row">
+
+			  <div class="row d-none d-sm-block">
 			  <button class="btn btn-product-tryon pull-right add-to-cart" data-toggle="modal" data-target="#add-to-cart-modal">Add to Cart </button>
 </div>
 			  <br />
 			  <br />
+
 			  <?php
-                  echo '<div id="carousel-we" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">';
-                  echo '<div class="carousel-inner" role="listbox">';
+                  echo '<div id="carousel-we" class="carousel slide carousel-fade d-none d-sm-block" data-ride="carousel" data-interval="false">';
+                  echo '<div class="carousel-inner">';
                 $images = [];
                 $images = explode(',', $colorImages);
                 $reversed = array_reverse($images);
                 $counter = 0;
                 foreach ($reversed as $value) {
                     if($counter==0){
-                        echo'<div class="item active">';
-                        echo '<img src="'.$upload_path.'/singlee/'.$value.'" title="Vancouver Best Online Affodable Women Eyeglasses"  alt="Vancouver Best Online Affodable Women Eyeglasses">';
+                        echo'<div class="carousel-item active">';
+                        echo '<img class="d-block w-100" src="'.$upload_path.'/singlee/'.$value.'" title="Vancouver Best Online Affodable Women Eyeglasses"  alt="Vancouver Best Online Affodable Women Eyeglasses">';
                      echo'</div>';
                     }else{
-                        echo'<div class="item">';
-                        echo '<img src="'.$upload_path.'/singlee/'.$value.'" title="Vancouver Best Online Affodable Women Eyeglasses"  alt="Vancouver Best Online Affodable Women Eyeglasses">';
+                        echo'<div class="carousel-item">';
+                        echo '<img class="d-block w-100" src="'.$upload_path.'/singlee/'.$value.'" title="Vancouver Best Online Affodable Women Eyeglasses"  alt="Vancouver Best Online Affodable Women Eyeglasses">';
                      echo'</div>';
                     }
                     $counter++;
@@ -226,20 +272,27 @@
 
     <div class="row">
         <br />
-<div class="well well-sm" style="border-radius: 0px; padding: 10px; border:0; background:#f5f5f5;border:1px dashed #999; background: #fff;">
-             <div class="row">
-                <h4 class="details-title">Descrition</h4>
+
+<div class="" style="margin-top: 20px; margin-bottom:50px;border-radius: 0px; padding: 14px; border:0; background:#f5f5f5;border:1px dashed #999; background: #fff;">
+
+
+             <div class="card details-title">
+                    <h4>Descrition</h4>
+                 </div>
                  <p class="desc-paragraph">
                 Become a 21st-century saint of style with St Michel. The contrast between sleek, matte gold metal and retro outsize shaped lenses makes these full-rim eyeglasses uniquely trendy. The smooth, streamlined design is complemented by a fine nose bridge and black temple tips to create a frame that gives an instant, edgy style boost.
 
-                </p></div>
-               <div class="row">
-                                <h4 class="details-title">Details</h4>
+                </p>
+
+                         <div class="card details-title">
+                    <h4>Details</h4>
+                 </div>
+
                    <table class="table product-table">
     <thead>
       <tr>
-        <td><span class="product-table-header">Product Details</span></td>
-      </tr>
+                  <td style="border:0 !important;"><span class="product-table-header"><strong>Product Details</strong></span></td>
+         </tr>
     </thead>
     <tbody>
       <tr>
@@ -260,13 +313,14 @@
       </tr>
     </tbody>
   </table>
-                </div>
-  <div class="row">
-    <h4 class="details-title">Add-Ons</h4>
+
+                    <div class="card details-title">
+                    <h4>Add-Ons</h4>
+                 </div>
     <table class="table product-table">
     <thead>
       <tr>
-        <td><span class="product-table-header">Available Lens Types & Add-Ons on This Frame</span></td>
+        <td style="border:0 !important;"><span class="product-table-header"><strong>Available Lens Types & Add-Ons on This Frame</strong></span></td>
       </tr>
     </thead>
     <tbody>
@@ -288,81 +342,57 @@
       </tr>
     </tbody>
   </table>
-                </div>
+
 
                 </div>
 	</div>
 
-
-<div id="add-to-cart-modal" class="modal fade" role="dialog" tabindex="-1" aria-labelledby="label-dialog-example" style="display: none;">
-  <div class="modal-dialog full-screen" role="document">
-    <div class="modal-content">
-
-      <div class="modal-header">
-                    <div class="row">
-                                <div class="container-fluid">
-               <div class="pull-left hidden-xs">
+<div class="modal d-block" id="add-to-cart-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<!-- <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true"  data-keyboard="false" data-backdrop="static"> -->
+   <div class="modal-dialog full-screen" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+                    <div class="w-100">
+               <div class="float-left hidden-xs">
                   <div class="btn-group" role="group" aria-label="...">
                      <button type="button" class="btn slider-control mclose" data-dismiss="modal" aria-label="Close"> Back to Order <i class="icon-close"></i></button>
                   </div>
                </div>
-               <div class="pull-right">
+               <div class="float-right">
                   <div class="btn-group" role="group" aria-label="...">
-                     <button type="button" class="btn slider-control visible-xs"><i class="fa fa-remove"></i></button>
-                     <button type="button" class="btn slider-control" href="#carousel-add-to-cart" role="button" data-slide="prev" id="carousel-prev" disabled><i class="fa fa-angle-left"></i></button>
-                     <button type="button" class="btn slider-control" href="#carousel-add-to-cart" role="button" data-slide="next" id="carousel-next" disabled><i class="fa fa-angle-right"></i></button>
+                     <button type="button" class="btn slider-control"><i class="icon icon-close"></i></button>
+                     <button type="button" class="btn slider-control" href="#carousel-add-to-cart" role="button" data-slide="prev" id="carousel-prev" disabled><i class="icon icon-angle-left"></i></button>
+                     <button type="button" class="btn slider-control" href="#carousel-add-to-cart" role="button" data-slide="next" id="carousel-next" disabled><i class="icon icon-angle-right"></i></button>
                      <button type="button" class="btn slider-control" data-toggle="modal" data-target="#order-details-modal"><i class="icon-bag" aria-hidden="true"></i>  <small class="hidden-sm hidden-xs">Order Details</small></button>
                   </div>
                </div>
-            </div>
-          </div>
 
-      </div>
-      <div class="modal-body">
-     <div class="container indicator-box">
-               <div class="row step-wizard-row">
-                  <div class="row step-wizard-line"></div>
-                  <div class="row step-wizard-txt">
-                    <div class="col-xs-2 text-center step">
-                        <p class="step-wizard-step active">1</p>
-                        <p class="step-wizard-title active hidden-xs">User</p>
-                     </div>
-                     <div class="col-xs-2 text-center step">
-                        <p class="step-wizard-step">2</p>
-                        <p class="step-wizard-title hidden-xs">Usage</p>
-                     </div>
-                     <div class="col-xs-2 text-center step">
-                        <p class="step-wizard-step">3</p>
-                        <p class="step-wizard-title hidden-xs">Presecription</p>
-                     </div>
-                     <div class="col-xs-2 text-center step">
-                        <p class="step-wizard-step">4</p>
-                        <p class="step-wizard-title hidden-xs">Lense Options</p>
-                     </div>
-                     <div class="col-xs-2 text-center step">
-                        <p class="step-wizard-step">5</p>
-                        <p class="step-wizard-title hidden-xs">Add-Ons $ Size</p>
-                     </div>
-                     <div class="col-xs-2 text-center step">
-                        <p class="step-wizard-step">6</p>
-                        <p class="step-wizard-title hidden-xs">Shipment</p>
-                     </div>
-                     <div class="col-xs-1">  </div>
-                  </div>
-               </div>
+          </div>
+         </div>
+         <div class="modal-body">
+       <div class="order-stage">
+
+         </div>
+            <div class="order-stage-msg">
+
             </div>
-     <div class="container msg-box no-padding">
-           <div class="alert alert-warning hidden" id="prescription-error">
-                <p>
-                  Let us see those peepers in person! Your Rx requires a unique lens, so we suggest you come visit us at the store before placing your order. A customer service rep always reviews your prescription to make sure its exactly what you need.
-                </p>
-              </div>
-           </div>
-     <div class="container no-padding" style="background: #fff; padding-bottom: 26px;">
-               <div id="carousel-add-to-cart" class="carousel slide no-margin" data-ride="carousel" data-interval="false" data-wrap="false">
-                  <div class="carousel-inner to-cart" role="listbox">
-                     <div class="item active no-padding">
-                        <div class="container no-padding">
+             <div class="order-steps">
+             <div class="container">
+                 <nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link active" id="nav-tab1-tab" data-toggle="tab" href="#nav-tab1" role="tab" aria-controls="nav-tab1" aria-selected="true">Tab 1</a>
+    <a class="nav-item nav-link" id="nav-tab2-tab" data-toggle="tab" href="#nav-tab2" role="tab" aria-controls="nav-tab2" aria-selected="false">Tab 2</a>
+    <a class="nav-item nav-link" id="nav-tab3-tab" data-toggle="tab" href="#nav-tab3" role="tab" aria-controls="nav-tab3" aria-selected="false">Tab 3</a>
+    <a class="nav-item nav-link" id="nav-tab4-tab" data-toggle="tab" href="#nav-tab4" role="tab" aria-controls="nav-tab4" aria-selected="false">Tab 4</a>
+    <a class="nav-item nav-link" id="nav-tab5-tab" data-toggle="tab" href="#nav-tab5" role="tab" aria-controls="nav-tab5" aria-selected="false">Tab 5</a>
+    <a class="nav-item nav-link" id="nav-tab6-tab" data-toggle="tab" href="#nav-tab6" role="tab" aria-controls="nav-tab6" aria-selected="false">Tab 6</a>
+    <a class="nav-item nav-link" id="nav-tab7-tab" data-toggle="tab" href="#nav-tab7" role="tab" aria-controls="nav-tab7" aria-selected="false">Tab 7</a>
+    <a class="nav-item nav-link" id="nav-tab8-tab" data-toggle="tab" href="#nav-tab8" role="tab" aria-controls="nav-tab8" aria-selected="false">Tab 8</a>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-tab1" role="tabpanel" aria-labelledby="nav-tab1-tab">
+                            <div class="container no-padding">
                            <div class="row" style="padding-top:20px;">
                               <div class="col-sm-6 col-md-4">
                                  <div class="thumbnail form-thumbnail">
@@ -429,19 +459,20 @@
                               </div>
                            </div>
                        </div>
-                    </div>
-                       <div class="item no-padding">
-                        <div class="container no-padding">
+
+    </div><!--    end of Tab 1-->
+  <div class="tab-pane fade" id="nav-tab2" role="tabpanel" aria-labelledby="nav-tab2-tab">
+                            <div class="container no-padding">
                            <div class="row" style="padding-top:20px;">
                               <div class="col-xs-12 col-md-4 panel-radio text-center" data-otype="A">
                                  <div class="panel panel-default panel-usage">
                                     <div class="panel-heading"><h3 class="panel-title usage-title">Distance</h3></div>
                                     <div class="panel-body">
-                                       <img src="" class="img-responsive"/>
+                                       <img src="" class="d-block w-100"/>
                                        <div class="usage-caption">
                                           <p>Lenses For General Every day Use of Seeing things Far Away and  Driving </p>
                                        </div>
-                                       <button class="btn btn-usage active"><i class="fa fa-check"></i> selected </button>
+                                       <button class="btn btn-usage active"><i class="icon icon-check"></i> selected </button>
                                     </div>
                                  </div>
                               </div>
@@ -449,11 +480,11 @@
                                  <div class="panel panel-default panel-usage">
                                     <div class="panel-heading"><h3 class="panel-title usage-title ">Reading</h3></div>
                                     <div class="panel-body">
-                                       <img src="" class="img-responsive"/>
+                                       <img src="" class="d-block w-100"/>
                                        <div class="usage-caption">
                                           <p>Lenses for Seeing Things Close up to you and Reading</p>
                                        </div>
-                                       <button class="btn btn-usage"><i class="fa fa-check"></i> selected  </button>
+                                       <button class="btn btn-usage"><i class="icon icon-check"></i> selected  </button>
                                     </div>
                                  </div>
                               </div>
@@ -461,26 +492,29 @@
                                  <div class="panel panel-default panel-usage">
                                     <div class="panel-heading"><h3 class="panel-title usage-title ">Non-Prescription</h3></div>
                                     <div class="panel-body">
-                                       <img src="" class="img-responsive"/>
+                                       <img src="" class="d-block w-100"/>
                                        <div class="usage-caption">
                                           <p>Lenses Without Prescription </p>
                                        </div>
-                                       <button class="btn btn-usage"><i class="fa fa-check"></i> selected   </button>
+                                       <button class="btn btn-usage"><i class="icon icon-check"></i> selected   </button>
                                     </div>
                                  </div>
                               </div>
                            </div>
 
                         </div>
-                     </div>
-                     <div class="item">
 
-                        <!-- * * The Slide 2 - Prescription Drop Downs *-->
-                       <div class="row">
+    </div><!--    end of tab 2-->
+  <div class="tab-pane fade" id="nav-tab3" role="tabpanel" aria-labelledby="nav-tab3-tab">
+    Specify the size?
+
+    </div><!--    end of tab 3-->
+  <div class="tab-pane fade" id="nav-tab4" role="tabpanel" aria-labelledby="nav-tab4-tab">
+                          <div class="row">
                          <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-filter">Brands <i class="fa fa-chevron-right"></i></button>
-        <button type="button" class="btn btn-filter">Shape <i class="fa fa-chevron-right"></i></button>
-        <button type="button" class="btn btn-filter">Material <i class="fa fa-chevron-right"></i></button>
+        <button type="button" class="btn btn-filter">Brands <i class="icon icon-chevron-right"></i></button>
+        <button type="button" class="btn btn-filter">Shape <i class="icon icon-chevron-right"></i></button>
+        <button type="button" class="btn btn-filter">Material <i class="icon icon-chevron-right"></i></button>
 
       </div>
                          <a class="hallow-btn">I am Existing User</a>
@@ -595,85 +629,47 @@
                            </div>
                         </div>
                         <div class="row" style="margin-top: 40px;"> <a class="btn btn-order btn-pre-confirmed">Confirm Prescription <i class="icon-check"></i></a> <a class="btn btn-order btn-pre-confirmed">Upload Your Prescription <i class="icon-check"></i></a> </div>
-                     </div>
-                     <div class="item">
-                        <div class="container">Bye</div>
-                     </div>
-                     <div class="item">
-                        <div class="container">Bye</div>
-                     </div>
-                     <div class="item">
-                        <div class="container">Bye</div>
-                     </div>
-                  </div>
-               </div>
+
+
+    </div><!--    end of tab 4-->
+  <div class="tab-pane fade" id="nav-tab5" role="tabpanel" aria-labelledby="nav-tab5-tab">...</div><!--    end of tab 5-->
+  <div class="tab-pane fade" id="nav-tab6" role="tabpanel" aria-labelledby="nav-tab6-tab">...</div><!--    end of tab 6-->
+  <div class="tab-pane fade" id="nav-tab7" role="tabpanel" aria-labelledby="nav-tab7-tab">...</div><!--    end of tab 7-->
+  <div class="tab-pane fade" id="nav-tab8" role="tabpanel" aria-labelledby="nav-tab8-tab">...</div><!--    end of tab 8-->
+
+</div>
+
+            </div>
             </div>
 
 
-      </div><!--End of Modal Body        -->
-      <div class="modal-footer">
-   <button type="button" class="btn btn-modal-lg">Go Next Step >></button>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 </div>
-
-<!-- Login Forget Modal -->
-<div class="modal fade forget" id="order-details-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-
-        <h4 class="modal-title" id="myModalLabel">Modal 2</h4>
-      </div>
-      <div class="modal-body">
-        This is Modal 2
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
 </div>
-<!-- Login Forget Modal -->
-<div class="modal fade forget" id="login-forget-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-
-        <h4 class="modal-title" id="myModalLabel">Modal 2</h4>
+<!-- Details Modal -->
+<div class="modal fade" id="order-details-modal" tabindex="-1" role="dialog" aria-labelledby="product-details" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            ...
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+         </div>
       </div>
-      <div class="modal-body">
-        This is Modal 2
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
+   </div>
 </div>
-
-<!-- Register Modal -->
-<div class="modal fade forget" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-
-        <h4 class="modal-title" id="myModalLabel">Modal 2</h4>
-      </div>
-      <div class="modal-body">
-        This is Modal 2
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <?php
 	} // end while
 } // end if
@@ -684,5 +680,5 @@
 
 
 <?php
-get_footer();
+get_footer('eyeglass');
 ?>

@@ -112,6 +112,226 @@ letter-spacing: 1px;
     font-size: 13px;
     text-decoration: none !important;
 }
+.filter.sticky-top{
+    top:64px;
+}
+
+.fixed-bottom{
+    bottom: -36px;
+     transition: all 0.5s ease;
+}
+.bb{
+      bottom: 0px;
+     transition: all 0.5s ease;
+}
+
+/* ========================Filters Setting */
+.navbar-filter{
+   border-top: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   background-color: #fcfcfc;
+   padding-top :12px;
+   padding-bottom: 12px;
+   height:60px;
+}
+.btn-filter {
+   width: 120px;
+   font-family: 'Rubik', sans-serif;
+   line-height: 20px;
+   text-transform: capitalize;
+   font-size: 12px;
+   letter-spacing: 1px;
+   font-weight: 400;
+   color: #444;
+   border: 1px solid #ccc;
+   box-shadow: none !important;
+   outline: none !important;
+   border-radius: 0px;
+   background: #fff;
+}
+.btn-filter .icon {
+   font-size: 10px;
+   font-weight: 100;
+   margin-left: 6px;
+   color: #999;
+}
+.filter-group .panel{
+   box-shadow:none;
+   margin:0px !important;
+   border:0px !important;
+
+}
+.filter-group .panel-filters{
+   box-shadow:none;
+   margin:0px !important;
+}
+.panel-filters .filter-body{
+   border:1px dashed #ddd;
+   padding:12px;
+   border-top:0px solid red;
+   background-color: #fcfcfc;
+
+}
+.btn-no-filter {
+
+   font-family: 'Rubik', sans-serif;
+   line-height: 20px;
+   text-transform: capitalize;
+   font-size: 12px;
+   letter-spacing: 1px;
+   font-weight: 400;
+   color: #999;
+   border: 1px solid #ccc;
+   box-shadow: none !important;
+   outline: none !important;
+   border-radius: 0px;
+   background: #fff;
+   transition: all 0.3s ease;
+   padding-left:20px;
+   padding-right:20px;
+}
+.btn-no-filter:hover {
+   background: #fcfcfc;
+   color:#00d0ff;
+}
+
+.btn-no-filter .fa-custom-filter {
+   margin-right: 4px;
+   font-style: italic;
+
+}
+
+.btn-no-filter .fa-custom-filter .fa {
+   font-weight: 100;
+
+}
+
+.btn-no-filter .fa-custom-filter .fa-remove {
+   position: absolute;
+   margin-left: -8px;
+   font-size: 9px;
+   margin-top: 9px;
+
+}
+.well-filters{
+   margin-bottom: 0px;
+   padding-bottom: 8px;
+   padding-top:13px;
+/*    background-color: #ffffff; */
+/*     border: 1px solid #e3e3e3; */
+
+}
+
+
+.list-group-filters{
+   margin-bottom:6px;
+   background:transparent !important;
+   margin:0px;
+}
+.list-group-filters .list-group-item {
+   border: 0px solid transparent !important;
+   background:transparent !important;
+   padding-top:8px;
+      padding-bottom:8px;
+}
+.list-group-filters .list-group-item input {
+   display: none;
+}
+
+.fa-filters {
+   background: transparent;
+   height: 17px;
+   width: 17px;
+   border: 1px solid #666;
+   cursor: pointer;
+}
+
+
+.fa-filters .fa-check {
+   position: absolute;
+   margin-left: -5px;
+   top: 4px;
+   font-weight: 100;
+   font-size: 11px;
+   color: #666;
+}
+
+
+.filter-label {
+ font-family: 'Montserrat', sans-serif;
+   font-size: 12px;
+   font-weight: 400;
+   letter-spacing: 1px;
+   color: #555;
+   line-height: 18px;
+   text-transform: capitalize;
+   cursor: pointer;
+}
+fieldset{
+
+  background:white;
+padding-top:0px;
+  border:1px solid #ccc;
+ -moz-border-radius:3px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+   padding-bottom:20px;
+}
+legend{
+   font-family: 'Montserrat', sans-serif;
+  margin-left:15px;
+   margin-bottom:8px;
+   border:1px solid #ccc;
+   padding:8px 40px 8px 16px;
+    -moz-border-radius:3px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+   max-width:202px;
+   font-size:12px;
+   background-color: #ffffff;
+   text-align:left;
+   letter-spacing:1px;
+
+}
+legend .fa{
+   margin-right:8px;
+}
+
+.slider-row{
+
+   background:  #fcfcfc;
+    width: 90%;
+    padding: 16px;
+margin: 0 auto;
+    border: 1px dashed #ddd;
+}
+.well-filters .thumbnail{
+    border: 0px solid transparent;
+}
+.well-filters .thumbnail img{
+    margin-bottom: 12px;
+    max-width: 120px;
+    margin-top: 20px;
+}
+.well-filters .thumbnail p{
+
+  font-family: 'Rubik', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #666;
+}
+.well-filters .thumbnail p span{
+    display:inline-block;
+    min-width: 26px;
+    max-width: 26px;
+    padding-right: 0px !important;
+
+}
+.size-filter-thumbs {
+    width: 20% !important;
+}
+
 /*--------------------------------------------------------------------------- Apple iPhone 5
                                                                               Apple iPhone 4
                                                                               Apple iPhone 3
@@ -259,6 +479,7 @@ letter-spacing: 1px;
                                                                                  12" 1024 */
 @media only screen and (min-width : 1023px)  {
  body{
+padding-top: 0px;
 
   }
 }

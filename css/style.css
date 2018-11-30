@@ -205,13 +205,15 @@ body {
     font-size: 13px;
     letter-spacing: 2px;
     font-weight: 400;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    min-width: 62px;
 }
 
+/*
 .navbar-top .ml-auto > li > a {
-    width: 76px;
     text-align: center;
 }
+*/
 
 .navbar-top .dropdown-menu {
     margin-top: -1px;
@@ -236,6 +238,8 @@ body {
     background: #444;
     padding-left: 10px;
     padding-right: 10px;
+    width: auto;
+
 }
 
 .navbar-main {
@@ -282,10 +286,7 @@ body {
     text-align: center;
 }
 
-.px-6 {
-    padding-left: 6rem;
-    padding-right: 6rem;
-}
+
 
 .btn-eye-exam {
     font-family: 'Roboto', sans-serif;
@@ -332,7 +333,6 @@ body {
     border: none !important;
     padding: 0px !important;
     margin: 0px;
-    background: red;
 }
 
 .navbar-main .well-menu {
@@ -814,7 +814,7 @@ border:2px solid #222;
 .footer-3 p {
     font-weight: 600;
     font-size: 13px;
-      font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #d2d2d2;
     letter-spacing: 1px;
 }
@@ -1014,18 +1014,24 @@ border:2px solid #222;
                                                                                  10" 1024
                                                                                  12" 1024 */
 @media only screen and (min-width : 1023px)  {
-body {}
-
+ body{
+     padding-top: 100px;
+  }
+/*
+    .navbar-top .ml-auto > li > a {
+    width: 60px;
+}
+*/
+.x-padding {
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
 .btn-newsletter {
     font-size: 15px;
     padding: 16px 36px;
 }
 .navbar-main .dropdown-menu {
-     left:0;
-/*
-    width: 1400px;
-    margin-left:-180px;
-*/
+    width: 100%;
 }
 
 }
@@ -1036,21 +1042,43 @@ body {}
                                                                                  12" 1024 */
 @media only screen and (min-width : 1023px)  {
  body{
-
+     padding-top: 102px;
   }
 }
 
 /*---------------------------------------------------------------------------    13" 1280*/
 @media only screen and (min-width : 1279px)  {
  body{
-
+     padding-top: 102px;
   }
+.navbar-main .dropdown-menu {
+    width: 80%;
+    left:9%;
+}
+    .x-padding {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
 }
 /*---------------------------------------------------------------------------    15" 1366*/
 @media only screen and (min-width : 1365px)  {
  body{
 
   }
+/*
+    .navbar-top .ml-auto > li > a {
+    width: 62px;
+
+}
+*/
+    .navbar-main .dropdown-menu {
+    width: 80%;
+    left:10%;
+}
+        .x-padding {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
 }
 /*---------------------------------------------------------------------------    19" 1440*/
 @media only screen and (min-width : 1439px)  {
@@ -1063,12 +1091,21 @@ body {}
  body{
 
   }
+        .x-padding {
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
 }
 /*---------------------------------------------------------------------------    22" 1680*/
 @media only screen and (min-width : 1679px)  {
  body{
 
   }
+        .navbar-main .dropdown-menu {
+    width: 70%;
+    left:15%;
+
+}
 }
 /*---------------------------------------------------------------------------    23" 1920
                                                                                  24" 1920 */

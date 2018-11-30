@@ -115,7 +115,7 @@ echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
                 <p class="d-block text-center" style="margin-top:20px;">Not a User?</p>
                 </div>
                 <div class="col-md-12 p-0 m-0">
-                <a class="btn btn-block btn-sm rounded-0 btn-sidenav" href="#" role="button">Register</a>
+                <a class="btn btn-block btn-sm rounded-0 btn-sidenav" href="http://niazmandiha.ca/registration/" role="button">Register</a>
                 </div>
                                    <div class="col-md-12 p-0 m-0">
                 <a class="btn btn-block btn-sm rounded-0 btn-sidenav closebtn" href="#" role="button">Continue Shopping</a>
@@ -338,185 +338,6 @@ echo ' | ' . sprintf( __( 'Page %s' ), max( $paged, $page ) );
     </div>
    
     <section>
-        <!-- Desktop Navbars -->
-        <nav class="navbar navbar-expand-lg navbar-top fixed-top d-none d-md-block">
-            <div class="container-fluid px-0 px-66">
-                <!-- <a class="navbar-brand" href="#"><i class="icon icon-pointer"></i> vancouver best affordable optical solutions</a> -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item phone-bar">
-                            <a class="nav-link" href="#"><i class="icon icon-call-in"></i> (604)-682-2788</a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                            <a class="nav-link" href="#" id="">  <i class="icon icon-pointer"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a role="button" class="nav-link" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
-sagittis lacus vel augue laoreet rutrum faucibus." >  <i class="icon icon-clock"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="wish-nav">  <i class="icon icon-heart-o pulse"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="cart-nav"> <i class=" icon icon-bag nopulse"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="help-nav">Help</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="signin-nav">Sign in</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-        <nav class="navbar navbar-expand-lg navbar-light shadow-sm navbar-main fixed-top d-none d-md-block" style="margin-top:36px">
-            <div class="container-fluid px-0 px-66">
-                <a class="navbar-brand pr-5" href="#">Rumi Optical</a>
-<!--
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
--->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   Eyeglasses  <i class="icon icon-angle-right css-angle-right d-sm-none"></i>
-                </a>
-                            <div class="dropdown-menu col-12 col-sm-12 col-md-12" aria-labelledby="navbarDropdown">
-                                  <div class="row well-menu shadow-sm w-100">
-                                        <div class="col-md-4">
-                                            <a href="www.google.com" class="card card-thumbnails">
-                                                <div class="card-body">
-                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
-                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Eyeglasses</h3>
-                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <a href="www.google.com" class="card card-thumbnails">
-                                                <div class="card-body">
-                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
-                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Eyeglasses</h3>
-                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <a href="www.google.com" class="card card-thumbnails">
-                                                <div class="card-body">
-                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
-                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Eyeglasses</h3>
-                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Sunglasses  <i class="icon icon-angle-right css-angle-right d-sm-none"></i>
-                </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <div class="mx-auto well-menu shadow-sm">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="card card-thumbnails">
-                                                <div class="card-body">
-                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
-                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Sunglasses</h3>
-                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card card-thumbnails">
-                                                <div class="card-body">
-                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
-                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Sunglasses</h3>
-                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card card-thumbnails">
-                                                <div class="card-body">
-                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
-                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Sunglasses</h3>
-                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Contact lenses  <i class="icon icon-angle-right css-angle-right d-sm-none"></i>
-                </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <div class="mx-auto well-menu shadow-sm">
-                                    <div class="row">
-                                        <div class="col-md-4">4</div>
-                                        <div class="col-md-4">4</div>
-                                        <div class="col-md-4">4</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Safety Glasses <i class="icon icon-angle-right css-angle-right d-sm-none"></i>
-                </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <div class="mx-auto well-menu shadow-sm">
-                                    <div class="row">
-                                        <div class="col-md-4">4</div>
-                                        <div class="col-md-4">4</div>
-                                        <div class="col-md-4">4</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Accessories <i class="icon icon-angle-right css-angle-right d-sm-none"></i>
-                </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <div class="mx-auto well-menu shadow-sm">
-                                    <div class="row">
-                                        <div class="col-md-4">4</div>
-                                        <div class="col-md-4">4</div>
-                                        <div class="col-md-4">4</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                               <button class="btn btn-sm rounded-0 btn-eye-exam" type="button">Eye Exam</button>
-                   </li>
-
-
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
 
         <nav class="navbar fixed-top navbar-light bg-light navbar-mobile-top d-md-none">
@@ -617,3 +438,193 @@ sagittis lacus vel augue laoreet rutrum faucibus." >  <i class="icon icon-clock"
 
 
     </section>
+
+                 <!-- Desktop Navbars -->
+        <nav class="navbar navbar-expand-lg navbar-top d-none d-md-block">
+            <div class="container-fluid x-padding">
+                <!-- <a class="navbar-brand" href="#"><i class="icon icon-pointer"></i> vancouver best affordable optical solutions</a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+<li class="nav-item phone-bar">
+                    <a class="nav-link" href="#"><i class="icon icon-call-in"></i> (604)-682-2788</a>
+                        </li>
+
+                    </ul>
+<!--
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item phone-bar">
+                    <a class="nav-link" href="#"><i class="icon icon-call-in"></i> (604)-682-2788</a>
+                        </li>
+                    </ul>
+-->
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                            <a class="nav-link" href="#" id="">  <i class="icon icon-pointer"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a role="button" class="nav-link" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus." >  <i class="icon icon-clock"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="wish-nav">  <i class="icon icon-heart-o pulse"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="cart-nav"> <i class=" icon icon-bag nopulse"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="help-nav">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="signin-nav">Sign in</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm navbar-main sticky-top d-none d-md-block">
+            <div class="container-fluid m-0 x-padding">
+                <a class="navbar-brand pr-5" href="#">Rumi Optical</a>
+<!--
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+-->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Eyeglasses  <i class="icon icon-angle-right css-angle-right d-none d-xl-inline-block"></i>
+                </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <div class="row well-menu shadow-sm w-100">
+                                        <div class="col-md-4">
+                                            <a href="www.google.com" class="card card-thumbnails">
+                                                <div class="card-body">
+                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
+                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Eyeglasses</h3>
+                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="www.google.com" class="card card-thumbnails">
+                                                <div class="card-body">
+                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
+                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Eyeglasses</h3>
+                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="www.google.com" class="card card-thumbnails">
+                                                <div class="card-body">
+                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
+                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Eyeglasses</h3>
+                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sunglasses  <i class="icon icon-angle-right css-angle-right d-none d-xl-inline-block"></i>
+                </a>
+                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <div class="row well-menu shadow-sm w-100">
+                                        <div class="col-md-4">
+                                            <a href="www.google.com" class="card card-thumbnails">
+                                                <div class="card-body">
+                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
+                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Eyeglasses</h3>
+                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="www.google.com" class="card card-thumbnails">
+                                                <div class="card-body">
+                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
+                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Eyeglasses</h3>
+                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="www.google.com" class="card card-thumbnails">
+                                                <div class="card-body">
+                                                    <img src="https://res.cloudinary.com/eyebuydirect-inc/image/upload/c_fill,e_sharpen:70,f_auto,h_350,q_auto:good,w_700/v1/product/frame/gray/pl6631_3.jpg" class="img-fluid" alt="Responsive image">
+                                                    <h3 class="navbar-thumb-cap"><strong>Women</strong> Eyeglasses</h3>
+                                                    <h3 class="navbar-thumb-cap-offer">Starting From <strong>$125.00</strong> </h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Contact lenses  <i class="icon icon-angle-right css-angle-right d-none d-xl-inline-block"></i>
+                </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="mx-auto well-menu shadow-sm">
+                                    <div class="row">
+                                        <div class="col-md-4">4</div>
+                                        <div class="col-md-4">4</div>
+                                        <div class="col-md-4">4</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Safety Glasses <i class="icon icon-angle-right css-angle-right d-none d-xl-inline-block"></i>
+                </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="mx-auto well-menu shadow-sm">
+                                    <div class="row">
+                                        <div class="col-md-4">4</div>
+                                        <div class="col-md-4">4</div>
+                                        <div class="col-md-4">4</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggler" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Accessories <i class="icon icon-angle-right css-angle-right d-none d-xl-inline-block"></i>
+                </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="mx-auto well-menu shadow-sm">
+                                    <div class="row">
+                                        <div class="col-md-4">4</div>
+                                        <div class="col-md-4">4</div>
+                                        <div class="col-md-4">4</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                               <button class="btn btn-sm rounded-0 btn-eye-exam" type="button">Eye Exam</button>
+                   </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+

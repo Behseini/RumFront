@@ -332,7 +332,7 @@
          <a class="mobile-bot-nav" href="#"><i class="icon icon-pointer"></i></a>
       </li>
       <li class="list-inline-item">
-         <a class="mobile-bot-nav" data-toggle="collapse" data-target="#navbar-mobile-bot-toggler-filter" aria-controls="navbar-mobile-bot-toggler" aria-expanded="false" aria-label="Toggle navigation"><i class="icon icon-star"></i></a>
+         <a class="mobile-bot-nav" data-toggle="collapse" data-target="#navbar-mobile-bot-toggler-filter" aria-controls="navbar-mobile-bot-toggler" aria-expanded="false" aria-label="Toggle navigation"><i class="icon icon-filter"></i></a>
       </li>
       <li class="list-inline-item">
          <a class="mobile-bot-nav" data-toggle="modal" data-target="#exampleModalCenter"><i class="icon icon-lock-open"></i></a>
@@ -394,6 +394,53 @@
   </div>
 </div>
 </div>
+        <nav class="navbar navbar-expand-lg navbar-top fixed-bottom d-none d-md-block">
+            <div class="container-fluid x-padding">
+                <!-- <a class="navbar-brand" href="#"><i class="icon icon-pointer"></i> vancouver best affordable optical solutions</a> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+<li class="nav-item phone-bar">
+                    <a class="nav-link" href="#"><i class="icon icon-call-in"></i> (604)-682-2788</a>
+                        </li>
+
+                    </ul>
+<!--
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item phone-bar">
+                    <a class="nav-link" href="#"><i class="icon icon-call-in"></i> (604)-682-2788</a>
+                        </li>
+                    </ul>
+-->
+                    <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                            <a class="nav-link" href="#" id="">  <i class="icon icon-pointer"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a role="button" class="nav-link" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus." >  <i class="icon icon-clock"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="wish-nav">  <i class="icon icon-heart-o pulse"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="cart-nav"> <i class=" icon icon-bag nopulse"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="help-nav">Help</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="signin-nav">Sign in</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
  </div>
 <?php wp_footer(); ?>
  </body>

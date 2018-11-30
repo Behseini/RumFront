@@ -102,32 +102,60 @@ $(document).ready(function () {
 
 
 $('#signin-nav').on('click', function () {
-    $('body').css({background:'rgba(0,0,0,0.4)'});
+   // $('body').css({background:'rgba(0,0,0,0.4)'});
   $('#signin-sidenav').animate({
     width: "410px"
   }, 'fast', 'linear');
 });
 $('#help-nav').on('click', function () {
-    $('body').css({background:'rgba(0,0,0,0.4)'});
+  //  $('body').css({background:'rgba(0,0,0,0.4)'});
   $('#help-sidenav').animate({
     width: "410px"
   }, 'fast', 'linear');
 });
 $('#cart-nav').on('click', function () {
-    $('body').css({background:'rgba(0,0,0,0.4)'});
+  //  $('body').css({background:'rgba(0,0,0,0.4)'});
   $('#cart-sidenav').animate({
     width: "410px"
   }, 'fast', 'linear');
 });
 $('#wish-nav').on('click', function () {
-    $('body').css({background:'rgba(0,0,0,0.4)'});
+    //$('body').css({background:'rgba(0,0,0,0.4)'});
   $('#wish-sidenav').animate({
     width: "410px"
   }, 'fast', 'linear');
 });
 $('.closebtn').on('click', function () {
-     $('body').css('background','#fff');
+     //$('body').css('background','#fff');
   $('#signin-sidenav, #help-sidenav, #cart-sidenav, #wish-sidenav').animate({
     width: "0px"
   }, 'fast', 'linear');
 });
+
+
+
+$(window).scroll(function (event) {
+    var scroll = $('.navbar-main').scrollTop();
+          if (scroll > 0 || scroll <=50) {
+           $('.fixed-bottom').removeClass('bb');
+
+    }
+           else {
+                 $('.fixed-bottom').addClass('bb');
+
+    }
+});
+
+
+var distance = $('.navbar-main').offset().top,
+    $window = $(window);
+
+$window.scroll(function() {
+    if ( $window.scrollTop() >= distance ) {
+         $('.fixed-bottom').addClass('bb');
+    }
+    else{
+         $('.fixed-bottom').removeClass('bb');
+    }
+});
+
