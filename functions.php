@@ -91,6 +91,7 @@ function add_js() {
     wp_enqueue_script('scripts', get_template_directory_uri() .'/js/scripts.js', array('jquery'),'',true );
 
     if( is_singular( 'women_eyeglasses' ) ){
+        wp_enqueue_script('touchspin', get_template_directory_uri() .'/js/jquery.bootstrap-touchspin.js', array('jquery'),'',true );
         wp_enqueue_script('single', get_template_directory_uri() .'/js/single-e.js', array('jquery'),'',true );
     }
     if( is_page_template( 'page-registration.php' ) ){

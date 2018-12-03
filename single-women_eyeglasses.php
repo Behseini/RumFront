@@ -511,124 +511,57 @@
     </div><!--    end of tab 3-->
   <div class="tab-pane fade" id="nav-tab4" role="tabpanel" aria-labelledby="nav-tab4-tab">
                           <div class="row">
-                         <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-filter">Brands <i class="icon icon-chevron-right"></i></button>
-        <button type="button" class="btn btn-filter">Shape <i class="icon icon-chevron-right"></i></button>
-        <button type="button" class="btn btn-filter">Material <i class="icon icon-chevron-right"></i></button>
 
-      </div>
                          <a class="hallow-btn">I am Existing User</a>
                          <a class="hallow-btn">I am Existing User</a>
                        </div>
-                        <div class="col-md-2 no-padding-l"> </div>
-                        <div class="well no-padding-l no-padding-r" style="background: #f5f5f5; border-radius: 0px; box-shadow: none!important;">
-                           <div class="row">
-                              <div class="col-md-offset-1 col-md-2"></div>
-                              <div class="col-md-2 no-padding">
-                                 <div class="prescription-box-cl-title">SPH Sphere</div>
-                              </div>
-                              <div class="col-md-2 no-padding">
-                                 <div class="prescription-box-cl-title">CYL Cylinder</div>
-                              </div>
-                              <div class="col-md-2 no-padding">
-                                 <div class="prescription-box-cl-title">Axis</div>
-                              </div>
-                              <div class="col-md-2 no-padding">
-                                 <div class="prescription-box-cl-title">Add</div>
-                              </div>
-                           </div>
-                           <div class="row prescription-row">
-                              <div class="col-md-1" style="border-right:6px solid #dbff29; height:44px;"></div>
-                              <div class="col-md-2"><span class="prescription-box-row-title"><strong>OD</strong><br/> Right Eye</span> </div>
-                             <div class="col-md-2 no-padding-l">
-                               <div class="spiner-box-0">
-                                 <div class="spiner-box-1">
-                                   <input class="spiner" id="ODSPH" type="text" value="0" name="demo1" data-index="0" data-limitn="-4" data-limitp="2" readonly />
-                                 </div>
-                                 <div class="spiner-box-2"></div>
-                               </div>
-                             </div>
-                              <div class="col-md-2 no-padding-l">
-                                 <div class="spiner-box-0">
-                                 <div class="spiner-box-1">
-                                   <input class="spiner" id="ODSPH" type="text" value="0" name="demo1" data-index="1" data-limitn="-4" data-limitp="3" readonly />
-                                 </div>
-                                 <div class="spiner-box-2"></div>
-                               </div>
-                             </div>
-                              <div class="col-md-2 no-padding-l">
-                               <div class="spiner-box-0">
-                                 <div class="spiner-box-1">
-                                   <input class="spiner" id="ODSPH" type="text" value="0" name="demo1" data-index="2" data-limitn="-4" data-limitp="6" readonly />
-                                 </div>
-                                 <div class="spiner-box-2"></div>
-                               </div>
-                              </div>
-                              <div class="col-md-2 no-padding-l">
-                               <div class="spiner-box-0">
-                                 <div class="spiner-box-1">
-                                   <input class="spiner" id="ODSPH" type="text" value="0" name="demo1" data-index="3" data-limitn="-4" data-limitp="2" readonly />
-                                 </div>
-                                 <div class="spiner-box-2"></div>
-                               </div>
-                              </div>
-                           </div>
-                           <div class="row prescription-row">
-                              <div class="col-md-1" style="border-right:6px solid #dbff29; height:44px;"></div>
-                              <div class="col-md-2"><span class="prescription-box-row-title"><strong>OS</strong><br/> Left Eye</span></div>
-                              <div class="col-md-2 no-padding-l">
-                               <div class="spiner-box-0">
-                                 <div class="spiner-box-1">
-                                   <input class="spiner" id="ODSPH" type="text" value="0" name="demo1" data-index="4" data-limitn="-4" data-limitp="2" readonly />
-                                 </div>
-                                 <div class="spiner-box-2"></div>
-                               </div>
-                              </div>
-                              <div class="col-md-2 no-padding-l">
-                               <div class="spiner-box-0">
-                                 <div class="spiner-box-1">
-                                   <input class="spiner" id="ODSPH" type="text" value="0" name="demo1" data-index="5" data-limitn="-4" data-limitp="2" readonly />
-                                 </div>
-                                 <div class="spiner-box-2"></div>
-                               </div>
-                              </div>
-                              <div class="col-md-2 no-padding-l">
-                               <div class="spiner-box-0">
-                                 <div class="spiner-box-1">
-                                   <input class="spiner" id="ODSPH" type="text" value="0" name="demo1" data-index="6" data-limitn="-4" data-limitp="2" readonly />
-                                 </div>
-                                 <div class="spiner-box-2"></div>
-                               </div>
-                              </div>
-                              <div class="col-md-2 no-padding-l">
-                               <div class="spiner-box-0">
-                                 <div class="spiner-box-1">
-                                   <input class="spiner" id="ODSPH" type="text" value="0" name="demo1" data-index="7" data-limitn="-4" data-limitp="2" readonly />
-                                 </div>
-                                 <div class="spiner-box-2"></div>
-                               </div>
-                              </div>
-                           </div>
-                           <div class="row " style="margin:0px 30px 0px 30px; border-top: 1px dashed #ccc;"></div>
-                           <div class="row prescription-row">
-                              <div class="col-md-1" style="border-right:6px solid #dbff29; height:44px;"></div>
-                              <div class="col-md-2"><span class="prescription-box-row-title"><strong>PD</strong><br/> Pupillary Distance</span></div>
-                              <div class="col-md-2 no-padding-l">
-                               <div class="spiner-box-0">
-                                 <div class="spiner-box-1">
-                                   <input class="spiner" id="ODSPH" type="text" value="0" name="demo1" data-index="8" data-limitn="-4" data-limitp="2" readonly />
-                                 </div>
-                                 <div class="spiner-box-2"></div>
-                               </div>
-                              </div>
-                              <div class="col-md-2 no-padding-l">
-                                 <div class="btn-group btn-group-justified btn-prescriptions hidden" role="group" aria-label="..."> <a role="button" class="btn btn-default ew-decreaser" data-min="-12.00"><i class="icon-down-angle"></i></a> <a role="button" class="btn btn-default ew-num"><i class="icon-question-e"></i></a> <a role="button"
-                                             class="btn btn-default ew-increaser" data-max="6.00"><i class="icon-up-angle"></i></a> </div>
-                              </div>
-                              <div class="col-md-2 no-padding-l"> Check box heere </div>
-                           </div>
-                        </div>
-                        <div class="row" style="margin-top: 40px;"> <a class="btn btn-order btn-pre-confirmed">Confirm Prescription <i class="icon-check"></i></a> <a class="btn btn-order btn-pre-confirmed">Upload Your Prescription <i class="icon-check"></i></a> </div>
+<div class="container">
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">SPH Sphere</th>
+      <th scope="col">CYL Cylinder</th>
+      <th scope="col">AXIS</th>
+      <th scope="col">ADD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <th>OD Right Eye</th>
+      <td>  <input id="od-right-sph" type="text" value="0" name="od-right-sph" /> </td>
+      <td>  <input id="od-right-cyl" type="text" value="0" name="od-right-cyl" /> </td>
+      <td>  <input id="od-right-axi" type="text" value="0" name="od-right-axi" /> </td>
+      <td>  <input id="od-right-add" type="text" value="0" name="od-right-add" /> </td>
+    </tr>
+
+    <tr>
+       <th>OS Left Eye</th>
+      <td>  <input id="os-left-sph" type="text" value="0" name="os-left-sph" /> </td>
+      <td>  <input id="os-left-cyl" type="text" value="0" name="os-left-cyl" /> </td>
+      <td>  <input id="os-left-axi" type="text" value="0" name="os-left-axi" /> </td>
+      <td>  <input id="os-left-add" type="text" value="0" name="os-left-add" /> </td>
+    </tr>
+    <tr>
+      <th>PD* Pupillary Distance</th>
+      <td><div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <input type="radio" name="options" id="option1" autocomplete="off" checked> Single PD
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="options" id="option2" autocomplete="off"> Dual PD
+  </label>
+
+</div></td>
+      <td><input id="pd-single" type="text" value="0" name="pd-single" /></td>
+      <td><input id="pd-dual-right" type="text" value="0" name="pd-dual-right" /></td>
+      <td><input id="pd-dual-left" type="text" value="0" name="pd-dual-left" /></td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 
     </div><!--    end of tab 4-->
